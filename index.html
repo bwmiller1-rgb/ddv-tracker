@@ -26,6 +26,8 @@ button{cursor:pointer}
 .name{font-size:1.2rem;font-weight:600;flex:1;border:none;background:transparent;padding:4px 0}
 .gift{width:100%;padding:14px;font-size:1.05rem;font-weight:600}
 .gifted .gift{background:var(--done);color:#123;border:none}
+.giftNote{width:100%}
+.fieldLabel{font-size:.85rem;color:var(--muted);margin-bottom:-4px}
 textarea{width:100%;min-height:60px;resize:vertical}
 .add{display:flex;gap:8px;margin:8px 0 18px}
 .add input{flex:1}
@@ -55,7 +57,7 @@ details .row{flex-wrap:wrap;margin-top:10px}
   <summary>Settings &amp; backup</summary>
   <div class="row">
     <label>Daily reset at <input type="time" id="resetTime"></label>
-    <button id="resetNow">Reset gifts now</button>
+    <button id="resetNow">Reset daily items now</button>
   </div>
   <div class="row">
     <button id="exportBtn">Copy backup</button>
@@ -66,12 +68,12 @@ details .row{flex-wrap:wrap;margin-top:10px}
 
 <script>
 const KEY = 'ddvTracker';
-const SPECIALTIES = ['None','Digging','Fishing','Foraging','Gardening','Mining','Snippet Catching','Timebending'];
+const SPECIALTIES = ['None','Digging','Fishing','Foraging','Gardening','Mining','Timebending','Snippet Hunting'];
 let state = JSON.parse(localStorage.getItem(KEY) || 'null') ||
-            { villagers: [], resetTime: '00:00', lastReset: 0 };
+            { villagers: [], resetTime: '05:00', lastReset: 0 };
 
 const save = () => localStorage.setItem(KEY, JSON.stringify(state));
-const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 // Most recent time the daily reset should have happened
 function lastBoundary() {
@@ -81,9 +83,10 @@ function lastBoundary() {
   return b.getTime();
 }
 
+// Clears the gift toggle and the "Today's gift" box for every villager
 function checkReset(force) {
   if (force || state.lastReset < lastBoundary()) {
-    state.villagers.forEach(v => v.gifted = false);
+    state.villagers.forEach(v => { v.gifted = false; v.giftNote = ''; });
     state.lastReset = Date.now();
     save(); render();
   }
@@ -110,7 +113,10 @@ function render() {
           SPECIALTIES.map(s => `<option ${v.specialty === s ? 'selected' : ''}>${s}</option>`).join('')
         }</select>
       </div>
-      <textarea data-f="notes" placeholder="Favorite gifts, quests, reminders…">${esc(v.notes)}</textarea>
+      <div class="fieldLabel">Notes</div>
+      <textarea data-f="notes" placeholder="Notes, quests, reminders…">${esc(v.notes)}</textarea>
+      <div class="fieldLabel">Today's gift (clears daily)</div>
+      <input class="giftNote" data-f="giftNote" placeholder="What to give today…" value="${esc(v.giftNote)}">
       <button class="gift" data-act="gift">${v.gifted ? '🎁 Gifted today' : 'Give daily gift'}</button>
     </div>`).join('');
 
@@ -126,7 +132,7 @@ const find = el => state.villagers.find(v => v.id === el.closest('.card').datase
 
 list.addEventListener('input', e => {
   const f = e.target.dataset.f;
-  if (f === 'notes' || f === 'name') { find(e.target)[f] = e.target.value; save(); }
+  if (f === 'notes' || f === 'name' || f === 'giftNote') { find(e.target)[f] = e.target.value; save(); }
 });
 list.addEventListener('change', e => {
   const f = e.target.dataset.f;
@@ -153,7 +159,7 @@ document.getElementById('addForm').addEventListener('submit', e => {
   const name = input.value.trim(); if (!name) return;
   state.villagers.push({
     id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
-    name, level: 1, specialty: 'None', notes: '', gifted: false
+    name, level: 1, specialty: 'None', notes: '', giftNote: '', gifted: false
   });
   input.value = ''; save(); render();
 });
@@ -162,12 +168,12 @@ document.getElementById('addForm').addEventListener('submit', e => {
 const rt = document.getElementById('resetTime');
 rt.value = state.resetTime;
 rt.addEventListener('change', () => {
-  state.resetTime = rt.value || '00:00';
-  state.lastReset = Date.now(); // don't wipe today's gifts just from changing the time
+  state.resetTime = rt.value || '05:00';
+  state.lastReset = Date.now(); // don't wipe today's items just from changing the time
   save(); render();
 });
 document.getElementById('resetNow').onclick = () => {
-  if (confirm('Clear all gift checkmarks?')) checkReset(true);
+  if (confirm("Clear all gift checkmarks and today's gift boxes?")) checkReset(true);
 };
 document.getElementById('sort').onchange = render;
 
