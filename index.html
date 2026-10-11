@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Valley Tracker">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Valley Tracker</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root{--bg:#1d1838;--card:#2c2552;--accent:#f4c95d;--text:#f3effc;--muted:#a99fcf;--done:#5dd39e}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,system-ui,sans-serif;background:var(--bg);color:var(--text);padding:calc(env(safe-area-inset-top) + 8px) 16px 40px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:12px 0}
+h1{margin:0;font-size:1.6rem;color:var(--accent)}
+.progress{color:var(--muted)}
+button,select,input,textarea{font:inherit;color:var(--text);background:#3a3268;border:1px solid #4d4485;border-radius:10px;padding:10px}
+button{cursor:pointer}
+.primary{background:var(--accent);color:#1d1838;border:none;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--card);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px;border:2px solid transparent}
+.card.gifted{border-color:var(--done);opacity:.8}
+.row{display:flex;gap:8px;align-items:center}
+.name{font-size:1.2rem;font-weight:600;flex:1;border:none;background:transparent;padding:4px 0}
+.gift{width:100%;padding:14px;font-size:1.05rem;font-weight:600}
+.gifted .gift{background:var(--done);color:#123;border:none}
+textarea{width:100%;min-height:60px;resize:vertical}
+.add{display:flex;gap:8px;margin:8px 0 18px}
+.add input{flex:1}
+details{margin-top:28px;color:var(--muted)}
+details .row{flex-wrap:wrap;margin-top:10px}
+.del{background:transparent;border:none;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <div><h1>Valley Tracker</h1><div class="progress" id="progress"></div></div>
+  <select id="sort">
+    <option value="todo">Not gifted first</option>
+    <option value="name">A–Z</option>
+    <option value="level">Highest level</option>
+  </select>
+</header>
+
+<form class="add" id="addForm">
+  <input id="newName" placeholder="Add a villager (e.g. Goofy)" autocomplete="off">
+  <button class="primary">Add</button>
+</form>
+
+<div class="grid" id="list"></div>
+
+<details>
+  <summary>Settings &amp; backup</summary>
+  <div class="row">
+    <label>Daily reset at <input type="time" id="resetTime"></label>
+    <button id="resetNow">Reset gifts now</button>
+  </div>
+  <div class="row">
+    <button id="exportBtn">Copy backup</button>
+    <button id="importBtn">Restore from backup</button>
+  </div>
+  <p id="lastReset"></p>
+</details>
+
+<script>
+const KEY = 'ddvTracker';
+const SPECIALTIES = ['None','Digging','Fishing','Foraging','Gardening','Mining'];
+let state = JSON.parse(localStorage.getItem(KEY) || 'null') ||
+            { villagers: [], resetTime: '00:00', lastReset: 0 };
+
+const save = () => localStorage.setItem(KEY, JSON.stringify(state));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+// Most recent time the daily reset should have happened
+function lastBoundary() {
+  const [h, m] = state.resetTime.split(':').map(Number);
+  const b = new Date(); b.setHours(h, m, 0, 0);
+  if (Date.now() < b) b.setDate(b.getDate() - 1);
+  return b.getTime();
+}
+
+function checkReset(force) {
+  if (force || state.lastReset < lastBoundary()) {
+    state.villagers.forEach(v => v.gifted = false);
+    state.lastReset = Date.now();
+    save(); render();
+  }
+}
+
+function render() {
+  const sort = document.getElementById('sort').value;
+  const vs = [...state.villagers].sort((a, b) =>
+    sort === 'name'  ? a.name.localeCompare(b.name) :
+    sort === 'level' ? b.level - a.level :
+    (a.gifted - b.gifted) || a.name.localeCompare(b.name));
+
+  document.getElementById('list').innerHTML = vs.map(v => `
+    <div class="card ${v.gifted ? 'gifted' : ''}" data-id="${v.id}">
+      <div class="row">
+        <input class="name" data-f="name" value="${esc(v.name)}">
+        <button class="del" data-act="del" aria-label="Remove">✕</button>
+      </div>
+      <div class="row">
+        <label>Level <select data-f="level">${
+          Array.from({length:10}, (_, i) => `<option ${v.level == i+1 ? 'selected' : ''}>${i+1}</option>`).join('')
+        }</select></label>
+        <select data-f="specialty">${
+          SPECIALTIES.map(s => `<option ${v.specialty === s ? 'selected' : ''}>${s}</option>`).join('')
+        }</select>
+      </div>
+      <textarea data-f="notes" placeholder="Favorite gifts, quests, reminders…">${esc(v.notes)}</textarea>
+      <button class="gift" data-act="gift">${v.gifted ? '🎁 Gifted today' : 'Give daily gift'}</button>
+    </div>`).join('');
+
+  const done = state.villagers.filter(v => v.gifted).length;
+  document.getElementById('progress').textContent = `${done} of ${state.villagers.length} gifted today`;
+  document.getElementById('lastReset').textContent =
+    state.lastReset ? `Last reset: ${new Date(state.lastReset).toLocaleString()}` : '';
+}
+
+// Card interactions
+const list = document.getElementById('list');
+const find = el => state.villagers.find(v => v.id === el.closest('.card').dataset.id);
+
+list.addEventListener('input', e => {
+  const f = e.target.dataset.f;
+  if (f === 'notes' || f === 'name') { find(e.target)[f] = e.target.value; save(); }
+});
+list.addEventListener('change', e => {
+  const f = e.target.dataset.f;
+  if (f === 'level' || f === 'specialty') {
+    find(e.target)[f] = f === 'level' ? Number(e.target.value) : e.target.value;
+    save(); render();
+  }
+});
+list.addEventListener('click', e => {
+  const act = e.target.dataset.act; if (!act) return;
+  const v = find(e.target);
+  if (act === 'gift') v.gifted = !v.gifted;
+  if (act === 'del') {
+    if (!confirm(`Remove ${v.name}?`)) return;
+    state.villagers = state.villagers.filter(x => x !== v);
+  }
+  save(); render();
+});
+
+// Add villager
+document.getElementById('addForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const input = document.getElementById('newName');
+  const name = input.value.trim(); if (!name) return;
+  state.villagers.push({
+    id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
+    name, level: 1, specialty: 'None', notes: '', gifted: false
+  });
+  input.value = ''; save(); render();
+});
+
+// Settings
+const rt = document.getElementById('resetTime');
+rt.value = state.resetTime;
+rt.addEventListener('change', () => {
+  state.resetTime = rt.value || '00:00';
+  state.lastReset = Date.now(); // don't wipe today's gifts just from changing the time
+  save(); render();
+});
+document.getElementById('resetNow').onclick = () => {
+  if (confirm('Clear all gift checkmarks?')) checkReset(true);
+};
+document.getElementById('sort').onchange = render;
+
+// Backup / restore
+document.getElementById('exportBtn').onclick = async () => {
+  try { await navigator.clipboard.writeText(JSON.stringify(state)); alert('Backup copied! Paste it into a note to keep it safe.'); }
+  catch { prompt('Copy this backup text:', JSON.stringify(state)); }
+};
+document.getElementById('importBtn').onclick = () => {
+  const text = prompt('Paste your backup text:'); if (!text) return;
+  try {
+    const data = JSON.parse(text);
+    if (!Array.isArray(data.villagers)) throw 0;
+    state = data; save(); rt.value = state.resetTime; render();
+    alert('Restored!');
+  } catch { alert("That doesn't look like a valid backup."); }
+};
+
+// Reset checks: on open, when returning to the app, and every minute
+checkReset();
+render();
+document.addEventListener('visibilitychange', () => { if (!document.hidden) checkReset(); });
+setInterval(checkReset, 60000);
+</script>
+</body>
+</html>
