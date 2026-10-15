@@ -23,6 +23,12 @@
   --card:#e4eefc;--cardMuted:#3f4f68;
   --fieldBorder:#b3c7e6;--btn:#c9daf4;
 }
+/* Pink theme */
+:root[data-theme="pink"]{
+  --bg:#7a1f4e;--text:#fff0f6;--muted:#f6c6dc;
+  --card:#fde6f0;--cardMuted:#6e3a54;
+  --fieldBorder:#efb3cd;--btn:#f8cfe1;
+}
 *{box-sizing:border-box}
 body{margin:0;font-family:-apple-system,system-ui,sans-serif;background:var(--bg);color:var(--text);padding:calc(env(safe-area-inset-top) + 8px) 16px 40px}
 header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:12px 0}
@@ -42,6 +48,8 @@ button{cursor:pointer;background:var(--btn)}
 .toggle{width:100%;padding:14px;font-size:1.05rem;font-weight:600}
 .complete .toggle{background:var(--done);color:#fff;border:none}
 .giftNote{width:100%}
+.card select,.card input:not(.name),.card textarea{font-size:1.08rem;font-weight:700}
+.card ::placeholder{font-weight:400}
 .fieldLabel{font-size:.85rem;font-weight:600;color:var(--cardMuted);margin-bottom:-4px}
 textarea{width:100%;min-height:60px;resize:vertical}
 .add{display:flex;gap:8px;margin:8px 0 14px}
@@ -50,7 +58,8 @@ textarea{width:100%;min-height:60px;resize:vertical}
 details{margin-top:28px;color:var(--muted)}
 details .row{flex-wrap:wrap;margin-top:10px}
 .del,.fav{background:transparent;border:none;padding:4px 6px;font-size:1.3rem;line-height:1}
-.del{color:var(--cardMuted)}
+.del{color:var(--cardMuted);display:flex}
+.del svg{width:20px;height:20px;pointer-events:none}
 .fav{color:#9b94b5}
 .isFav .fav{color:var(--fav)}
 </style>
@@ -86,6 +95,7 @@ details .row{flex-wrap:wrap;margin-top:10px}
     <label>Color theme <select id="theme">
       <option value="purple">Purple</option>
       <option value="blue">Blue</option>
+      <option value="pink">Pink</option>
     </select></label>
   </div>
   <div class="row">
@@ -136,6 +146,7 @@ function checkReset(force) {
 
 // Favorites always sort to the top, then the chosen order
 const byFav = (a, b) => (!!b.fav - !!a.fav);
+const TRASH = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6M10 11v6M14 11v6"/></svg>';
 const favButton = item =>
   `<button class="fav" data-act="fav" aria-label="${item.fav ? 'Unfavorite' : 'Favorite'}">${item.fav ? '★' : '☆'}</button>`;
 
@@ -148,7 +159,7 @@ function render() {
       <div class="row">
         ${favButton(a)}
         <input class="name" data-f="name" value="${esc(a.name)}">
-        <button class="del" data-act="del" aria-label="Remove">✕</button>
+        <button class="del" data-act="del" aria-label="Delete" title="Delete">${TRASH}</button>
       </div>
       <div class="fieldLabel">Notes</div>
       <textarea data-f="notes" placeholder="Details, where to go, rewards…">${esc(a.notes)}</textarea>
@@ -167,7 +178,7 @@ function render() {
       <div class="row">
         ${favButton(v)}
         <input class="name" data-f="name" value="${esc(v.name)}">
-        <button class="del" data-act="del" aria-label="Remove">✕</button>
+        <button class="del" data-act="del" aria-label="Delete" title="Delete">${TRASH}</button>
       </div>
       <div class="row">
         <label>Level <select data-f="level">${
