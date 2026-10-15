@@ -10,51 +10,83 @@
 <title>Valley Tracker</title>
 <meta name="robots" content="noindex, nofollow">
 <style>
-:root{--bg:#1d1838;--card:#2c2552;--accent:#f4c95d;--text:#f3effc;--muted:#a99fcf;--done:#5dd39e}
+/* Purple theme (default) */
+:root{
+  --bg:#2a2250;--text:#f3effc;--muted:#c8bfec;--accent:#f4c95d;
+  --card:#ebe6fb;--cardText:#141414;--cardMuted:#4a4466;
+  --field:#ffffff;--fieldBorder:#c3b8ea;--btn:#d6cdf5;
+  --done:#2e9e6a;--doneBg:#dcf3e7;--fav:#e0a800;
+}
+/* Blue theme */
+:root[data-theme="blue"]{
+  --bg:#16294a;--text:#eef4ff;--muted:#b9cbe8;
+  --card:#e4eefc;--cardMuted:#3f4f68;
+  --fieldBorder:#b3c7e6;--btn:#c9daf4;
+}
 *{box-sizing:border-box}
 body{margin:0;font-family:-apple-system,system-ui,sans-serif;background:var(--bg);color:var(--text);padding:calc(env(safe-area-inset-top) + 8px) 16px 40px}
 header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:12px 0}
 h1{margin:0;font-size:1.6rem;color:var(--accent)}
+h2{margin:22px 0 4px;font-size:1.25rem;color:var(--accent)}
 .progress{color:var(--muted)}
-button,select,input,textarea{font:inherit;color:var(--text);background:#3a3268;border:1px solid #4d4485;border-radius:10px;padding:10px}
-button{cursor:pointer}
+button,select,input,textarea{font:inherit;color:var(--cardText);background:var(--field);border:1px solid var(--fieldBorder);border-radius:10px;padding:10px}
+button{cursor:pointer;background:var(--btn)}
 .primary{background:var(--accent);color:#1d1838;border:none;font-weight:600}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
-.card{background:var(--card);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px;border:2px solid transparent}
-.card.gifted{border-color:var(--done);opacity:.8}
+.card{background:var(--card);color:var(--cardText);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px;border:3px solid transparent}
+.card.complete{border-color:var(--done);background:var(--doneBg)}
+.card.isFav{border-color:var(--fav)}
+.card.complete.isFav{border-color:var(--done)}
 .row{display:flex;gap:8px;align-items:center}
-.name{font-size:1.2rem;font-weight:600;flex:1;border:none;background:transparent;padding:4px 0}
-.gift{width:100%;padding:14px;font-size:1.05rem;font-weight:600}
-.gifted .gift{background:var(--done);color:#123;border:none}
+.name{font-size:1.2rem;font-weight:700;flex:1;min-width:0;border:none;background:transparent;padding:4px 0}
+.toggle{width:100%;padding:14px;font-size:1.05rem;font-weight:600}
+.complete .toggle{background:var(--done);color:#fff;border:none}
 .giftNote{width:100%}
-.fieldLabel{font-size:.85rem;color:var(--muted);margin-bottom:-4px}
+.fieldLabel{font-size:.85rem;font-weight:600;color:var(--cardMuted);margin-bottom:-4px}
 textarea{width:100%;min-height:60px;resize:vertical}
-.add{display:flex;gap:8px;margin:8px 0 18px}
-.add input{flex:1}
+.add{display:flex;gap:8px;margin:8px 0 14px}
+.add input{flex:1;min-width:0}
+.empty{color:var(--muted);margin:0 0 8px}
 details{margin-top:28px;color:var(--muted)}
 details .row{flex-wrap:wrap;margin-top:10px}
-.del{background:transparent;border:none;color:var(--muted)}
+.del,.fav{background:transparent;border:none;padding:4px 6px;font-size:1.3rem;line-height:1}
+.del{color:var(--cardMuted)}
+.fav{color:#9b94b5}
+.isFav .fav{color:var(--fav)}
 </style>
 </head>
 <body>
 <header>
   <div><h1>Valley Tracker</h1><div class="progress" id="progress"></div></div>
-  <select id="sort">
+  <select id="sort" aria-label="Sort villagers">
     <option value="todo">Not gifted first</option>
     <option value="name">A–Z</option>
     <option value="level">Highest level</option>
   </select>
 </header>
 
+<h2>Daily activities</h2>
+<form class="add" id="addActivity">
+  <input id="newActivity" placeholder="Add an activity (e.g. Star Path duty)" autocomplete="off">
+  <button class="primary">Add</button>
+</form>
+<div class="grid" id="activities"></div>
+
+<h2>Villagers</h2>
 <form class="add" id="addForm">
   <input id="newName" placeholder="Add a villager (e.g. Goofy)" autocomplete="off">
   <button class="primary">Add</button>
 </form>
-
 <div class="grid" id="list"></div>
 
 <details>
   <summary>Settings &amp; backup</summary>
+  <div class="row">
+    <label>Color theme <select id="theme">
+      <option value="purple">Purple</option>
+      <option value="blue">Blue</option>
+    </select></label>
+  </div>
   <div class="row">
     <label>Daily reset at <input type="time" id="resetTime"></label>
     <button id="resetNow">Reset daily items now</button>
@@ -71,9 +103,17 @@ const KEY = 'ddvTracker';
 const SPECIALTIES = ['None','Digging','Fishing','Foraging','Gardening','Mining','Timebending','Snippet Hunting'];
 let state = JSON.parse(localStorage.getItem(KEY) || 'null') ||
             { villagers: [], resetTime: '05:00', lastReset: 0 };
+// Fill in fields added after the first version so older saves keep working
+function upgrade() {
+  state.activities = state.activities || [];
+  state.theme = state.theme || 'purple';
+}
+upgrade();
 
 const save = () => localStorage.setItem(KEY, JSON.stringify(state));
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const newId = () => crypto.randomUUID ? crypto.randomUUID() : String(Date.now() + Math.random());
+const applyTheme = () => document.documentElement.dataset.theme = state.theme;
 
 // Most recent time the daily reset should have happened
 function lastBoundary() {
@@ -83,25 +123,47 @@ function lastBoundary() {
   return b.getTime();
 }
 
-// Clears the gift toggle and the "Today's gift" box for every villager
+// Clears gift toggles, "Today's gift" boxes, and activity checkmarks
 function checkReset(force) {
   if (force || state.lastReset < lastBoundary()) {
     state.villagers.forEach(v => { v.gifted = false; v.giftNote = ''; });
+    state.activities.forEach(a => { a.done = false; });
     state.lastReset = Date.now();
     save(); render();
   }
 }
 
+// Favorites always sort to the top, then the chosen order
+const byFav = (a, b) => (!!b.fav - !!a.fav);
+const favButton = item =>
+  `<button class="fav" data-act="fav" aria-label="${item.fav ? 'Unfavorite' : 'Favorite'}">${item.fav ? '★' : '☆'}</button>`;
+
 function render() {
+  const as = [...state.activities].sort((a, b) =>
+    byFav(a, b) || (a.done - b.done) || a.name.localeCompare(b.name));
+
+  document.getElementById('activities').innerHTML = as.length ? as.map(a => `
+    <div class="card ${a.done ? 'complete' : ''} ${a.fav ? 'isFav' : ''}" data-kind="activities" data-id="${a.id}">
+      <div class="row">
+        ${favButton(a)}
+        <input class="name" data-f="name" value="${esc(a.name)}">
+        <button class="del" data-act="del" aria-label="Remove">✕</button>
+      </div>
+      <div class="fieldLabel">Notes</div>
+      <textarea data-f="notes" placeholder="Details, where to go, rewards…">${esc(a.notes)}</textarea>
+      <button class="toggle" data-act="done">${a.done ? '✅ Done today' : 'Mark complete'}</button>
+    </div>`).join('') : '<p class="empty">No daily activities yet.</p>';
+
   const sort = document.getElementById('sort').value;
-  const vs = [...state.villagers].sort((a, b) =>
+  const vs = [...state.villagers].sort((a, b) => byFav(a, b) || (
     sort === 'name'  ? a.name.localeCompare(b.name) :
     sort === 'level' ? b.level - a.level :
-    (a.gifted - b.gifted) || a.name.localeCompare(b.name));
+    (a.gifted - b.gifted) || a.name.localeCompare(b.name)));
 
-  document.getElementById('list').innerHTML = vs.map(v => `
-    <div class="card ${v.gifted ? 'gifted' : ''}" data-id="${v.id}">
+  document.getElementById('list').innerHTML = vs.length ? vs.map(v => `
+    <div class="card ${v.gifted ? 'complete' : ''} ${v.fav ? 'isFav' : ''}" data-kind="villagers" data-id="${v.id}">
       <div class="row">
+        ${favButton(v)}
         <input class="name" data-f="name" value="${esc(v.name)}">
         <button class="del" data-act="del" aria-label="Remove">✕</button>
       </div>
@@ -117,39 +179,59 @@ function render() {
       <textarea data-f="notes" placeholder="Notes, quests, reminders…">${esc(v.notes)}</textarea>
       <div class="fieldLabel">Today's gift (clears daily)</div>
       <input class="giftNote" data-f="giftNote" placeholder="What to give today…" value="${esc(v.giftNote)}">
-      <button class="gift" data-act="gift">${v.gifted ? '🎁 Gifted today' : 'Give daily gift'}</button>
-    </div>`).join('');
+      <button class="toggle" data-act="gift">${v.gifted ? '🎁 Gifted today' : 'Give daily gift'}</button>
+    </div>`).join('') : '<p class="empty">No villagers yet.</p>';
 
-  const done = state.villagers.filter(v => v.gifted).length;
-  document.getElementById('progress').textContent = `${done} of ${state.villagers.length} gifted today`;
+  const gifted = state.villagers.filter(v => v.gifted).length;
+  const done = state.activities.filter(a => a.done).length;
+  document.getElementById('progress').textContent =
+    `${done} of ${state.activities.length} activities done · ${gifted} of ${state.villagers.length} gifted today`;
   document.getElementById('lastReset').textContent =
     state.lastReset ? `Last reset: ${new Date(state.lastReset).toLocaleString()}` : '';
 }
 
-// Card interactions
-const list = document.getElementById('list');
-const find = el => state.villagers.find(v => v.id === el.closest('.card').dataset.id);
+// Card interactions (shared by both sections)
+const find = el => {
+  const card = el.closest('.card');
+  return state[card.dataset.kind].find(x => x.id === card.dataset.id);
+};
 
-list.addEventListener('input', e => {
-  const f = e.target.dataset.f;
-  if (f === 'notes' || f === 'name' || f === 'giftNote') { find(e.target)[f] = e.target.value; save(); }
-});
-list.addEventListener('change', e => {
-  const f = e.target.dataset.f;
-  if (f === 'level' || f === 'specialty') {
-    find(e.target)[f] = f === 'level' ? Number(e.target.value) : e.target.value;
+['activities', 'list'].forEach(gridId => {
+  const grid = document.getElementById(gridId);
+  grid.addEventListener('input', e => {
+    const f = e.target.dataset.f;
+    if (f === 'notes' || f === 'name' || f === 'giftNote') { find(e.target)[f] = e.target.value; save(); }
+  });
+  grid.addEventListener('change', e => {
+    const f = e.target.dataset.f;
+    if (f === 'level' || f === 'specialty') {
+      find(e.target)[f] = f === 'level' ? Number(e.target.value) : e.target.value;
+      save(); render();
+    }
+  });
+  grid.addEventListener('click', e => {
+    const btn = e.target.closest('[data-act]'); if (!btn) return;
+    const act = btn.dataset.act;
+    const item = find(btn);
+    const kind = btn.closest('.card').dataset.kind;
+    if (act === 'gift') item.gifted = !item.gifted;
+    if (act === 'done') item.done = !item.done;
+    if (act === 'fav') item.fav = !item.fav;
+    if (act === 'del') {
+      if (!confirm(`Remove ${item.name}?`)) return;
+      state[kind] = state[kind].filter(x => x !== item);
+    }
     save(); render();
-  }
+  });
 });
-list.addEventListener('click', e => {
-  const act = e.target.dataset.act; if (!act) return;
-  const v = find(e.target);
-  if (act === 'gift') v.gifted = !v.gifted;
-  if (act === 'del') {
-    if (!confirm(`Remove ${v.name}?`)) return;
-    state.villagers = state.villagers.filter(x => x !== v);
-  }
-  save(); render();
+
+// Add activity
+document.getElementById('addActivity').addEventListener('submit', e => {
+  e.preventDefault();
+  const input = document.getElementById('newActivity');
+  const name = input.value.trim(); if (!name) return;
+  state.activities.push({ id: newId(), name, notes: '', done: false, fav: false });
+  input.value = ''; save(); render();
 });
 
 // Add villager
@@ -158,22 +240,25 @@ document.getElementById('addForm').addEventListener('submit', e => {
   const input = document.getElementById('newName');
   const name = input.value.trim(); if (!name) return;
   state.villagers.push({
-    id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
-    name, level: 1, specialty: 'None', notes: '', giftNote: '', gifted: false
+    id: newId(), name, level: 1, specialty: 'None', notes: '', giftNote: '', gifted: false, fav: false
   });
   input.value = ''; save(); render();
 });
 
 // Settings
 const rt = document.getElementById('resetTime');
+const themeSel = document.getElementById('theme');
 rt.value = state.resetTime;
+themeSel.value = state.theme;
+applyTheme();
+themeSel.addEventListener('change', () => { state.theme = themeSel.value; applyTheme(); save(); });
 rt.addEventListener('change', () => {
   state.resetTime = rt.value || '05:00';
   state.lastReset = Date.now(); // don't wipe today's items just from changing the time
   save(); render();
 });
 document.getElementById('resetNow').onclick = () => {
-  if (confirm("Clear all gift checkmarks and today's gift boxes?")) checkReset(true);
+  if (confirm("Clear all gift checkmarks, today's gift boxes, and activity checkmarks?")) checkReset(true);
 };
 document.getElementById('sort').onchange = render;
 
@@ -187,7 +272,8 @@ document.getElementById('importBtn').onclick = () => {
   try {
     const data = JSON.parse(text);
     if (!Array.isArray(data.villagers)) throw 0;
-    state = data; save(); rt.value = state.resetTime; render();
+    state = data; upgrade(); save();
+    rt.value = state.resetTime; themeSel.value = state.theme; applyTheme(); render();
     alert('Restored!');
   } catch { alert("That doesn't look like a valid backup."); }
 };
