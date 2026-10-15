@@ -61,7 +61,8 @@ details .row{flex-wrap:wrap;margin-top:10px}
   <select id="sort" aria-label="Sort villagers">
     <option value="todo">Not gifted first</option>
     <option value="name">A–Z</option>
-    <option value="level">Highest level</option>
+    <option value="level">Level: high to low</option>
+    <option value="levelUp">Level: low to high</option>
   </select>
 </header>
 
@@ -157,7 +158,8 @@ function render() {
   const sort = document.getElementById('sort').value;
   const vs = [...state.villagers].sort((a, b) => byFav(a, b) || (
     sort === 'name'  ? a.name.localeCompare(b.name) :
-    sort === 'level' ? b.level - a.level :
+    sort === 'level' ? (b.level - a.level) || a.name.localeCompare(b.name) :
+    sort === 'levelUp' ? (a.level - b.level) || a.name.localeCompare(b.name) :
     (a.gifted - b.gifted) || a.name.localeCompare(b.name)));
 
   document.getElementById('list').innerHTML = vs.length ? vs.map(v => `
