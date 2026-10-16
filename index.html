@@ -35,7 +35,7 @@ header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:s
 h1{margin:0;font-size:1.6rem;color:var(--accent)}
 h2{margin:22px 0 4px;font-size:1.25rem;color:var(--accent)}
 .progress{color:var(--muted)}
-.progress.allDone{color:#5dd39e;font-weight:700}
+.progress .allDone{color:#5dd39e;font-weight:700}
 button,select,input,textarea{font:inherit;color:var(--cardText);background:var(--field);border:1px solid var(--fieldBorder);border-radius:10px;padding:10px}
 button{cursor:pointer;background:var(--btn)}
 .primary{background:var(--accent);color:#1d1838;border:none;font-weight:600}
@@ -221,12 +221,14 @@ function render() {
   const collectable = state.villagers.filter(canCollect);
   const collected = collectable.filter(v => v.collected).length;
   const done = state.activities.filter(a => a.done).length;
-  const total = state.activities.length + counted.length + collectable.length;
-  const allDone = total > 0 && done + gifted + collected === total;
-  const progress = document.getElementById('progress');
-  progress.classList.toggle('allDone', allDone);
-  progress.textContent =
-    `${done} of ${state.activities.length} activities done · ${gifted} of ${counted.length} gifted · ${collected} of ${collectable.length} collected`;
+  // Each part turns green on its own once everything in it is done
+  const part = (n, total, label) =>
+    `<span class="${total > 0 && n === total ? 'allDone' : ''}">${n} of ${total} ${label}</span>`;
+  document.getElementById('progress').innerHTML = [
+    part(done, state.activities.length, 'activities done'),
+    part(gifted, counted.length, 'gifted'),
+    part(collected, collectable.length, 'collected'),
+  ].join(' · ');
   document.getElementById('lastReset').textContent =
     state.lastReset ? `Last reset: ${new Date(state.lastReset).toLocaleString()}` : '';
 }
