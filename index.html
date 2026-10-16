@@ -66,6 +66,20 @@ details .row{flex-wrap:wrap;margin-top:10px}
 .del svg{width:20px;height:20px;pointer-events:none}
 .fav{color:#9b94b5}
 .isFav .fav{color:var(--fav)}
+.checklist{display:flex;flex-direction:column;gap:6px}
+.item{display:flex;gap:8px;align-items:center}
+.item input{flex:1;min-width:0}
+.item.on input{text-decoration:line-through;color:var(--cardMuted)}
+.check{width:42px;height:42px;padding:0;font-size:1.2rem;flex:none}
+.check.on{background:var(--done);color:#fff;border:none}
+.counter{display:flex;align-items:center;gap:10px}
+.counter .num{font-size:1.25rem;font-weight:700;min-width:64px;text-align:center}
+.counter.on .num{color:var(--done)}
+.step{width:44px;height:44px;padding:0;font-size:1.4rem;font-weight:700;flex:none}
+.step:disabled{opacity:.4}
+.mini{background:transparent;border:none;color:var(--cardMuted);padding:4px 8px;font-size:1.1rem;flex:none}
+.addRow{display:flex;gap:8px;flex-wrap:wrap}
+.small{padding:6px 12px;font-size:.9rem;background:transparent;border:1px dashed var(--cardMuted);color:var(--cardMuted)}
 </style>
 </head>
 <body>
@@ -139,11 +153,11 @@ function lastBoundary() {
   return b.getTime();
 }
 
-// Clears gift and collected toggles, "Today's gift" boxes, and activity checkmarks
+// Clears gift and collected toggles, "Today's gift" boxes, activity checkmarks, checklists and counters
 function checkReset(force) {
   if (force || state.lastReset < lastBoundary()) {
     state.villagers.forEach(v => { v.gifted = false; v.collected = false; v.giftNote = ''; });
-    state.activities.forEach(a => { a.done = false; });
+    state.activities.forEach(a => { a.done = false; if (a.goal) a.count = 0; (a.items || []).forEach(i => { i.done = false; }); });
     state.lastReset = Date.now();
     save(); render();
   }
@@ -159,6 +173,31 @@ const canGift = v => v.level > 0;
 const needsGift = v => canGift(v) && !v.gifted;
 const villagerDone = v => canGift(v) && v.gifted && (v.collected || !canCollect(v));
 const TRASH = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6M10 11v6M14 11v6"/></svg>';
+// Activities with a checklist or counter complete themselves once every item is checked and the count is reached
+const hasTracking = a => (a.items && a.items.length) || a.goal;
+const trackingDone = a => (a.items || []).every(i => i.done) && (!a.goal || (a.count || 0) >= a.goal);
+const checklistHtml = a => {
+  const items = (a.items || []).map(i => `
+        <div class="item ${i.done ? 'on' : ''}" data-item="${i.id}">
+          <button class="check ${i.done ? 'on' : ''}" data-act="toggleItem" aria-label="${i.done ? 'Uncheck' : 'Check'}">${i.done ? '✓' : ''}</button>
+          <input data-f="itemText" value="${esc(i.text)}" placeholder="Item">
+          <button class="mini" data-act="delItem" aria-label="Remove item">✕</button>
+        </div>`).join('');
+  const count = a.count || 0;
+  const counter = a.goal ? `
+        <div class="counter ${count >= a.goal ? 'on' : ''}">
+          <button class="step" data-act="dec" aria-label="One less" ${count <= 0 ? 'disabled' : ''}>−</button>
+          <span class="num">${count} / ${a.goal}</span>
+          <button class="step" data-act="inc" aria-label="One more" ${count >= a.goal ? 'disabled' : ''}>+</button>
+          <button class="mini" data-act="delCounter" aria-label="Remove counter">✕</button>
+        </div>` : '';
+  return `
+      ${items || counter ? `<div class="checklist">${items}${counter}</div>` : ''}
+      <div class="addRow">
+        <button class="small" data-act="addItem">＋ Checklist item</button>
+        ${a.goal ? '' : '<button class="small" data-act="addCounter">＋ Counter</button>'}
+      </div>`;
+};
 const favButton = item =>
   `<button class="fav" data-act="fav" aria-label="${item.fav ? 'Unfavorite' : 'Favorite'}">${item.fav ? '★' : '☆'}</button>`;
 
@@ -174,7 +213,7 @@ function render() {
         <button class="del" data-act="del" aria-label="Delete" title="Delete">${TRASH}</button>
       </div>
       <div class="fieldLabel">Notes</div>
-      <textarea data-f="notes" placeholder="Details, where to go, rewards…">${esc(a.notes)}</textarea>
+      <textarea data-f="notes" placeholder="Details, where to go, rewards…">${esc(a.notes)}</textarea>${checklistHtml(a)}
       <button class="toggle ${a.done ? 'on' : ''}" data-act="done">${a.done ? '✅ Done today' : 'Mark complete'}</button>
     </div>`).join('') : '<p class="empty">No daily activities yet.</p>';
 
@@ -234,6 +273,7 @@ function render() {
 }
 
 // Card interactions (shared by both sections)
+const findItem = el => find(el).items.find(i => i.id === el.closest('.item').dataset.item);
 const find = el => {
   const card = el.closest('.card');
   return state[card.dataset.kind].find(x => x.id === card.dataset.id);
@@ -244,6 +284,7 @@ const find = el => {
   grid.addEventListener('input', e => {
     const f = e.target.dataset.f;
     if (f === 'notes' || f === 'name' || f === 'giftNote') { find(e.target)[f] = e.target.value; save(); }
+    if (f === 'itemText') { findItem(e.target).text = e.target.value; save(); }
   });
   grid.addEventListener('change', e => {
     const f = e.target.dataset.f;
@@ -260,6 +301,22 @@ const find = el => {
     if (act === 'gift') item.gifted = !item.gifted;
     if (act === 'collect') item.collected = !item.collected;
     if (act === 'done') item.done = !item.done;
+    if (act === 'addItem') {
+      const text = (prompt('Checklist item (e.g. House 1):') || '').trim(); if (!text) return;
+      (item.items = item.items || []).push({ id: newId(), text, done: false });
+    }
+    if (act === 'toggleItem') { const i = findItem(btn); i.done = !i.done; }
+    if (act === 'delItem') { const i = findItem(btn); item.items = item.items.filter(x => x !== i); }
+    if (act === 'addCounter') {
+      const goal = parseInt(prompt('How many do you need to collect?', '3'), 10);
+      if (!(goal > 0)) return;
+      item.goal = goal; item.count = 0;
+    }
+    if (act === 'inc') item.count = Math.min(item.goal, (item.count || 0) + 1);
+    if (act === 'dec') item.count = Math.max(0, (item.count || 0) - 1);
+    if (act === 'delCounter') { delete item.goal; delete item.count; }
+    if (['addItem', 'toggleItem', 'delItem', 'addCounter', 'inc', 'dec', 'delCounter'].includes(act) && hasTracking(item))
+      item.done = trackingDone(item);
     if (act === 'fav') item.fav = !item.fav;
     if (act === 'del') {
       if (!confirm(`Remove ${item.name}?`)) return;
@@ -302,7 +359,7 @@ rt.addEventListener('change', () => {
   save(); render();
 });
 document.getElementById('resetNow').onclick = () => {
-  if (confirm("Clear all gifted and collected checkmarks, today's gift boxes, and activity checkmarks?")) checkReset(true);
+  if (confirm("Clear all gifted and collected checkmarks, today's gift boxes, activity checkmarks, checklists and counters?")) checkReset(true);
 };
 document.getElementById('sort').onchange = render;
 
