@@ -191,7 +191,7 @@ function render() {
       </div>
       <div class="row">
         <label>Level <select data-f="level">${
-          Array.from({length:10}, (_, i) => `<option ${v.level == i+1 ? 'selected' : ''}>${i+1}</option>`).join('')
+          Array.from({length:11}, (_, i) => `<option ${v.level == i ? 'selected' : ''}>${i}</option>`).join('')
         }</select></label>
         <select data-f="specialty">${
           SPECIALTIES.map(s => `<option ${v.specialty === s ? 'selected' : ''}>${s}</option>`).join('')
@@ -209,13 +209,14 @@ function render() {
       </div>
     </div>`).join('') : '<p class="empty">No villagers yet.</p>';
 
-  const gifted = state.villagers.filter(v => v.gifted).length;
+  // Level 0 villagers aren't counted toward daily completion
+  const counted = state.villagers.filter(v => v.level > 0);
+  const gifted = counted.filter(v => v.gifted).length;
   const collectable = state.villagers.filter(canCollect);
   const collected = collectable.filter(v => v.collected).length;
   const done = state.activities.filter(a => a.done).length;
-  const nv = state.villagers.length;
   document.getElementById('progress').textContent =
-    `${done} of ${state.activities.length} activities done · ${gifted} of ${nv} gifted · ${collected} of ${collectable.length} collected`;
+    `${done} of ${state.activities.length} activities done · ${gifted} of ${counted.length} gifted · ${collected} of ${collectable.length} collected`;
   document.getElementById('lastReset').textContent =
     state.lastReset ? `Last reset: ${new Date(state.lastReset).toLocaleString()}` : '';
 }
