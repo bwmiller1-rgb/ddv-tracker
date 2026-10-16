@@ -62,7 +62,7 @@ button{cursor:pointer;background:var(--btn)}
 .sparkle{display:flex;align-items:center;gap:8px;font-weight:600}
 .sparkle input{width:22px;height:22px;padding:0;accent-color:var(--fav)}
 .toggle:disabled{opacity:.4;cursor:not-allowed}
-.giftNote{width:100%}
+.giftNote{width:100%;min-height:0;line-height:1.35}
 .card select,.card input:not(.name),.card textarea{font-size:1.08rem;font-weight:700}
 .card ::placeholder{font-weight:400}
 .fieldLabel{font-size:.85rem;font-weight:600;color:var(--cardMuted);margin-bottom:-4px}
@@ -275,7 +275,7 @@ function render() {
       <div class="fieldLabel">Notes</div>
       <textarea data-f="notes" placeholder="Notes, reminders…">${esc(h.notes)}</textarea>
       <div class="fieldLabel">Today's gift (clears daily)</div>
-      <input class="giftNote" data-f="giftNote" placeholder="What to give today…" value="${esc(h.giftNote)}">
+      <textarea class="giftNote" data-f="giftNote" rows="2" placeholder="What to give today…">${esc(h.giftNote)}</textarea>
       <div class="careGrid">${HORSE_TASKS.map(([k, label, icon]) => h.level > 0
         ? `<button class="toggle ${h[k] ? 'on' : ''}" data-act="care" data-task="${k}">${h[k] ? icon + ' ' : ''}${label}</button>`
         : `<button class="toggle" disabled title="Not available at level 0">${label}</button>`).join('')}</div>
@@ -308,7 +308,7 @@ function render() {
       <div class="fieldLabel">Notes</div>
       <textarea data-f="notes" placeholder="Notes, quests, reminders…">${esc(v.notes)}</textarea>
       <div class="fieldLabel">Today's gift (clears daily)</div>
-      <input class="giftNote" data-f="giftNote" placeholder="What to give today…" value="${esc(v.giftNote)}">
+      <textarea class="giftNote" data-f="giftNote" rows="2" placeholder="What to give today…">${esc(v.giftNote)}</textarea>
       <div class="btnRow">
         ${canGift(v)
           ? `<button class="toggle ${v.gifted ? 'on' : ''}" data-act="gift">${v.gifted ? '🎁 Gifted' : 'Gifted'}</button>`
