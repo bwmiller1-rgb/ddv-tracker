@@ -46,7 +46,10 @@ button{cursor:pointer;background:var(--btn)}
 .row{display:flex;gap:8px;align-items:center}
 .name{font-size:1.2rem;font-weight:700;flex:1;min-width:0;border:none;background:transparent;padding:4px 0}
 .toggle{width:100%;padding:14px;font-size:1.05rem;font-weight:600}
-.complete .toggle{background:var(--done);color:#fff;border:none}
+.toggle.on{background:var(--done);color:#fff;border:none}
+.btnRow{display:flex;gap:8px}
+.btnRow .toggle{flex:1;min-width:0}
+.toggle:disabled{opacity:.4;cursor:not-allowed}
 .giftNote{width:100%}
 .card select,.card input:not(.name),.card textarea{font-size:1.08rem;font-weight:700}
 .card ::placeholder{font-weight:400}
@@ -69,6 +72,7 @@ details .row{flex-wrap:wrap;margin-top:10px}
   <div><h1>Valley Tracker</h1><div class="progress" id="progress"></div></div>
   <select id="sort" aria-label="Sort villagers">
     <option value="todo">Not gifted first</option>
+    <option value="uncollected">Not collected first</option>
     <option value="name">A–Z</option>
     <option value="level">Level: high to low</option>
     <option value="levelUp">Level: low to high</option>
@@ -134,10 +138,10 @@ function lastBoundary() {
   return b.getTime();
 }
 
-// Clears gift toggles, "Today's gift" boxes, and activity checkmarks
+// Clears gift and collected toggles, "Today's gift" boxes, and activity checkmarks
 function checkReset(force) {
   if (force || state.lastReset < lastBoundary()) {
-    state.villagers.forEach(v => { v.gifted = false; v.giftNote = ''; });
+    state.villagers.forEach(v => { v.gifted = false; v.collected = false; v.giftNote = ''; });
     state.activities.forEach(a => { a.done = false; });
     state.lastReset = Date.now();
     save(); render();
@@ -146,6 +150,10 @@ function checkReset(force) {
 
 // Favorites always sort to the top, then the chosen order
 const byFav = (a, b) => (!!b.fav - !!a.fav);
+// "Collected" only applies to villagers at level 7 or higher
+const canCollect = v => v.level >= 7;
+const needsCollect = v => canCollect(v) && !v.collected;
+const villagerDone = v => v.gifted && (v.collected || !canCollect(v));
 const TRASH = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6M10 11v6M14 11v6"/></svg>';
 const favButton = item =>
   `<button class="fav" data-act="fav" aria-label="${item.fav ? 'Unfavorite' : 'Favorite'}">${item.fav ? '★' : '☆'}</button>`;
@@ -163,7 +171,7 @@ function render() {
       </div>
       <div class="fieldLabel">Notes</div>
       <textarea data-f="notes" placeholder="Details, where to go, rewards…">${esc(a.notes)}</textarea>
-      <button class="toggle" data-act="done">${a.done ? '✅ Done today' : 'Mark complete'}</button>
+      <button class="toggle ${a.done ? 'on' : ''}" data-act="done">${a.done ? '✅ Done today' : 'Mark complete'}</button>
     </div>`).join('') : '<p class="empty">No daily activities yet.</p>';
 
   const sort = document.getElementById('sort').value;
@@ -171,10 +179,11 @@ function render() {
     sort === 'name'  ? a.name.localeCompare(b.name) :
     sort === 'level' ? (b.level - a.level) || a.name.localeCompare(b.name) :
     sort === 'levelUp' ? (a.level - b.level) || a.name.localeCompare(b.name) :
+    sort === 'uncollected' ? (needsCollect(b) - needsCollect(a)) || a.name.localeCompare(b.name) :
     (a.gifted - b.gifted) || a.name.localeCompare(b.name)));
 
   document.getElementById('list').innerHTML = vs.length ? vs.map(v => `
-    <div class="card ${v.gifted ? 'complete' : ''} ${v.fav ? 'isFav' : ''}" data-kind="villagers" data-id="${v.id}">
+    <div class="card ${villagerDone(v) ? 'complete' : ''} ${v.fav ? 'isFav' : ''}" data-kind="villagers" data-id="${v.id}">
       <div class="row">
         ${favButton(v)}
         <input class="name" data-f="name" value="${esc(v.name)}">
@@ -192,13 +201,21 @@ function render() {
       <textarea data-f="notes" placeholder="Notes, quests, reminders…">${esc(v.notes)}</textarea>
       <div class="fieldLabel">Today's gift (clears daily)</div>
       <input class="giftNote" data-f="giftNote" placeholder="What to give today…" value="${esc(v.giftNote)}">
-      <button class="toggle" data-act="gift">${v.gifted ? '🎁 Gifted today' : 'Give daily gift'}</button>
+      <div class="btnRow">
+        <button class="toggle ${v.gifted ? 'on' : ''}" data-act="gift">${v.gifted ? '🎁 Gifted' : 'Gifted'}</button>
+        ${canCollect(v)
+          ? `<button class="toggle ${v.collected ? 'on' : ''}" data-act="collect">${v.collected ? '✅ Collected' : 'Collected'}</button>`
+          : `<button class="toggle" disabled title="Unlocks at level 7">Collected</button>`}
+      </div>
     </div>`).join('') : '<p class="empty">No villagers yet.</p>';
 
   const gifted = state.villagers.filter(v => v.gifted).length;
+  const collectable = state.villagers.filter(canCollect);
+  const collected = collectable.filter(v => v.collected).length;
   const done = state.activities.filter(a => a.done).length;
+  const nv = state.villagers.length;
   document.getElementById('progress').textContent =
-    `${done} of ${state.activities.length} activities done · ${gifted} of ${state.villagers.length} gifted today`;
+    `${done} of ${state.activities.length} activities done · ${gifted} of ${nv} gifted · ${collected} of ${collectable.length} collected`;
   document.getElementById('lastReset').textContent =
     state.lastReset ? `Last reset: ${new Date(state.lastReset).toLocaleString()}` : '';
 }
@@ -228,6 +245,7 @@ const find = el => {
     const item = find(btn);
     const kind = btn.closest('.card').dataset.kind;
     if (act === 'gift') item.gifted = !item.gifted;
+    if (act === 'collect') item.collected = !item.collected;
     if (act === 'done') item.done = !item.done;
     if (act === 'fav') item.fav = !item.fav;
     if (act === 'del') {
@@ -253,7 +271,7 @@ document.getElementById('addForm').addEventListener('submit', e => {
   const input = document.getElementById('newName');
   const name = input.value.trim(); if (!name) return;
   state.villagers.push({
-    id: newId(), name, level: 1, specialty: 'None', notes: '', giftNote: '', gifted: false, fav: false
+    id: newId(), name, level: 1, specialty: 'None', notes: '', giftNote: '', gifted: false, collected: false, fav: false
   });
   input.value = ''; save(); render();
 });
@@ -271,7 +289,7 @@ rt.addEventListener('change', () => {
   save(); render();
 });
 document.getElementById('resetNow').onclick = () => {
-  if (confirm("Clear all gift checkmarks, today's gift boxes, and activity checkmarks?")) checkReset(true);
+  if (confirm("Clear all gifted and collected checkmarks, today's gift boxes, and activity checkmarks?")) checkReset(true);
 };
 document.getElementById('sort').onchange = render;
 
