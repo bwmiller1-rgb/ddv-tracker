@@ -153,7 +153,10 @@ const byFav = (a, b) => (!!b.fav - !!a.fav);
 // "Collected" only applies to villagers at level 7 or higher
 const canCollect = v => v.level >= 7;
 const needsCollect = v => canCollect(v) && !v.collected;
-const villagerDone = v => v.gifted && (v.collected || !canCollect(v));
+// Level 0 villagers can't be gifted yet
+const canGift = v => v.level > 0;
+const needsGift = v => canGift(v) && !v.gifted;
+const villagerDone = v => canGift(v) && v.gifted && (v.collected || !canCollect(v));
 const TRASH = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6M10 11v6M14 11v6"/></svg>';
 const favButton = item =>
   `<button class="fav" data-act="fav" aria-label="${item.fav ? 'Unfavorite' : 'Favorite'}">${item.fav ? '★' : '☆'}</button>`;
@@ -180,7 +183,7 @@ function render() {
     sort === 'level' ? (b.level - a.level) || a.name.localeCompare(b.name) :
     sort === 'levelUp' ? (a.level - b.level) || a.name.localeCompare(b.name) :
     sort === 'uncollected' ? (needsCollect(b) - needsCollect(a)) || a.name.localeCompare(b.name) :
-    (a.gifted - b.gifted) || a.name.localeCompare(b.name)));
+    (needsGift(b) - needsGift(a)) || a.name.localeCompare(b.name)));
 
   document.getElementById('list').innerHTML = vs.length ? vs.map(v => `
     <div class="card ${villagerDone(v) ? 'complete' : ''} ${v.fav ? 'isFav' : ''}" data-kind="villagers" data-id="${v.id}">
@@ -202,7 +205,9 @@ function render() {
       <div class="fieldLabel">Today's gift (clears daily)</div>
       <input class="giftNote" data-f="giftNote" placeholder="What to give today…" value="${esc(v.giftNote)}">
       <div class="btnRow">
-        <button class="toggle ${v.gifted ? 'on' : ''}" data-act="gift">${v.gifted ? '🎁 Gifted' : 'Gifted'}</button>
+        ${canGift(v)
+          ? `<button class="toggle ${v.gifted ? 'on' : ''}" data-act="gift">${v.gifted ? '🎁 Gifted' : 'Gifted'}</button>`
+          : `<button class="toggle" disabled title="Not available at level 0">Gifted</button>`}
         ${canCollect(v)
           ? `<button class="toggle ${v.collected ? 'on' : ''}" data-act="collect">${v.collected ? '✅ Collected' : 'Collected'}</button>`
           : `<button class="toggle" disabled title="Unlocks at level 7">Collected</button>`}
@@ -210,7 +215,7 @@ function render() {
     </div>`).join('') : '<p class="empty">No villagers yet.</p>';
 
   // Level 0 villagers aren't counted toward daily completion
-  const counted = state.villagers.filter(v => v.level > 0);
+  const counted = state.villagers.filter(canGift);
   const gifted = counted.filter(v => v.gifted).length;
   const collectable = state.villagers.filter(canCollect);
   const collected = collectable.filter(v => v.collected).length;
