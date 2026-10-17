@@ -33,6 +33,8 @@
 body{margin:0;font-family:-apple-system,system-ui,sans-serif;background:var(--bg);color:var(--text);padding:calc(env(safe-area-inset-top) + 8px) 16px 40px}
 header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:12px 0}
 h1{margin:0;font-size:1.6rem;color:var(--accent)}
+.titleRow{display:flex;align-items:center;gap:10px}
+.refresh{padding:6px 12px;font-size:.95rem;font-weight:600;background:transparent;color:var(--accent);border:1px solid var(--accent);border-radius:999px;flex:none}
 h2{margin:22px 0 4px;font-size:1.25rem;color:var(--accent)}
 .progress{color:var(--muted)}
 .sortBox{display:flex;flex-direction:column;gap:6px}
@@ -95,7 +97,7 @@ details .row{flex-wrap:wrap;margin-top:10px}
 </head>
 <body>
 <header>
-  <div><h1>Felina's Valley Tracker</h1><div class="progress" id="progress"></div></div>
+  <div><div class="titleRow"><h1>Felina's Valley Tracker</h1><button id="refreshBtn" class="refresh" aria-label="Refresh">⟳ Refresh</button></div><div class="progress" id="progress"></div></div>
   <div class="sortBox">
   <select id="sort" aria-label="Sort villagers">
     <option value="name" selected>A–Z</option>
@@ -450,6 +452,8 @@ document.getElementById('resetNow').onclick = () => {
   if (confirm("Clear all villager and horse checkmarks, today's gift boxes, activity checkmarks, checklists and counters?")) checkReset(true);
 };
 document.getElementById('sort').onchange = render;
+// Home-screen apps have no browser reload button; this reloads and skips the cached copy so updates show up
+document.getElementById('refreshBtn').onclick = () => { save(); location.replace(location.pathname + '?r=' + Date.now()); };
 const completedLast = document.getElementById('completedLast');
 completedLast.checked = state.completedLast;
 completedLast.onchange = () => { state.completedLast = completedLast.checked; save(); render(); };
