@@ -74,6 +74,7 @@ textarea{width:100%;min-height:60px;resize:vertical}
 .empty{color:var(--muted);margin:0 0 8px}
 details{margin-top:28px;color:var(--muted)}
 details .row{flex-wrap:wrap;margin-top:10px}
+.hint{margin:6px 0 0;font-size:.9rem}
 .del,.fav{background:transparent;border:none;padding:4px 6px;font-size:1.3rem;line-height:1}
 .del{color:var(--cardMuted);display:flex}
 .del svg{width:20px;height:20px;pointer-events:none}
@@ -146,8 +147,14 @@ details .row{flex-wrap:wrap;margin-top:10px}
     <button id="resetNow">Reset daily items now</button>
   </div>
   <div class="row">
-    <button id="exportBtn">Copy backup</button>
-    <button id="importBtn">Restore from backup</button>
+    <button id="saveFileBtn">💾 Save backup file</button>
+    <button id="loadFileBtn">📂 Load backup file</button>
+    <input type="file" id="loadFileInput" accept=".json,application/json,text/plain" hidden>
+  </div>
+  <p class="hint">Save to Files → iCloud Drive, then load that file on your other device.</p>
+  <div class="row">
+    <button id="exportBtn">Copy backup text</button>
+    <button id="importBtn">Paste backup text</button>
   </div>
   <p id="lastReset"></p>
 </details>
@@ -465,15 +472,43 @@ document.getElementById('exportBtn').onclick = async () => {
   try { await navigator.clipboard.writeText(JSON.stringify(state)); alert('Backup copied! Paste it into a note to keep it safe.'); }
   catch { prompt('Copy this backup text:', JSON.stringify(state)); }
 };
-document.getElementById('importBtn').onclick = () => {
-  const text = prompt('Paste your backup text:'); if (!text) return;
+// Replaces everything on this device with a backup (pasted text or a loaded file)
+function restoreBackup(text) {
   try {
     const data = JSON.parse(text);
     if (!Array.isArray(data.villagers)) throw 0;
+    const when = data.savedAt ? ` from ${new Date(data.savedAt).toLocaleString()}` : '';
+    if (!confirm(`Replace everything on this device with the backup${when}?`)) return;
+    delete data.savedAt;
     state = data; upgrade(); save();
-    rt.value = state.resetTime; themeSel.value = state.theme; completedLast.checked = state.completedLast; applyTheme(); render();
+    rt.value = state.resetTime; themeSel.value = state.theme; completedLast.checked = state.completedLast; applyTheme();
+    checkReset(); render();
     alert('Restored!');
   } catch { alert("That doesn't look like a valid backup."); }
+}
+document.getElementById('importBtn').onclick = () => {
+  const text = prompt('Paste your backup text:'); if (text) restoreBackup(text);
+};
+
+// Backup file: the share sheet lets you "Save to Files" (e.g. iCloud Drive); other browsers just download it
+const BACKUP_FILE = 'valley-tracker-backup.json';
+document.getElementById('saveFileBtn').onclick = async () => {
+  const json = JSON.stringify({ ...state, savedAt: Date.now() });
+  const file = new File([json], BACKUP_FILE, { type: 'application/json' });
+  if (navigator.canShare && navigator.canShare({ files: [file] })) {
+    try { await navigator.share({ files: [file] }); return; }
+    catch (err) { if (err.name === 'AbortError') return; }
+  }
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(file); a.download = BACKUP_FILE;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+};
+const loadInput = document.getElementById('loadFileInput');
+document.getElementById('loadFileBtn').onclick = () => loadInput.click();
+loadInput.onchange = async () => {
+  const f = loadInput.files[0]; loadInput.value = '';
+  if (f) restoreBackup(await f.text());
 };
 
 // Reset checks: on open, when returning to the app, and every minute
