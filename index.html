@@ -83,8 +83,8 @@ details .row{flex-wrap:wrap;margin-top:10px}
 .isFav .fav{color:var(--fav)}
 .checklist{display:flex;flex-direction:column;gap:6px}
 .item{display:flex;gap:8px;align-items:center}
-.item input{flex:1;min-width:0}
-.item.on input{text-decoration:line-through;color:var(--cardMuted)}
+.item textarea{flex:1;min-width:0;min-height:0;resize:none;overflow:hidden;line-height:1.35}
+.item.on textarea{text-decoration:line-through;color:var(--cardMuted)}
 .check{width:42px;height:42px;padding:0;font-size:1.2rem;flex:none}
 .check.on{background:var(--done);color:#fff;border:none}
 .counter{display:flex;align-items:center;gap:10px}
@@ -225,7 +225,7 @@ const checklistHtml = a => {
   const items = (a.items || []).map(i => `
         <div class="item ${i.done ? 'on' : ''}" data-item="${i.id}">
           <button class="check ${i.done ? 'on' : ''}" data-act="toggleItem" aria-label="${i.done ? 'Uncheck' : 'Check'}">${i.done ? '✓' : ''}</button>
-          <input data-f="itemText" value="${esc(i.text)}" placeholder="Item">
+          <textarea data-f="itemText" rows="1" placeholder="Item">${esc(i.text)}</textarea>
           <button class="mini" data-act="delItem" aria-label="Remove item">✕</button>
         </div>`).join('');
   const count = a.count || 0;
@@ -245,6 +245,13 @@ const checklistHtml = a => {
 };
 const favButton = item =>
   `<button class="fav" data-act="fav" aria-label="${item.fav ? 'Unfavorite' : 'Favorite'}">${item.fav ? '★' : '☆'}</button>`;
+
+// Checklist item boxes grow to fit their text
+function autoGrow(el) {
+  el.style.height = 'auto';
+  el.style.height = el.scrollHeight + (el.offsetHeight - el.clientHeight) + 'px';
+}
+window.addEventListener('resize', () => document.querySelectorAll('.item textarea').forEach(autoGrow));
 
 function render() {
   const as = [...state.activities].sort((a, b) =>
@@ -347,6 +354,7 @@ function render() {
     part(gifted, counted.length, 'gifted'),
     part(collected, collectable.length, 'collected'),
   ].join(' · ');
+  document.querySelectorAll('.item textarea').forEach(autoGrow);
   document.getElementById('lastReset').textContent =
     state.lastReset ? `Last reset: ${new Date(state.lastReset).toLocaleString()}` : '';
 }
@@ -363,7 +371,7 @@ const find = el => {
   grid.addEventListener('input', e => {
     const f = e.target.dataset.f;
     if (f === 'notes' || f === 'name' || f === 'giftNote') { find(e.target)[f] = e.target.value; save(); }
-    if (f === 'itemText') { findItem(e.target).text = e.target.value; save(); }
+    if (f === 'itemText') { findItem(e.target).text = e.target.value; autoGrow(e.target); save(); }
   });
   grid.addEventListener('change', e => {
     const f = e.target.dataset.f;
