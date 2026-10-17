@@ -155,12 +155,15 @@ details .row{flex-wrap:wrap;margin-top:10px}
 <script>
 const KEY = 'ddvTracker';
 const SPECIALTIES = ['None','Digging','Fishing','Foraging','Gardening','Mining','Timebending','Snippet Hunting'];
+const HORSE_SPECIALTIES = ['Water Crops','Digging','Remove Night Thorns','Harvesting','Mining'];
 let state = JSON.parse(localStorage.getItem(KEY) || 'null') ||
             { villagers: [], resetTime: '05:00', lastReset: 0 };
 // Fill in fields added after the first version so older saves keep working
 function upgrade() {
   state.activities = state.activities || [];
   state.horses = state.horses || [];
+  // Drop any horse specialties that aren't on the horse list (from before it had its own list)
+  state.horses.forEach(h => { h.specialties = (h.specialties || []).filter(s => HORSE_SPECIALTIES.includes(s)); });
   state.theme = state.theme || 'purple';
   state.completedLast = !!state.completedLast;
 }
@@ -192,9 +195,8 @@ function checkReset(force) {
 
 // Favorites always sort to the top, then the chosen order
 const byFav = (a, b) => (!!b.fav - !!a.fav);
-// Horses: five daily care tasks (stored as fields on each horse) and up to five specialties
+// Horses: five daily care tasks (stored as fields on each horse) and their own specialty list
 const HORSE_TASKS = [['pet', 'Pet', '🤚'], ['brush', 'Brush', '🪮'], ['feed', 'Feed', '🥕'], ['ride', 'Ride', '🏇'], ['gifted', 'Gift', '🎁']];
-const MAX_HORSE_SPECIALTIES = 5;
 const horseDone = h => h.level > 0 && HORSE_TASKS.every(([k]) => h[k]);
 const levelSelect = x => `<label>Level <select data-f="level">${
   Array.from({length:11}, (_, i) => `<option ${x.level == i ? 'selected' : ''}>${i}</option>`).join('')
@@ -269,10 +271,10 @@ function render() {
         ${levelSelect(h)}
         <label class="sparkle"><input type="checkbox" data-f="sparkles" ${h.sparkles ? 'checked' : ''}> ✨ Sparkles</label>
       </div>
-      <div class="fieldLabel">Specialties (up to ${MAX_HORSE_SPECIALTIES})</div>
-      <div class="chips">${SPECIALTIES.filter(s => s !== 'None').map(s => {
+      <div class="fieldLabel">Specialties</div>
+      <div class="chips">${HORSE_SPECIALTIES.map(s => {
         const on = specs.includes(s);
-        return `<button class="chip ${on ? 'on' : ''}" data-act="spec" data-spec="${esc(s)}" ${!on && specs.length >= MAX_HORSE_SPECIALTIES ? 'disabled' : ''}>${esc(s)}</button>`;
+        return `<button class="chip ${on ? 'on' : ''}" data-act="spec" data-spec="${esc(s)}">${esc(s)}</button>`;
       }).join('')}</div>
       <div class="fieldLabel">Notes</div>
       <textarea data-f="notes" placeholder="Notes, reminders…">${esc(h.notes)}</textarea>
@@ -376,7 +378,7 @@ const find = el => {
       const specs = item.specialties = item.specialties || [];
       const s = btn.dataset.spec;
       if (specs.includes(s)) item.specialties = specs.filter(x => x !== s);
-      else if (specs.length < MAX_HORSE_SPECIALTIES) specs.push(s);
+      else specs.push(s);
     }
     if (act === 'done') item.done = !item.done;
     if (act === 'addItem') {
