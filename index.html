@@ -74,7 +74,8 @@ textarea{width:100%;min-height:60px;resize:vertical}
 .empty{color:var(--muted);margin:0 0 8px}
 details{margin-top:28px;color:var(--muted)}
 details .row{flex-wrap:wrap;margin-top:10px}
-.hint{margin:6px 0 0;font-size:.9rem}
+.backupRow{display:flex;gap:8px}
+.backupRow button{padding:6px 12px;font-size:.9rem;font-weight:600}
 .del,.fav{background:transparent;border:none;padding:4px 6px;font-size:1.3rem;line-height:1}
 .del{color:var(--cardMuted);display:flex}
 .del svg{width:20px;height:20px;pointer-events:none}
@@ -109,6 +110,11 @@ details .row{flex-wrap:wrap;margin-top:10px}
     <option value="levelUp">Level: low to high</option>
   </select>
   <label><input type="checkbox" id="completedLast"> Move completed to bottom</label>
+  <div class="backupRow">
+    <button id="saveFileBtn" title="Save to Files → iCloud Drive">💾 Backup</button>
+    <button id="loadFileBtn" title="Load a backup file">📂 Restore</button>
+    <input type="file" id="loadFileInput" accept=".json,application/json,text/plain" hidden>
+  </div>
   </div>
 </header>
 
@@ -146,12 +152,6 @@ details .row{flex-wrap:wrap;margin-top:10px}
     <label>Daily reset at <input type="time" id="resetTime"></label>
     <button id="resetNow">Reset daily items now</button>
   </div>
-  <div class="row">
-    <button id="saveFileBtn">💾 Save backup file</button>
-    <button id="loadFileBtn">📂 Load backup file</button>
-    <input type="file" id="loadFileInput" accept=".json,application/json,text/plain" hidden>
-  </div>
-  <p class="hint">Save to Files → iCloud Drive, then load that file on your other device.</p>
   <div class="row">
     <button id="exportBtn">Copy backup text</button>
     <button id="importBtn">Paste backup text</button>
