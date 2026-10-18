@@ -107,6 +107,11 @@ details .row{flex-wrap:wrap;margin-top:10px}
 .section.closed{display:none}
 .filterRow{display:flex;align-items:center;gap:8px;color:var(--muted);margin:4px 0 8px}
 .filterRow select{padding:6px 10px}
+.filterBar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:4px 0 8px}
+.filterBar .filterRow{margin:0}
+.findBox{display:flex;align-items:center;gap:6px;color:var(--muted)}
+.findBox input{width:180px;padding:6px 10px}
+.clearBtn{padding:6px 10px;font-size:.9rem;font-weight:600}
 /* Dreamsnap heart + hover labels for the star and heart */
 .heart{background:transparent;border:none;padding:4px 6px;font-size:1.3rem;line-height:1;color:#9b94b5}
 .heart.on{color:#e0457b}
@@ -178,7 +183,12 @@ details .row{flex-wrap:wrap;margin-top:10px}
   <input id="newName" placeholder="Add a villager (e.g. Goofy)" autocomplete="off">
   <button class="primary">Add</button>
 </form>
-<label class="filterRow">Show <select id="specFilter"></select></label>
+<div class="filterBar">
+  <label class="findBox">Find <input id="findVillager" list="villagerNames" placeholder="Villager name" autocomplete="off"></label>
+  <datalist id="villagerNames"></datalist>
+  <label class="filterRow">Show <select id="specFilter"></select></label>
+  <button id="clearFilters" class="clearBtn" title="Show all villagers">✕ Clear</button>
+</div>
 <div class="grid" id="list"></div>
 </div>
 
@@ -367,8 +377,13 @@ function render() {
   }).join('') : '<p class="empty">No horses yet.</p>';
 
   const sort = document.getElementById('sort').value;
-  const shown = state.specFilter === 'all' ? state.villagers
-    : state.villagers.filter(v => (v.specialty || 'None') === state.specFilter);
+  // Find box (partial, case-insensitive name match) and specialty filter
+  const findText = findBox.value.trim().toLowerCase();
+  const shown = state.villagers.filter(v =>
+    (state.specFilter === 'all' || (v.specialty || 'None') === state.specFilter) &&
+    (!findText || v.name.toLowerCase().includes(findText)));
+  document.getElementById('villagerNames').innerHTML = [...state.villagers].map(v => v.name)
+    .sort((a, b) => a.localeCompare(b)).map(n => `<option value="${esc(n)}">`).join('');
   const vs = [...shown].sort((a, b) => lastIfDone(villagerDone(a), villagerDone(b)) || byFav(a, b) || (
     sort === 'default' ? defaultVillagerSort(a, b) :
     sort === 'name'  ? a.name.localeCompare(b.name) :
@@ -403,7 +418,7 @@ function render() {
           ? `<button class="toggle ${v.collected ? 'on' : ''}" data-act="collect">${v.collected ? '✅ Collected' : 'Collected'}</button>`
           : `<button class="toggle" disabled title="Unlocks at level 7">Collected</button>`}
       </div>
-    </div>`).join('') : `<p class="empty">${state.villagers.length ? 'No villagers with that specialty.' : 'No villagers yet.'}</p>`;
+    </div>`).join('') : `<p class="empty">${state.villagers.length ? 'No villagers match the filter.' : 'No villagers yet.'}</p>`;
 
   // Level 0 villagers aren't counted toward daily completion
   const counted = state.villagers.filter(canGift);
@@ -548,6 +563,11 @@ document.getElementById('sort').onchange = render;
 const dlcSel = document.getElementById('dlc');
 const notesBox = document.getElementById('generalNotes');
 const specFilter = document.getElementById('specFilter');
+const findBox = document.getElementById('findVillager');
+findBox.oninput = render;
+document.getElementById('clearFilters').onclick = () => {
+  findBox.value = ''; state.specFilter = 'all'; specFilter.value = 'all'; save(); render();
+};
 specFilter.innerHTML = '<option value="all">All specialties</option>' +
   SPECIALTIES.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join('');
 function syncTopControls() {
