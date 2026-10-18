@@ -49,6 +49,9 @@ button{cursor:pointer;background:var(--btn)}
 .card.complete{border-color:var(--done);background:var(--doneBg)}
 .card.isFav{border-color:var(--fav)}
 .card.complete.isFav{border-color:var(--done)}
+/* Villager partial progress: orange = gifted only, brown = collected only */
+.card.giftOnly{border-color:#e8892b;background:#ffe6cc}
+.card.collectOnly{border-color:#8b5a2b;background:#ecdccb}
 .row{display:flex;gap:8px;align-items:center}
 .name{font-size:1.2rem;font-weight:700;flex:1;min-width:0;border:none;background:transparent;padding:4px 0}
 .toggle{width:100%;padding:14px;font-size:1.05rem;font-weight:600}
@@ -306,7 +309,11 @@ const needsCollect = v => canCollect(v) && !v.collected;
 // Level 0 villagers can't be gifted yet
 const canGift = v => v.level > 0;
 const needsGift = v => canGift(v) && !v.gifted;
-const villagerDone = v => canGift(v) && v.gifted && (v.collected || !canCollect(v));
+// Level 10: done once collected (gifting doesn't change the color). Below 10: gifted (+ collected from level 7).
+const villagerDone = v => v.level === 10 ? !!v.collected : canGift(v) && v.gifted && (v.collected || !canCollect(v));
+const villagerColor = v => villagerDone(v) ? 'complete'
+  : v.level === 10 || !canCollect(v) ? ''
+  : v.gifted ? 'giftOnly' : v.collected ? 'collectOnly' : '';
 // Item list (items.json, built weekly from the wiki) for the lookup box and gift slots
 let ITEMS = [];
 const itemIndex = new Map();
@@ -443,7 +450,7 @@ function render() {
     (needsGift(b) - needsGift(a)) || a.name.localeCompare(b.name)));
 
   document.getElementById('list').innerHTML = vs.length ? vs.map(v => `
-    <div class="card ${villagerDone(v) ? 'complete' : ''} ${v.fav ? 'isFav' : ''}" data-kind="villagers" data-id="${v.id}">
+    <div class="card ${villagerColor(v)} ${v.fav ? 'isFav' : ''}" data-kind="villagers" data-id="${v.id}">
       <div class="row">
         ${favButton(v)}
         <input class="name" data-f="name" value="${esc(v.name)}">
