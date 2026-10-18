@@ -6,9 +6,14 @@
    "name": "Acorn Snail",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Honeyglow Woods"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -18,9 +23,14 @@
    "name": "Agave",
    "type": "Ingredient",
    "kind": "Sweets",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -31,10 +41,15 @@
    "name": "Alexandrite",
    "type": "Gem",
    "kind": "",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Wastes",
-    "The Oasis"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Wastes",
+      "The Oasis"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -45,9 +60,14 @@
    "name": "Almonds",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Eternity Isle",
-   "where": [
-    "Wild Tangle"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -58,9 +78,14 @@
    "name": "Amber",
    "type": "Foraging",
    "kind": "Crafting Material",
-   "realm": "Eternity Isle",
-   "where": [
-    "Wild Tangle"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -71,8 +96,15 @@
    "name": "Ambrosia",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Storybook Vale",
-   "where": [],
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Goofy's Stall (Upgrade 2)"
+     ]
+    ]
+   ],
    "from": [
     "Goofy's Stall (Upgrade 2)"
    ]
@@ -81,10 +113,15 @@
    "name": "Amethyst",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights",
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights",
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -95,9 +132,14 @@
    "name": "Anglerfish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -107,9 +149,14 @@
    "name": "Antique Clothes Iron",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -120,10 +167,15 @@
    "name": "Apple",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Plaza",
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza",
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -135,10 +187,15 @@
    "name": "Aquamarine",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach",
-    "Forest of Valor"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach",
+      "Forest of Valor"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -149,9 +206,14 @@
    "name": "Asparagus",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -162,9 +224,14 @@
    "name": "Balloon Fish",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -175,9 +242,14 @@
    "name": "Bamboo",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Eternity Isle",
-   "where": [
-    "Wild Tangle"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -188,11 +260,16 @@
    "name": "Banana",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow",
-    "Dazzle Beach",
-    "Moana Realm"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow",
+      "Dazzle Beach",
+      "Moana Realm"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -204,9 +281,14 @@
    "name": "Barley",
    "type": "Ingredient",
    "kind": "Grains",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -216,9 +298,14 @@
    "name": "Basil",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -228,15 +315,30 @@
    "name": "Bass",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow",
-    "Forest of Valor",
-    "Sunlit Plateau",
-    "Frosted Heights",
-    "Glittering Dunes",
-    "Wild Tangle",
-    "Honeyglow Woods"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow",
+      "Forest of Valor",
+      "Sunlit Plateau",
+      "Frosted Heights"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "Glittering Dunes",
+      "Wild Tangle"
+     ]
+    ],
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -246,9 +348,14 @@
    "name": "Beady Soil",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -259,9 +366,14 @@
    "name": "Beans",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -271,9 +383,14 @@
    "name": "Beetroot",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishblossom Mountains"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishblossom Mountains"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -283,9 +400,14 @@
    "name": "Beige Tale Cone Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -295,9 +417,14 @@
    "name": "Bell Pepper",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -308,10 +435,15 @@
    "name": "Black Glass-Like Flowers",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Plains",
-    "The Wastes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Plains",
+      "The Wastes"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -321,9 +453,14 @@
    "name": "Black Passion Lily",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -333,9 +470,14 @@
    "name": "Black Pepper",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -345,9 +487,14 @@
    "name": "Black Silk Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch (max 1)"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -357,10 +504,15 @@
    "name": "Blue Button",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow",
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow",
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Blue Button",
@@ -371,9 +523,14 @@
    "name": "Blue Falling Penstemon",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Plaza"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -383,10 +540,15 @@
    "name": "Blue Glass-Like Flowers",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Plains",
-    "The Wastes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Plains",
+      "The Wastes"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -396,9 +558,14 @@
    "name": "Blue Hydrangea",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -408,9 +575,14 @@
    "name": "Blue Lily of the Valley",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres (max 1)"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -420,10 +592,15 @@
    "name": "Blue Luminescent Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Overlook",
-    "The Ruins"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Overlook",
+      "The Ruins"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -433,9 +610,14 @@
    "name": "Blue Marsh Milkweed",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -446,9 +628,14 @@
    "type": "Ingredient",
    "kind": "Sweets",
    "realm": "",
-   "where": [
-    "Plaza",
-    "Peaceful Meadow"
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza",
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -459,9 +646,14 @@
    "name": "Blue Passion Lily",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -471,9 +663,14 @@
    "name": "Blue Star Lily",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -483,9 +680,14 @@
    "name": "Blue Tale Cone Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -495,9 +697,14 @@
    "name": "Blue Zircon",
    "type": "Gem",
    "kind": "",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Lagoon"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Lagoon"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -508,10 +715,15 @@
    "name": "Blueberry",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach",
-    "Forest of Valor"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach",
+      "Forest of Valor"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -523,9 +735,14 @@
    "name": "Bones",
    "type": "Foraging",
    "kind": "Crafting Material",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Digging",
@@ -536,9 +753,14 @@
    "name": "Bonsai Star Fruit",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -549,9 +771,14 @@
    "name": "Bream",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -561,9 +788,14 @@
    "name": "Brilliant Blue Starfish",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Oasis"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Oasis"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -573,9 +805,14 @@
    "name": "Broccoli",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -585,9 +822,14 @@
    "name": "Broken Weapon",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -598,9 +840,14 @@
    "name": "Brussels Sprout",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -611,9 +858,14 @@
    "name": "Bumblestone",
    "type": "Gem",
    "kind": "",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Borderlands"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Borderlands"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -624,8 +876,16 @@
    "name": "Butter",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Chez Remy",
+      "Tiana's Palace"
+     ]
+    ]
+   ],
    "from": [
     "Chez Remy",
     "Tiana's Palace"
@@ -635,9 +895,14 @@
    "name": "Button Mushroom",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -647,9 +912,14 @@
    "name": "Cabbage",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Eternity Isle",
-   "where": [
-    "Wild Tangle"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -659,9 +929,14 @@
    "name": "Cactoberries",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -672,10 +947,20 @@
    "name": "Canola",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor",
-    "Ancient's Landing"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -686,9 +971,14 @@
    "name": "Cape Gooseberry",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -698,10 +988,15 @@
    "name": "Carp",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor",
-    "Sunlit Plateau"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor",
+      "Sunlit Plateau"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -711,9 +1006,14 @@
    "name": "Carrot",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -724,9 +1024,14 @@
    "name": "Catfish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -736,9 +1041,14 @@
    "name": "Cauliflower",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -748,9 +1058,14 @@
    "name": "Celery",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Eternity Isle",
-   "where": [
-    "Ancient's Landing"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -760,8 +1075,16 @@
    "name": "Cheese",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Chez Remy",
+      "Tiana's Palace"
+     ]
+    ]
+   ],
    "from": [
     "Chez Remy",
     "Tiana's Palace"
@@ -771,10 +1094,15 @@
    "name": "Cherry",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau",
-    "Frosted Heights"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau",
+      "Frosted Heights"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -787,9 +1115,14 @@
    "name": "Chia Seeds",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -799,10 +1132,20 @@
    "name": "Chili Pepper",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau",
-    "Glittering Dunes"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -813,8 +1156,15 @@
    "name": "Chrysanthemum Tea Leaves",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Mulan's Tea Stall"
+     ]
+    ]
+   ],
    "from": [
     "Mulan's Tea Stall"
    ]
@@ -823,10 +1173,20 @@
    "name": "Cinnamon",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Eternity Isle",
-   "where": [
-    "Wild Tangle",
-    "The Bind"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ],
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -836,10 +1196,15 @@
    "name": "Citrine",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust",
-    "Sunlit Plateau"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust",
+      "Sunlit Plateau"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -850,9 +1215,14 @@
    "name": "Clam",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -862,12 +1232,22 @@
    "name": "Clay",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust",
-    "Sunlit Plateau",
-    "Forgotten Lands",
-    "Pixie Acres"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust",
+      "Sunlit Plateau",
+      "Forgotten Lands"
+     ]
+    ],
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres"
+     ]
+    ]
    ],
    "from": [
     "Kristoff's Stall",
@@ -879,10 +1259,15 @@
    "name": "Cocoa Bean",
    "type": "Ingredient",
    "kind": "Sweets",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust",
-    "Sunlit Plateau"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust",
+      "Sunlit Plateau"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -895,11 +1280,21 @@
    "name": "Coconut",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach",
-    "(After Burying the Eel)",
-    "Moana Realm"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach",
+      "Moana Realm"
+     ]
+    ],
+    [
+     "",
+     [
+      "(After Burying the Eel)"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -911,15 +1306,35 @@
    "name": "Cod",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach",
-    "Glade of Trust",
-    "Forgotten Lands",
-    "The Docks",
-    "The Overlook",
-    "Everafter",
-    "Glamour Gulch"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach",
+      "Glade of Trust",
+      "Forgotten Lands"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "The Docks",
+      "The Overlook"
+     ]
+    ],
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ],
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -929,9 +1344,14 @@
    "name": "Coffee Bean",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -942,9 +1362,14 @@
    "name": "Common Club Rush",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -955,11 +1380,16 @@
    "name": "Copper",
    "type": "Foraging",
    "kind": "Crafting Material",
-   "realm": "Eternity Isle",
-   "where": [
-    "Ancient's Landing",
-    "Glittering Dunes",
-    "Wild Tangle"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Ancient's Landing",
+      "Glittering Dunes",
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -971,9 +1401,14 @@
    "name": "Copter Seeds",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -984,10 +1419,20 @@
    "name": "Corn",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach",
-    "Glittering Dunes"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -998,9 +1443,14 @@
    "name": "Cosmic Figs",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Eternity Isle",
-   "where": [
-    "Ancient's Landing"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -1010,9 +1460,14 @@
    "name": "Cotton",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -1022,10 +1477,20 @@
    "name": "Crab",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights",
-    "Wishing Alps"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights"
+     ]
+    ],
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1035,10 +1500,15 @@
    "name": "Crimson Eternal Poppies",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Elysian Fields",
-    "Mount Olympus"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Elysian Fields",
+      "Mount Olympus"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1048,9 +1518,14 @@
    "name": "Crystal",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Mining",
@@ -1061,9 +1536,14 @@
    "name": "Cucumber",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -1074,9 +1554,14 @@
    "name": "Cumin",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Eternity Isle",
-   "where": [
-    "Ancient's Landing"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -1087,9 +1572,14 @@
    "name": "Dandelion",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Plaza"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1099,9 +1589,14 @@
    "name": "Dark Chocolate Coffee Beans",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishblossom Mountains"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishblossom Mountains"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -1111,9 +1606,14 @@
    "name": "Dark Wood",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1123,9 +1623,14 @@
    "name": "Dates",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -1136,9 +1641,14 @@
    "name": "Diamond",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -1149,9 +1659,14 @@
    "name": "Dill",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishing Alps"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1161,8 +1676,19 @@
    "name": "Dream Shard",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Digging Sparkling Holes",
+      "Feeding Critters",
+      "Removing Night Thorns",
+      "Splinters of Fate",
+      "And Inkies"
+     ]
+    ]
+   ],
    "from": [
     "Digging Sparkling Holes",
     "Feeding Critters",
@@ -1175,9 +1701,14 @@
    "name": "Dreamango",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Eternity Isle",
-   "where": [
-    "Wild Tangle"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -1188,12 +1719,17 @@
    "name": "Dreamlight Fruit",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau",
-    "Glade of Trust",
-    "Frosted Heights",
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau",
+      "Glade of Trust",
+      "Frosted Heights",
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -1204,9 +1740,14 @@
    "name": "Driftwood",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Honeyglow Woods"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1216,12 +1757,22 @@
    "name": "Dry Wood",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau",
-    "Frosted Heights",
-    "Forgotten Lands",
-    "Wishing Alps"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau",
+      "Frosted Heights",
+      "Forgotten Lands"
+     ]
+    ],
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Kristoff's Stall",
@@ -1232,9 +1783,14 @@
    "name": "Dunebopper",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Oasis"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Oasis"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1244,10 +1800,15 @@
    "name": "Dusty Violet Rose",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Wild Woods",
-    "The Beanstalk Marshes"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Wild Woods",
+      "The Beanstalk Marshes"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1257,8 +1818,16 @@
    "name": "Egg",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Chez Remy",
+      "Tiana's Palace"
+     ]
+    ]
+   ],
    "from": [
     "Chez Remy",
     "Tiana's Palace"
@@ -1269,19 +1838,32 @@
    "type": "Ingredient",
    "kind": "Dairy and Oil",
    "realm": "",
-   "where": [],
+   "areas": [
+    [
+     "",
+     [
+      "Eggstravaganza",
+      "Harvested from Egg Bushes"
+     ]
+    ]
+   ],
    "from": [
     "Eggstravaganza",
-    ":* Harvested from Egg Bushes"
+    "Harvested from Egg Bushes"
    ]
   },
   {
    "name": "Eggplant",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -1292,10 +1874,15 @@
    "name": "Electric Eel",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Grasslands",
-    "The Promenade"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Grasslands",
+      "The Promenade"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1305,8 +1892,15 @@
    "name": "Elysian Grain",
    "type": "Ingredient",
    "kind": "Grains",
-   "realm": "Storybook Vale",
-   "where": [],
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Goofy's Stall (Upgrade 1)"
+     ]
+    ]
+   ],
    "from": [
     "Goofy's Stall (Upgrade 1)"
    ]
@@ -1315,10 +1909,15 @@
    "name": "Emerald",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor",
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor",
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -1329,9 +1928,14 @@
    "name": "Evergem",
    "type": "Gem",
    "kind": "",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Ruins"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Ruins"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -1342,9 +1946,14 @@
    "name": "Faerie Rye",
    "type": "Ingredient",
    "kind": "Grains",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -1354,9 +1963,14 @@
    "name": "Fairy Bubbles",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -1368,9 +1982,14 @@
    "name": "Fairy Kamut",
    "type": "Ingredient",
    "kind": "Grains",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishblossom Mountains"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishblossom Mountains"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -1380,9 +1999,14 @@
    "name": "Fairy Sprinkles",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1392,9 +2016,14 @@
    "name": "Festive Anglerfish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1404,9 +2033,14 @@
    "name": "Festive Bass",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1416,8 +2050,15 @@
    "name": "Festive Cocoa Bean",
    "type": "Ingredient",
    "kind": "Sweets",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Festive Token"
+     ]
+    ]
+   ],
    "from": [
     "Festive Token"
    ]
@@ -1426,9 +2067,14 @@
    "name": "Festive Fugu",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1438,9 +2084,14 @@
    "name": "Festive Salmon",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1450,9 +2101,14 @@
    "name": "Festive Squid",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1462,9 +2118,14 @@
    "name": "Festive Wrapping Paper",
    "type": "Foraging",
    "kind": "Crafting Material",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Foraging near Scrooge's Store"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Foraging near Scrooge's Store"
+     ]
+    ]
    ],
    "from": [
     "Festive Token"
@@ -1474,8 +2135,16 @@
    "name": "Fishy Green Egg",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Eggstravaganza",
+      "Menu_Icon_Fishing on Dazzle Beach"
+     ]
+    ]
+   ],
    "from": [
     "Eggstravaganza",
     "Menu_Icon_Fishing on Dazzle Beach"
@@ -1485,10 +2154,15 @@
    "name": "Flower Button",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Plaza",
-    "Peaceful Meadow"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza",
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Blue Button"
@@ -1498,9 +2172,14 @@
    "name": "Flute Root",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -1510,9 +2189,14 @@
    "name": "Flying Fish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1522,8 +2206,15 @@
    "name": "Flyleaf Feta",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Storybook Vale",
-   "where": [],
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Goofy's Stall (Upgrade 2)"
+     ]
+    ]
+   ],
    "from": [
     "Goofy's Stall (Upgrade 2)"
    ]
@@ -1532,10 +2223,15 @@
    "name": "Fuchsia Eternal Poppies",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Fiery Plains",
-    "Mount Olympus"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Fiery Plains",
+      "Mount Olympus"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1545,9 +2241,14 @@
    "name": "Fugu",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1557,15 +2258,35 @@
    "name": "Garlic",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor",
-    "Frozen Realm",
-    "The Grove",
-    "The Lagoon",
-    "Everafter",
-    "Drowsybloom Acre",
-    "Gloommeadow"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor",
+      "Frozen Realm"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "The Grove",
+      "The Lagoon"
+     ]
+    ],
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ],
+    [
+     "Honeyglow",
+     [
+      "Drowsybloom Acre",
+      "Gloommeadow"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -1576,12 +2297,22 @@
    "name": "Garnet",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Plaza",
-    "Peaceful Meadow",
-    "The Plains",
-    "The Wastes"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza",
+      "Peaceful Meadow"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "The Plains",
+      "The Wastes"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -1592,9 +2323,14 @@
    "name": "Giant Acorns",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -1605,9 +2341,14 @@
    "name": "Ginger",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1617,8 +2358,15 @@
    "name": "Golden Apple",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Storybook Vale",
-   "where": [],
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Goofy's Stall (Upgrade 2)"
+     ]
+    ]
+   ],
    "from": [
     "Goofy's Stall (Upgrade 2)"
    ]
@@ -1627,9 +2375,14 @@
    "name": "Golden Pattypan",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Honeyglow WoodsCategory:Ingredients from the Honeyglow Woods"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -1639,10 +2392,15 @@
    "name": "Goldenrod Eternal Poppies",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Fiery Plains",
-    "The Statue's Shadow"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Fiery Plains",
+      "The Statue's Shadow"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1652,9 +2410,14 @@
    "name": "Goose Feathers",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -1665,10 +2428,15 @@
    "name": "Gooseberry",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights",
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights",
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -1679,9 +2447,14 @@
    "name": "Grapes",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Eternity Isle",
-   "where": [
-    "Ancient's Landing"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -1691,9 +2464,14 @@
    "name": "Grassy Ore",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -1704,9 +2482,14 @@
    "name": "Gravel",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -1717,9 +2500,14 @@
    "name": "Green Beans",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -1729,9 +2517,14 @@
    "name": "Green Button",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Event Quests"
+   "realm": "Main",
+   "areas": [
+    [
+     "",
+     [
+      "Event Quests"
+     ]
+    ]
    ],
    "from": [
     "Blue Button"
@@ -1741,10 +2534,15 @@
    "name": "Green Fly Trap",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Grasslands",
-    "The Promenade"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Grasslands",
+      "The Promenade"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1754,10 +2552,15 @@
    "name": "Green Glass-Like Flowers",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Plains",
-    "The Wastes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Plains",
+      "The Wastes"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1767,10 +2570,15 @@
    "name": "Green Luminescent Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Overlook",
-    "The Ruins"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Overlook",
+      "The Ruins"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1780,9 +2588,14 @@
    "name": "Green Passion Lily",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1792,9 +2605,14 @@
    "name": "Green Rising Penstemon",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1804,9 +2622,14 @@
    "name": "Green Silk Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch (max 1)"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -1816,13 +2639,23 @@
    "name": "Hardwood",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor",
-    "Glade of Trust",
-    "Sunlit Plateau",
-    "Frosted Heights",
-    "Pixie Acres"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor",
+      "Glade of Trust",
+      "Sunlit Plateau",
+      "Frosted Heights"
+     ]
+    ],
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres"
+     ]
+    ]
    ],
    "from": [
     "Kristoff's Stall",
@@ -1834,11 +2667,21 @@
    "name": "Here and There Fish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dreamlight Valley biomes",
-    "(6am-10am or 6pm-10pm)",
-    "After Here and There and Back Again"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dreamlight Valley biomes"
+     ]
+    ],
+    [
+     "",
+     [
+      "(6am-10am or 6pm-10pm)",
+      "After Here and There and Back Again"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1848,10 +2691,15 @@
    "name": "Herring",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach",
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach",
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1861,9 +2709,14 @@
    "name": "Hippocampus",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1873,9 +2726,14 @@
    "name": "Honey Agate",
    "type": "Gem",
    "kind": "",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Honeyglow Woods"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -1886,9 +2744,14 @@
    "name": "Honey Coral",
    "type": "Ingredient",
    "kind": "Sweets",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1898,9 +2761,14 @@
    "name": "Honeycomb Stone",
    "type": "Gem",
    "kind": "",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres"
+     ]
+    ]
    ],
    "from": [
     "Mining"
@@ -1910,9 +2778,14 @@
    "name": "Honeydew Melon",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -1922,16 +2795,26 @@
    "name": "Iron Ore",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor",
-    "Glade of Trust",
-    "Sunlit Plateau",
-    "Frosted Heights",
-    "Forgotten Lands",
-    "Vitalys Mine",
-    "The Bind",
-    "Everafter"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor",
+      "Glade of Trust",
+      "Sunlit Plateau",
+      "Frosted Heights",
+      "Forgotten Lands",
+      "Vitalys Mine"
+     ]
+    ],
+    [
+     "Storybook",
+     [
+      "The Bind",
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Mining"
@@ -1941,10 +2824,15 @@
    "name": "Jade",
    "type": "Gem",
    "kind": "",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Courtyard",
-    "The Overlook"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Courtyard",
+      "The Overlook"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -1955,8 +2843,15 @@
    "name": "Jasmine Tea Leaves",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Mulan's Tea Stall"
+     ]
+    ]
+   ],
    "from": [
     "Mulan's Tea Stall"
    ]
@@ -1965,9 +2860,14 @@
    "name": "Jasper",
    "type": "Gem",
    "kind": "",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch"
+     ]
+    ]
    ],
    "from": [
     "Mining"
@@ -1977,9 +2877,14 @@
    "name": "Jellied Fish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -1989,10 +2894,15 @@
    "name": "Juniper Berry",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Gloommeadow",
-    "Braveheart Grove"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Gloommeadow",
+      "Braveheart Grove"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -2003,9 +2913,14 @@
    "name": "Kingfish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -2015,9 +2930,14 @@
    "name": "Koi",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -2027,9 +2947,14 @@
    "name": "Lamprey",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -2039,9 +2964,14 @@
    "name": "Lancetfish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -2051,9 +2981,14 @@
    "name": "Leek",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -2064,10 +2999,15 @@
    "name": "Lemon",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor",
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor",
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -2079,9 +3019,14 @@
    "name": "Lettuce",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -2092,9 +3037,14 @@
    "name": "Lightning Spice",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -2105,9 +3055,14 @@
    "name": "Lobster",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -2117,9 +3072,14 @@
    "name": "Lollipop Fruit",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishblossom Mountains"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishblossom Mountains"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -2129,9 +3089,14 @@
    "name": "Magma",
    "type": "Gem",
    "kind": "",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -2142,9 +3107,14 @@
    "name": "Majestea",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Eternity Isle",
-   "where": [
-    "Ancient's Landing"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2154,9 +3124,14 @@
    "name": "Marble",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -2168,9 +3143,14 @@
    "name": "Measuring-Tape Snail",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -2180,9 +3160,14 @@
    "name": "Melon",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -2192,8 +3177,16 @@
    "name": "Milk",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Chez Remy",
+      "Tiana's Palace"
+     ]
+    ]
+   ],
    "from": [
     "Chez Remy",
     "Tiana's Palace"
@@ -2203,9 +3196,14 @@
    "name": "Mint",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2215,10 +3213,15 @@
    "name": "Moss",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind",
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind",
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -2230,9 +3233,14 @@
    "name": "Mountain Whitefish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishing Alps"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -2242,10 +3250,15 @@
    "name": "Mud",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind",
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind",
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -2257,9 +3270,14 @@
    "name": "Mushroom",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -2275,9 +3293,14 @@
    "name": "Mussel",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2287,9 +3310,14 @@
    "name": "Nestling Pear",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Eternity Isle",
-   "where": [
-    "Ancient's Landing"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -2300,9 +3328,14 @@
    "name": "Night Shard",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "All biomes"
+   "realm": "Main",
+   "areas": [
+    [
+     "",
+     [
+      "All biomes"
+     ]
+    ]
    ],
    "from": [
     "Digging Sparkling Holes"
@@ -2312,9 +3345,14 @@
    "name": "Nutmeg",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -2325,9 +3363,14 @@
    "name": "Oak Leaves",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Honeyglow Woods"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2337,9 +3380,14 @@
    "name": "Oasis Glass",
    "type": "Foraging",
    "kind": "Crafting Material",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -2351,9 +3399,14 @@
    "name": "Oats",
    "type": "Ingredient",
    "kind": "Grains",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -2363,9 +3416,14 @@
    "name": "Octopus",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Eternity Isle",
-   "where": [
-    "Ancient's Landing"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -2375,9 +3433,14 @@
    "name": "Okra",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -2388,9 +3451,14 @@
    "name": "Old Braided Rope",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishing Alps"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -2401,9 +3469,14 @@
    "name": "Olive Green Tale Cone Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2413,9 +3486,14 @@
    "name": "Olives",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -2426,9 +3504,14 @@
    "name": "Onion",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -2439,9 +3522,14 @@
    "name": "Onyx",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Anywhere"
+   "realm": "Main",
+   "areas": [
+    [
+     "",
+     [
+      "Anywhere"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -2452,8 +3540,15 @@
    "name": "Oolong Tea Leaves",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Mulan's Tea Stall"
+     ]
+    ]
+   ],
    "from": [
     "Mulan's Tea Stall"
    ]
@@ -2462,9 +3557,14 @@
    "name": "Opal",
    "type": "Gem",
    "kind": "",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -2475,9 +3575,14 @@
    "name": "Orange & Red Marsh Milkweed",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2487,10 +3592,15 @@
    "name": "Orange Bird of Paradise",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Docks",
-    "The Courtyard"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Docks",
+      "The Courtyard"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2500,10 +3610,15 @@
    "name": "Orange Glass-Like Flowers",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Plains",
-    "The Wastes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Plains",
+      "The Wastes"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2513,9 +3628,14 @@
    "name": "Orange Houseleek",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2525,9 +3645,14 @@
    "name": "Orange Marsh Milkweed",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2537,9 +3662,14 @@
    "name": "Orange Nasturtium",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2549,10 +3679,15 @@
    "name": "Orange Pitcher Plant",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Grove",
-    "The Lagoon"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Grove",
+      "The Lagoon"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2562,9 +3697,14 @@
    "name": "Orange Star Lily",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2574,9 +3714,14 @@
    "name": "Oregano",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Plaza"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -2587,9 +3732,14 @@
    "name": "Oyster",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2599,9 +3749,14 @@
    "name": "Paprika",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2611,9 +3766,14 @@
    "name": "Parsnip",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Honeyglow WoodsCategory:Ingredients from the Honeyglow Woods"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -2623,8 +3783,16 @@
    "name": "Peanut",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Chez Remy",
+      "Tiana's Palace"
+     ]
+    ]
+   ],
    "from": [
     "Chez Remy",
     "Tiana's Palace"
@@ -2634,9 +3802,14 @@
    "name": "Pearl",
    "type": "Foraging",
    "kind": "Crafting Material",
-   "realm": "Eternity Isle",
-   "where": [
-    "Ancient's Landing"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -2647,9 +3820,14 @@
    "name": "Pearly Barley",
    "type": "Ingredient",
    "kind": "Grains",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishblossom Mountains"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishblossom Mountains"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -2659,13 +3837,23 @@
    "name": "Pebbles",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach",
-    "Forest of Valor",
-    "Sunlit Plateau",
-    "Forgotten Lands",
-    "Wishing Alps"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach",
+      "Forest of Valor",
+      "Sunlit Plateau",
+      "Forgotten Lands"
+     ]
+    ],
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Kristoff's Stall",
@@ -2676,12 +3864,22 @@
    "name": "Perch",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor",
-    "Sunlit Plateau",
-    "The Grove",
-    "The Lagoon"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor",
+      "Sunlit Plateau"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "The Grove",
+      "The Lagoon"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -2691,12 +3889,22 @@
    "name": "Peridot",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow",
-    "Dazzle Beach",
-    "The Grasslands",
-    "The Promenade"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow",
+      "Dazzle Beach"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "The Grasslands",
+      "The Promenade"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -2707,9 +3915,14 @@
    "name": "Persimmon",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -2720,10 +3933,15 @@
    "name": "Petrified Wood",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind",
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind",
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -2736,9 +3954,14 @@
    "name": "Pike",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -2748,9 +3971,14 @@
    "name": "Pincushion Peach",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -2761,9 +3989,14 @@
    "name": "Pine Cone",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -2775,9 +4008,14 @@
    "name": "Pineapple",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Eternity Isle",
-   "where": [
-    "Wild Tangle"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -2787,9 +4025,14 @@
    "name": "Pink Bromeliad",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2799,10 +4042,15 @@
    "name": "Pink Cactus Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Oasis",
-    "The Borderlands"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Oasis",
+      "The Borderlands"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2812,9 +4060,14 @@
    "name": "Pink Crocus",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishing Alps (max 1)"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2824,9 +4077,14 @@
    "name": "Pink Houseleek",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2836,9 +4094,14 @@
    "name": "Pink Hydrangea",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2848,9 +4111,14 @@
    "name": "Pink Lily of the Valley",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres (max 1)"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2860,10 +4128,15 @@
    "name": "Pink Luminescent Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Overlook",
-    "The Ruins"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Overlook",
+      "The Ruins"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2874,9 +4147,14 @@
    "type": "Ingredient",
    "kind": "Sweets",
    "realm": "",
-   "where": [
-    "Plaza",
-    "Peaceful Meadow"
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza",
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -2887,10 +4165,15 @@
    "name": "Pink Rose",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Storybook Vale",
-   "where": [
-    "Teapot Falls",
-    "The Beanstalk Marshes"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Teapot Falls",
+      "The Beanstalk Marshes"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2900,9 +4183,14 @@
    "name": "Piranha",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Lagoon"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Lagoon"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -2912,9 +4200,14 @@
    "name": "Pirarucu",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Eternity Isle",
-   "where": [
-    "Wild Tangle"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -2924,9 +4217,14 @@
    "name": "Pixel Shard",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Multiplayer"
+   "realm": "Main",
+   "areas": [
+    [
+     "",
+     [
+      "Multiplayer"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2936,9 +4234,14 @@
    "name": "Pixie Dust",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishblossom Mountains"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishblossom Mountains"
+     ]
+    ]
    ],
    "from": [
     "Mining"
@@ -2948,8 +4251,15 @@
    "name": "Plain Yogurt",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Storybook Vale",
-   "where": [],
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Goofy's Stall (Upgrade 2)"
+     ]
+    ]
+   ],
    "from": [
     "Goofy's Stall (Upgrade 2)"
    ]
@@ -2958,9 +4268,14 @@
    "name": "Plastic Scrap",
    "type": "Foraging",
    "kind": "Crafting Material",
-   "realm": "Eternity Isle",
-   "where": [
-    "Ancient's Landing"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -2972,9 +4287,14 @@
    "name": "Plush Fish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Honeyglow Woods"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -2984,9 +4304,14 @@
    "name": "Porcini Mushrooms",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -2996,8 +4321,15 @@
    "name": "Pork",
    "type": "Ingredient",
    "kind": "Protein",
-   "realm": "Eternity Isle",
-   "where": [],
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Gaston's Stall"
+     ]
+    ]
+   ],
    "from": [
     "Gaston's Stall"
    ]
@@ -3006,9 +4338,14 @@
    "name": "Posidonia",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3018,10 +4355,20 @@
    "name": "Potato",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands",
-    "Wild Tangle"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -3032,8 +4379,15 @@
    "name": "Poultry",
    "type": "Ingredient",
    "kind": "Protein",
-   "realm": "Eternity Isle",
-   "where": [],
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Gaston's Stall"
+     ]
+    ]
+   ],
    "from": [
     "Gaston's Stall"
    ]
@@ -3042,9 +4396,14 @@
    "name": "Pretty Pink Starfish",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Oasis"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Oasis"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3054,9 +4413,14 @@
    "name": "Prisma Shrimp",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Eternity Isle",
-   "where": [
-    "Wild Tangle"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3066,9 +4430,14 @@
    "name": "Pufflebud Pods",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Honeyglow WoodsCategory:Ingredients from the Honeyglow Woods"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -3078,9 +4447,14 @@
    "name": "Pumpkin",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -3091,9 +4465,14 @@
    "name": "Pure Ice",
    "type": "Gem",
    "kind": "",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -3104,12 +4483,17 @@
    "name": "Purple & White Foxglove",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Drowsybloom Acre (max 1)",
-    "Gloommeadow (max 1)",
-    "Braveheart Grove (max 1)",
-    "Nectar Apiary (max 1)"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Drowsybloom Acre (max 1)",
+      "Gloommeadow (max 1)",
+      "Braveheart Grove (max 1)",
+      "Nectar Apiary (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3119,9 +4503,14 @@
    "name": "Purple Bell Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3131,8 +4520,15 @@
    "name": "Purple Button",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Blue Button"
+     ]
+    ]
+   ],
    "from": [
     "Blue Button"
    ]
@@ -3141,10 +4537,15 @@
    "name": "Purple Cactus Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Oasis",
-    "The Borderlands"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Oasis",
+      "The Borderlands"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3154,9 +4555,14 @@
    "name": "Purple Crocus",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishing Alps (max 1)"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3166,9 +4572,14 @@
    "name": "Purple Falling Penstemon",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Plaza"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3178,10 +4589,15 @@
    "name": "Purple Fly Trap",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Grasslands",
-    "The Promenade"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Grasslands",
+      "The Promenade"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3191,9 +4607,14 @@
    "name": "Purple Hydrangea",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3203,9 +4624,14 @@
    "name": "Purple Impatiens",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3215,9 +4641,14 @@
    "name": "Purple Lily of the Valley",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres (max 1)"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3227,9 +4658,14 @@
    "name": "Purple Marsh Milkweed",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3239,9 +4675,14 @@
    "name": "Purple Rising Penstemon",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3252,10 +4693,15 @@
    "type": "Ingredient",
    "kind": "Dairy and Oil",
    "realm": "",
-   "where": [
-    "Moana (Universe)",
-    "Toy Story",
-    "WALL-E (Universe)"
+   "areas": [
+    [
+     "Main",
+     [
+      "Moana (Universe)",
+      "Toy Story",
+      "WALL-E (Universe)"
+     ]
+    ]
    ],
    "from": [
     "Eggstravaganza",
@@ -3266,12 +4712,17 @@
    "name": "Purple Thistle",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Drowsybloom Acre (max 1)",
-    "Gloommeadow (max 1)",
-    "Braveheart Grove (max 1)",
-    "Nectar Apiary (max 1)"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Drowsybloom Acre (max 1)",
+      "Gloommeadow (max 1)",
+      "Braveheart Grove (max 1)",
+      "Nectar Apiary (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3281,9 +4732,14 @@
    "name": "Pyrite",
    "type": "Gem",
    "kind": "",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishing Alps"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Mining"
@@ -3293,9 +4749,14 @@
    "name": "Quartz",
    "type": "Foraging",
    "kind": "Crafting Material",
-   "realm": "Eternity Isle",
-   "where": [
-    "Ancient's Landing"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -3306,9 +4767,14 @@
    "name": "Radicchio",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -3318,9 +4784,14 @@
    "name": "Radish",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -3330,9 +4801,14 @@
    "name": "Rainbow Rose Bouquet",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Beast's Greenhouse"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Beast's Greenhouse"
+     ]
+    ]
    ],
    "from": [
     "A Growing Mystery"
@@ -3342,12 +4818,27 @@
    "name": "Rainbow Trout",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow",
-    "Forest of Valor",
-    "The Oasis",
-    "Everafter"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow",
+      "Forest of Valor"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "The Oasis"
+     ]
+    ],
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3357,10 +4848,15 @@
    "name": "Raspberry",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Plaza",
-    "Peaceful Meadow"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza",
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -3372,9 +4868,14 @@
    "name": "Reclaimed Barn Wood",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishing Alps"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -3385,9 +4886,14 @@
    "name": "Red Algae",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "All Biomes"
+   "realm": "Main",
+   "areas": [
+    [
+     "",
+     [
+      "All Biomes"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3397,9 +4903,14 @@
    "name": "Red Alpine Bass",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishing Alps"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3409,9 +4920,14 @@
    "name": "Red Bell Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3421,9 +4937,14 @@
    "name": "Red Bromeliad",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3433,10 +4954,15 @@
    "name": "Red Button",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dreamlight Valley",
-    "Near houses"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dreamlight Valley",
+      "Near houses"
+     ]
+    ]
    ],
    "from": [
     "Blue Button",
@@ -3447,9 +4973,14 @@
    "name": "Red Currants",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishing Alps"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -3460,9 +4991,14 @@
    "name": "Red Daisy",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3472,9 +5008,14 @@
    "name": "Red Falling Penstemon",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Plaza"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3484,10 +5025,15 @@
    "name": "Red Luminescent Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Overlook",
-    "The Ruins"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Overlook",
+      "The Ruins"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3497,9 +5043,14 @@
    "name": "Red Nasturtium",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3509,9 +5060,14 @@
    "name": "Red Passion Lily",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3521,10 +5077,15 @@
    "name": "Red Pitcher Plant",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Grove",
-    "The Lagoon"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Grove",
+      "The Lagoon"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3534,9 +5095,14 @@
    "name": "Red Rose",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Beast's Greenhouse"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Beast's Greenhouse"
+     ]
+    ]
    ],
    "from": [
     "A Gift in Crimson"
@@ -3546,9 +5112,14 @@
    "name": "Red Silk Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch (max 1)"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3558,12 +5129,17 @@
    "name": "Red Thistle",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Drowsybloom Acre (max 1)",
-    "Gloommeadow (max 1)",
-    "Braveheart Grove (max 1)",
-    "Nectar Apiary (max 1)"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Drowsybloom Acre (max 1)",
+      "Gloommeadow (max 1)",
+      "Braveheart Grove (max 1)",
+      "Nectar Apiary (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3573,9 +5149,14 @@
    "name": "Rhubarb",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -3585,9 +5166,14 @@
    "name": "Rice",
    "type": "Ingredient",
    "kind": "Grains",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -3598,8 +5184,15 @@
    "name": "Rich Soil",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Harvesting Crops"
+     ]
+    ]
+   ],
    "from": [
     "Harvesting Crops"
    ]
@@ -3608,9 +5201,14 @@
    "name": "Ring Squash",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -3620,10 +5218,15 @@
    "name": "Robot Fish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Docks",
-    "The Overlook"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Docks",
+      "The Overlook"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3633,12 +5236,17 @@
    "name": "Rose & Cream Foxglove",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Drowsybloom Acre (max 1)",
-    "Gloommeadow (max 1)",
-    "Braveheart Grove (max 1)",
-    "Nectar Apiary (max 1)"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Drowsybloom Acre (max 1)",
+      "Gloommeadow (max 1)",
+      "Braveheart Grove (max 1)",
+      "Nectar Apiary (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3648,10 +5256,20 @@
    "name": "Ruby",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Vitalys Mine",
-    "Mythopia"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Vitalys Mine"
+     ]
+    ],
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -3663,9 +5281,14 @@
    "name": "Ruby Lentils",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Eternity Isle",
-   "where": [
-    "Wild Tangle"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -3675,9 +5298,14 @@
    "name": "Rusty Hinge",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishing Alps"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -3688,12 +5316,22 @@
    "name": "Salmon",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau",
-    "Frosted Heights",
-    "The Grasslands",
-    "The Promenade"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau",
+      "Frosted Heights"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "The Grasslands",
+      "The Promenade"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3703,9 +5341,14 @@
    "name": "Salt Crystal",
    "type": "Ingredient",
    "kind": "Spices",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3715,11 +5358,26 @@
    "name": "Sand",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach",
-    "Glittering Dunes",
-    "Glamour Gulch"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ],
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch"
+     ]
+    ]
    ],
    "from": [
     "Kristoff's Stall",
@@ -3731,9 +5389,14 @@
    "name": "Sand Fish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3743,9 +5406,14 @@
    "name": "Sand Worm",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3755,9 +5423,14 @@
    "name": "Sapphire",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Vitalys Mine"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Vitalys Mine"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -3769,9 +5442,14 @@
    "name": "Satin-Finned Betta",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3781,9 +5459,14 @@
    "name": "Scales",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3793,9 +5476,14 @@
    "name": "Scallop",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -3805,9 +5493,14 @@
    "name": "Scarlet Kale",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishblossom Mountains"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishblossom Mountains"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -3817,9 +5510,14 @@
    "name": "Scorpion",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3829,9 +5527,14 @@
    "name": "Sea Grapes",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3841,9 +5544,14 @@
    "name": "Sea Monster Tooth",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3853,9 +5561,14 @@
    "name": "Sea Snail",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Eternity Isle",
-   "where": [
-    "Ancient's Landing"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3865,9 +5578,14 @@
    "name": "Sea Wolf",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3877,10 +5595,20 @@
    "name": "Seaweed",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dream Castle",
-    "Wild Tangle"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dream Castle"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3890,9 +5618,14 @@
    "name": "Sequin Strands",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -3903,10 +5636,15 @@
    "name": "Shad",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Docks",
-    "The Overlook"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Docks",
+      "The Overlook"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -3916,10 +5654,15 @@
    "name": "Shiny Alexandrite",
    "type": "Gem",
    "kind": "",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Wastes",
-    "The Oasis"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Wastes",
+      "The Oasis"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -3930,10 +5673,15 @@
    "name": "Shiny Amethyst",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights",
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights",
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -3944,10 +5692,15 @@
    "name": "Shiny Aquamarine",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach",
-    "Forest of Valor"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach",
+      "Forest of Valor"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -3958,9 +5711,14 @@
    "name": "Shiny Blue Zircon",
    "type": "Gem",
    "kind": "",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Lagoon"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Lagoon"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -3971,9 +5729,14 @@
    "name": "Shiny Bumblestone",
    "type": "Gem",
    "kind": "",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Borderlands"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Borderlands"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -3984,10 +5747,15 @@
    "name": "Shiny Citrine",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust",
-    "Sunlit Plateau"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust",
+      "Sunlit Plateau"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -3998,9 +5766,14 @@
    "name": "Shiny Diamond",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4011,10 +5784,15 @@
    "name": "Shiny Emerald",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor",
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor",
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4025,9 +5803,14 @@
    "name": "Shiny Evergem",
    "type": "Gem",
    "kind": "",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Ruins"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Ruins"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4038,12 +5821,22 @@
    "name": "Shiny Garnet",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Plaza",
-    "Peaceful Meadow",
-    "The Plains",
-    "The Wastes"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza",
+      "Peaceful Meadow"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "The Plains",
+      "The Wastes"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4054,9 +5847,14 @@
    "name": "Shiny Honey Agate",
    "type": "Gem",
    "kind": "",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Honeyglow Woods"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
+     ]
+    ]
    ],
    "from": [
     "Mining"
@@ -4066,9 +5864,14 @@
    "name": "Shiny Honeycomb Stone",
    "type": "Gem",
    "kind": "",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres"
+     ]
+    ]
    ],
    "from": [
     "Mining"
@@ -4078,10 +5881,15 @@
    "name": "Shiny Jade",
    "type": "Gem",
    "kind": "",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Courtyard",
-    "The Overlook"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Courtyard",
+      "The Overlook"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4092,9 +5900,14 @@
    "name": "Shiny Jasper",
    "type": "Gem",
    "kind": "",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch"
+     ]
+    ]
    ],
    "from": [
     "Mining"
@@ -4104,9 +5917,14 @@
    "name": "Shiny Magma",
    "type": "Gem",
    "kind": "",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4117,9 +5935,14 @@
    "name": "Shiny Opal",
    "type": "Gem",
    "kind": "",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4130,12 +5953,22 @@
    "name": "Shiny Peridot",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow",
-    "Dazzle Beach",
-    "The Grasslands",
-    "The Promenade"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow",
+      "Dazzle Beach"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "The Grasslands",
+      "The Promenade"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4146,9 +5979,14 @@
    "name": "Shiny Pure Ice",
    "type": "Gem",
    "kind": "",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4159,9 +5997,14 @@
    "name": "Shiny Pyrite",
    "type": "Gem",
    "kind": "",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishing Alps"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Mining"
@@ -4171,10 +6014,20 @@
    "name": "Shiny Ruby",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Vitalys Mine",
-    "Mythopia"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Vitalys Mine"
+     ]
+    ],
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4185,9 +6038,14 @@
    "name": "Shiny Sapphire",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Vitalys Mine"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Vitalys Mine"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4198,10 +6056,15 @@
    "name": "Shiny Spinel",
    "type": "Gem",
    "kind": "",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Promenade",
-    "The Grove"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Promenade",
+      "The Grove"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4212,9 +6075,14 @@
    "name": "Shiny Star Sapphire",
    "type": "Gem",
    "kind": "",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4225,12 +6093,27 @@
    "name": "Shiny Topaz",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Plaza",
-    "The Docks",
-    "The Courtyard",
-    "The Bind"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "The Docks",
+      "The Courtyard"
+     ]
+    ],
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4241,10 +6124,15 @@
    "name": "Shiny Tourmaline",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau",
-    "Frosted Heights"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau",
+      "Frosted Heights"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4255,8 +6143,15 @@
    "name": "Shovel Bird Eggs",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Storybook Vale",
-   "where": [],
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Goofy's Stall (Upgrade 2)"
+     ]
+    ]
+   ],
    "from": [
     "Goofy's Stall (Upgrade 2)"
    ]
@@ -4265,9 +6160,14 @@
    "name": "Shrimp",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -4277,9 +6177,14 @@
    "name": "Silver Ore",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishing Alps"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -4290,9 +6195,14 @@
    "name": "Silver Silk Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch (max 1)"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4302,9 +6212,14 @@
    "name": "Skeleton Fish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -4314,10 +6229,15 @@
    "name": "Slate Gray Rose",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Storybook Vale",
-   "where": [
-    "Teapot Falls",
-    "The Fallen Fortress"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Teapot Falls",
+      "The Fallen Fortress"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4327,8 +6247,16 @@
    "name": "Slush Ice",
    "type": "Ingredient",
    "kind": "Ice",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Chez Remy",
+      "Tiana's Palace"
+     ]
+    ]
+   ],
    "from": [
     "Chez Remy",
     "Tiana's Palace"
@@ -4338,10 +6266,20 @@
    "name": "Snowball",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights",
-    "Wishing Alps"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights"
+     ]
+    ],
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Kristoff's Stall",
@@ -4353,9 +6291,14 @@
    "name": "Soft Limestone",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Honeyglow Woods"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
+     ]
+    ]
    ],
    "from": [
     "Mining"
@@ -4365,13 +6308,23 @@
    "name": "Softwood",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Plaza",
-    "Peaceful Meadow",
-    "Forest of Valor",
-    "Glade of Trust",
-    "Ancient's Landing"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza",
+      "Peaceful Meadow",
+      "Forest of Valor",
+      "Glade of Trust"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Kristoff's Stall",
@@ -4383,9 +6336,14 @@
    "name": "Soil",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "All Biomes"
+   "realm": "Main",
+   "areas": [
+    [
+     "",
+     [
+      "All Biomes"
+     ]
+    ]
    ],
    "from": [
     "Digging",
@@ -4396,11 +6354,21 @@
    "name": "Sole",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands",
-    "The Docks",
-    "The Overlook"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "The Docks",
+      "The Overlook"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -4410,9 +6378,14 @@
    "name": "Sorcerer Hat Hermit Crab",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -4422,9 +6395,14 @@
    "name": "Sour Berries",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -4435,9 +6413,14 @@
    "name": "Soya",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -4448,9 +6431,14 @@
    "name": "Spinach",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -4461,10 +6449,15 @@
    "name": "Spinel",
    "type": "Gem",
    "kind": "",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Promenade",
-    "The Grove"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Promenade",
+      "The Grove"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4475,9 +6468,14 @@
    "name": "Spiral Strawberries",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -4489,7 +6487,15 @@
    "type": "Ingredient",
    "kind": "Dairy and Oil",
    "realm": "",
-   "where": [],
+   "areas": [
+    [
+     "",
+     [
+      "Eggstravaganza",
+      "Gardening"
+     ]
+    ]
+   ],
    "from": [
     "Eggstravaganza",
     "Gardening"
@@ -4499,11 +6505,21 @@
    "name": "Squid",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust",
-    "Forgotten Lands",
-    "Mythopia"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust",
+      "Forgotten Lands"
+     ]
+    ],
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -4513,9 +6529,14 @@
    "name": "Star Sapphire",
    "type": "Gem",
    "kind": "",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4526,9 +6547,14 @@
    "name": "Stone",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "All Biomes"
+   "realm": "Main",
+   "areas": [
+    [
+     "",
+     [
+      "All Biomes"
+     ]
+    ]
    ],
    "from": [
     "Kristoff's Stall",
@@ -4541,9 +6567,14 @@
    "name": "Strawberry",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Eternity Isle",
-   "where": [
-    "Ancient's Landing"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -4554,9 +6585,14 @@
    "name": "Stygian Mudskipper",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Storybook Vale",
-   "where": [
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -4566,9 +6602,14 @@
    "name": "Sugarcane",
    "type": "Ingredient",
    "kind": "Sweets",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -4579,9 +6620,14 @@
    "name": "Sunflower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4591,12 +6637,17 @@
    "name": "Sweet Chestnut",
    "type": "Ingredient",
    "kind": "Fruit",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Drowsybloom Acre",
-    "Gloommeadow",
-    "Braveheart Grove",
-    "Nectar Apiary"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Drowsybloom Acre",
+      "Gloommeadow",
+      "Braveheart Grove",
+      "Nectar Apiary"
+     ]
+    ]
    ],
    "from": [
     "Foraging",
@@ -4607,9 +6658,14 @@
    "name": "Sweet Jelly",
    "type": "Ingredient",
    "kind": "Sweets",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Honeyglow Woods"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -4619,9 +6675,14 @@
    "name": "Swordfish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -4631,10 +6692,15 @@
    "name": "Teal Eternal Poppies",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Elysian Fields",
-    "The Statue's Shadow"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Elysian Fields",
+      "The Statue's Shadow"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4644,9 +6710,14 @@
    "name": "Three-Leaf Clover",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dreamlight Valley"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dreamlight Valley"
+     ]
+    ]
    ],
    "from": [
     "Lucky You!",
@@ -4657,9 +6728,14 @@
    "name": "Tigger Fish",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -4669,11 +6745,21 @@
    "name": "Tilapia",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau",
-    "Frosted Heights",
-    "Pixie Acres"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau",
+      "Frosted Heights"
+     ]
+    ],
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -4683,9 +6769,14 @@
    "name": "Tin",
    "type": "Foraging",
    "kind": "Crafting Material",
-   "realm": "Eternity Isle",
-   "where": [
-    "Glittering Dunes"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Glittering Dunes"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -4696,10 +6787,20 @@
    "name": "Tomato",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach",
-    "Wild Tangle"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -4710,12 +6811,27 @@
    "name": "Topaz",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Plaza",
-    "The Docks",
-    "The Courtyard",
-    "The Bind"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "The Docks",
+      "The Courtyard"
+     ]
+    ],
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4726,10 +6842,15 @@
    "name": "Tourmaline",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau",
-    "Frosted Heights"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau",
+      "Frosted Heights"
+     ]
+    ]
    ],
    "from": [
     "Aladdin's Gem Stall",
@@ -4740,9 +6861,14 @@
    "name": "Tree Resin",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Honeyglow Woods"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
+     ]
+    ]
    ],
    "from": [
     "Digging",
@@ -4753,9 +6879,14 @@
    "name": "Tropical Wood",
    "type": "Foraging",
    "kind": "Crafting Material",
-   "realm": "Eternity Isle",
-   "where": [
-    "Wild Tangle"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -4767,9 +6898,14 @@
    "name": "Truffle",
    "type": "Ingredient",
    "kind": "",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Honeyglow Woods"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4779,9 +6915,14 @@
    "name": "Trumpet Snail",
    "type": "Ingredient",
    "kind": "Seafood",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4791,12 +6932,27 @@
    "name": "Tuna",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust",
-    "Forgotten Lands",
-    "The Bind",
-    "Wishing Alps"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust",
+      "Forgotten Lands"
+     ]
+    ],
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ],
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -4806,9 +6962,14 @@
    "name": "Turnip",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Eternity Isle",
-   "where": [
-    "Wild Tangle"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -4818,11 +6979,21 @@
    "name": "Vanilla",
    "type": "Ingredient",
    "kind": "Sweets",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "The Lion King Realm",
-    "Sunlit Plateau",
-    "Mythopia"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "The Lion King Realm",
+      "Sunlit Plateau"
+     ]
+    ],
+    [
+     "Storybook",
+     [
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4832,8 +7003,15 @@
    "name": "Venison",
    "type": "Ingredient",
    "kind": "Protein",
-   "realm": "Eternity Isle",
-   "where": [],
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Gaston's Stall"
+     ]
+    ]
+   ],
    "from": [
     "Gaston's Stall"
    ]
@@ -4842,9 +7020,14 @@
    "name": "Vitalys Crystal",
    "type": "Gem",
    "kind": "",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Vitalys Mine"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Vitalys Mine"
+     ]
+    ]
    ],
    "from": [
     "Mining"
@@ -4854,10 +7037,15 @@
    "name": "Volcanic Rock",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Storybook Vale",
-   "where": [
-    "Everafter",
-    "Mythopia"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "Everafter",
+      "Mythopia"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -4869,9 +7057,14 @@
    "name": "Walleye",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -4881,10 +7074,20 @@
    "name": "Wheat",
    "type": "Ingredient",
    "kind": "Grains",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow",
-    "Ancient's Landing"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow"
+     ]
+    ],
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -4895,9 +7098,14 @@
    "name": "White & Pink Falling Penstemon",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Plaza"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Plaza"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4907,12 +7115,17 @@
    "name": "White & Pink Foxglove",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Drowsybloom Acre (max 1)",
-    "Gloommeadow (max 1)",
-    "Braveheart Grove (max 1)",
-    "Nectar Apiary (max 1)"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Drowsybloom Acre (max 1)",
+      "Gloommeadow (max 1)",
+      "Braveheart Grove (max 1)",
+      "Nectar Apiary (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4922,9 +7135,14 @@
    "name": "White & Red Hydrangea",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Dazzle Beach"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Dazzle Beach"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4934,9 +7152,14 @@
    "name": "White Bell Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forest of Valor"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forest of Valor"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4946,10 +7169,15 @@
    "name": "White Bird of Paradise",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Docks",
-    "The Courtyard"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Docks",
+      "The Courtyard"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4959,10 +7187,15 @@
    "name": "White Cactus Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Oasis",
-    "The Borderlands"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Oasis",
+      "The Borderlands"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4972,9 +7205,14 @@
    "name": "White Crocus",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishing Alps (max 1)"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4984,9 +7222,14 @@
    "name": "White Daisy",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -4996,9 +7239,14 @@
    "name": "White Impatiens",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5008,9 +7256,14 @@
    "name": "White Marsh Milkweed",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Glade of Trust"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Glade of Trust"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5020,9 +7273,14 @@
    "name": "White Passion Lily",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5032,10 +7290,15 @@
    "name": "White Rose",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Wild Woods",
-    "The Fallen Fortress"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Wild Woods",
+      "The Fallen Fortress"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5045,9 +7308,14 @@
    "name": "White Sturgeon",
    "type": "Ingredient",
    "kind": "Fish",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Frosted Heights"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Frosted Heights"
+     ]
+    ]
    ],
    "from": [
     "Fishing"
@@ -5057,12 +7325,17 @@
    "name": "White Thistle",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Drowsybloom Acre (max 1)",
-    "Gloommeadow (max 1)",
-    "Braveheart Grove (max 1)",
-    "Nectar Apiary (max 1)"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Drowsybloom Acre (max 1)",
+      "Gloommeadow (max 1)",
+      "Braveheart Grove (max 1)",
+      "Nectar Apiary (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5073,7 +7346,15 @@
    "type": "Ingredient",
    "kind": "Dairy and Oil",
    "realm": "",
-   "where": [],
+   "areas": [
+    [
+     "",
+     [
+      "Eggstravaganza",
+      "Foraging in all biomes"
+     ]
+    ]
+   ],
    "from": [
     "Eggstravaganza",
     "Foraging in all biomes"
@@ -5083,9 +7364,14 @@
    "name": "Wire Coat Hanger",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Glamour Gulch"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Glamour Gulch"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -5096,17 +7382,22 @@
    "name": "Wrought Iron",
    "type": "Foraging",
    "kind": "Crafting Materials",
-   "realm": "Dreamlight Valley",
-   "where": [],
+   "realm": "Main",
+   "areas": [],
    "from": []
   },
   {
    "name": "Yam",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Eternity Isle",
-   "where": [
-    "Ancient's Landing"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Ancient's Landing"
+     ]
+    ]
    ],
    "from": [
     "Gardening"
@@ -5116,12 +7407,17 @@
    "name": "Yellow & Orange Foxglove",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Drowsybloom Acre (max 1)",
-    "Gloommeadow (max 1)",
-    "Braveheart Grove (max 1)",
-    "Nectar Apiary (max 1)"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Drowsybloom Acre (max 1)",
+      "Gloommeadow (max 1)",
+      "Braveheart Grove (max 1)",
+      "Nectar Apiary (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5131,10 +7427,15 @@
    "name": "Yellow Bird of Paradise",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Docks",
-    "The Courtyard"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Docks",
+      "The Courtyard"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5144,9 +7445,14 @@
    "name": "Yellow Bromeliad",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5156,10 +7462,15 @@
    "name": "Yellow Cactus Flower",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Oasis",
-    "The Borderlands"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Oasis",
+      "The Borderlands"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5169,9 +7480,14 @@
    "name": "Yellow Crocus",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Wishing Alps (max 1)"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Wishing Alps (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5181,9 +7497,14 @@
    "name": "Yellow Daisy",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Peaceful Meadow"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Peaceful Meadow"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5193,9 +7514,14 @@
    "name": "Yellow Lily of the Valley",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Wishblossom Mountains",
-   "where": [
-    "Pixie Acres (max 1)"
+   "realm": "Wishblossom",
+   "areas": [
+    [
+     "Wishblossom",
+     [
+      "Pixie Acres (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5205,9 +7531,14 @@
    "name": "Yellow Nasturtium",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Forgotten Lands"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Forgotten Lands"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5217,10 +7548,15 @@
    "name": "Yellow Pitcher Plant",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Eternity Isle",
-   "where": [
-    "The Grove",
-    "The Lagoon"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "The Grove",
+      "The Lagoon"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5230,9 +7566,14 @@
    "name": "Yellow Tale Cone Flowers",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Storybook Vale",
-   "where": [
-    "The Bind"
+   "realm": "Storybook",
+   "areas": [
+    [
+     "Storybook",
+     [
+      "The Bind"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5242,12 +7583,17 @@
    "name": "Yellow Thistle",
    "type": "Foraging",
    "kind": "Flowers",
-   "realm": "Honeyglow Woods",
-   "where": [
-    "Drowsybloom Acre (max 1)",
-    "Gloommeadow (max 1)",
-    "Braveheart Grove (max 1)",
-    "Nectar Apiary (max 1)"
+   "realm": "Honeyglow",
+   "areas": [
+    [
+     "Honeyglow",
+     [
+      "Drowsybloom Acre (max 1)",
+      "Gloommeadow (max 1)",
+      "Braveheart Grove (max 1)",
+      "Nectar Apiary (max 1)"
+     ]
+    ]
    ],
    "from": [
     "Foraging"
@@ -5257,9 +7603,14 @@
    "name": "Zinc",
    "type": "Foraging",
    "kind": "Crafting Material",
-   "realm": "Eternity Isle",
-   "where": [
-    "Wild Tangle"
+   "realm": "Eternity",
+   "areas": [
+    [
+     "Eternity",
+     [
+      "Wild Tangle"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",
@@ -5270,9 +7621,14 @@
    "name": "Zucchini",
    "type": "Ingredient",
    "kind": "Vegetables",
-   "realm": "Dreamlight Valley",
-   "where": [
-    "Sunlit Plateau"
+   "realm": "Main",
+   "areas": [
+    [
+     "Main",
+     [
+      "Sunlit Plateau"
+     ]
+    ]
    ],
    "from": [
     "Goofy's Stall",

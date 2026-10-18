@@ -1,5 +1,5 @@
 // Builds items.json (gatherable items + where they're found) from the Dreamlight Valley Wiki.
-// Run with: node scripts/update-items.mjs   (Node 18+, no packages needed)
+// Run by hand when the game adds items: node scripts/update-items.mjs   (Node 18+, no packages needed)
 // Item data © Dreamlight Valley Wiki contributors, CC BY-NC-SA.
 import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 
@@ -8,6 +8,35 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15
 const HUBS = ['Ingredients', 'Gems', 'Foraging', 'Fishing', 'Gardening'];
 const KEEP_TYPES = ['Ingredient', 'Foraging', 'Gem'];
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+// Which realm (DLC) each biome/region belongs to. Add new places here when an expansion comes out.
+const REALMS = {
+  Main: ['Dreamlight Valley', 'Dreamlight Valley biomes', 'Plaza', 'Peaceful Meadow', 'Dazzle Beach', 'Forest of Valor',
+    'Glade of Trust', 'Sunlit Plateau', 'Frosted Heights', 'Forgotten Lands', 'Dream Castle', 'The Lion King Realm',
+    'Frozen Realm', 'Moana Realm', 'Moana (Universe)', 'WALL-E (Universe)', 'Toy Story', "Beast's Greenhouse",
+    'Vitalys Mine', "Foraging near Scrooge's Store", 'Near houses'],
+  Eternity: ['Eternity Isle', "Ancient's Landing", 'The Docks', 'The Courtyard', 'The Overlook', 'The Ruins',
+    'Glittering Dunes', 'The Plains', 'The Wastes', 'The Oasis', 'The Borderlands',
+    'Wild Tangle', 'The Grasslands', 'The Grove', 'The Promenade', 'The Lagoon'],
+  Storybook: ['Storybook Vale', 'Mythopia', 'The Elysian Fields', 'The Fiery Plains', "The Statue's Shadow", 'Mount Olympus',
+    'Everafter', 'The Wild Woods', 'Teapot Falls', 'The Fallen Fortress', 'The Beanstalk Marshes', 'The Bind', 'The Library of Lore'],
+  Honeyglow: ['Honeyglow Woods', 'Braveheart Grove', 'Drowsybloom Acre', 'Gloommeadow', 'Nectar Apiary'],
+  Wishblossom: ['Wishblossom Mountains', 'Pixie Acres', 'Glamour Gulch', 'Wishing Alps'],
+};
+const COLLECTION_REALM = { 'Dreamlight Valley': 'Main', 'Eternity Isle': 'Eternity', 'Storybook Vale': 'Storybook',
+  'Honeyglow Woods': 'Honeyglow', 'Wishblossom Mountains': 'Wishblossom' };
+const realmOf = place => Object.keys(REALMS).find(r => REALMS[r].includes(place.replace(/\s*\(max \d+\)$/i, '')));
+// [["Main", ["Plaza", "Forgotten Lands"]], ["Eternity", [...]], ["", [notes that aren't places]]]
+function groupByRealm(places) {
+  const groups = new Map();
+  for (const p of places) {
+    const r = realmOf(p) || '';
+    if (!groups.has(r)) groups.set(r, []);
+    groups.get(r).push(p);
+  }
+  const order = [...Object.keys(REALMS), ''];
+  return [...groups].sort((a, b) => order.indexOf(a[0]) - order.indexOf(b[0]));
+}
 
 async function api(params, tries = 4) {
   const url = API + '?' + new URLSearchParams({ format: 'json', ...params });
@@ -31,6 +60,7 @@ function clean(s) {
     .replace(/\{\{!\}\}/g, '|')
     .replace(/\[\[File:[^\]]*\]\]/gi, '')
     .replace(/<[^>]+>/g, '')
+    .replace(/\[\[:?Category:[^\]]*\]\]/gi, '')
     .replace(/\{\{[^{}]*iconOnly[^{}]*\}\}/gi, '');  // icon-only templates add nothing
   // {{name|X|...}}, {{inlineIcon|X|...}} -> X ; other templates -> first arg
   for (let k = 0; k < 4; k++)
@@ -38,7 +68,7 @@ function clean(s) {
          .replace(/\{\{[^{}]*\}\}/g, '');
   t = t.replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, '$2').replace(/\[\[([^\]]+)\]\]/g, '$1')
        .replace(/'''?/g, '');
-  return [...new Set(t.split(/\n|,/).map(x => x.replace(/\s+/g, ' ').replace(/^[\s•*-]+|[\s(]+$/g, '').trim())
+  return [...new Set(t.split(/\n|,/).map(x => x.replace(/\s+/g, ' ').replace(/^[\s•*:-]+|[\s(]+$/g, '').trim())
     .map(x => x.replace(/\s*\(\d+\)$/, '')).map(x => x.charAt(0).toUpperCase() + x.slice(1))
     .filter(x => x && !/^(none|n\/a|-|or|\d+)$/i.test(x)))];
 }
@@ -95,13 +125,16 @@ for (let i = 0; i < list.length; i += 40) {
     if (!KEEP_TYPES.includes(type)) continue;
     const where = clean(f.found || f.biomes || f.biome || f.location || '');
     const from = clean(f.from || '');
+    const realm = COLLECTION_REALM[clean(f.collection || '')[0]] || '';
+    const how = from.filter(x => !where.includes(x));
     items.push({
       name: p.title,
       type,
       kind: clean(f.ingtype || f.category || f.collectioncategory || '')[0] || '',
-      realm: clean(f.collection || '')[0] || '',
-      where,
-      from: from.filter(x => !where.includes(x)),
+      realm,
+      // where it's found, grouped by realm; items with no location (shop-only) use their sources instead
+      areas: where.length ? groupByRealm(where) : how.length ? [[realm, how]] : [],
+      from: how,
     });
   }
   process.stdout.write('.');

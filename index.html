@@ -228,7 +228,7 @@ details .row{flex-wrap:wrap;margin-top:10px}
     <button id="importBtn">Paste backup text</button>
   </div>
   <p id="lastReset"></p>
-  <p class="credit">Item locations from the <a href="https://dreamlightvalleywiki.com" target="_blank" rel="noopener" style="color:inherit">Dreamlight Valley Wiki</a> (CC BY-NC-SA), updated weekly.</p>
+  <p class="credit">Item locations from the <a href="https://dreamlightvalleywiki.com" target="_blank" rel="noopener" style="color:inherit">Dreamlight Valley Wiki</a> (CC BY-NC-SA), updated when the game adds new items.</p>
 </details>
 
 <script>
@@ -252,10 +252,8 @@ function upgrade() {
   state.villagers.forEach(v => {
     if (!Array.isArray(v.gifts)) {
       v.gifts = [0, 1, 2].map(() => ({ item: '', done: false }));
-      if (v.giftNote) v.gifts[0].item = v.giftNote;
-      if (v.gifted) v.gifts.forEach(g => { g.done = true; });
+      v.giftedBtn = !!v.gifted;   // keep today's Gifted taps from before the gift slots existed
     }
-    delete v.giftNote;
   });
 }
 upgrade();
@@ -276,7 +274,7 @@ function lastBoundary() {
 // Clears villager and horse daily toggles (incl. BFF and gold level), "Today's gift" boxes, activity checkmarks, checklists and counters
 function checkReset(force) {
   if (force || state.lastReset < lastBoundary()) {
-    state.villagers.forEach(v => { v.gifted = false; v.collected = false; v.bff = false; v.gold = 0; v.gifts.forEach(g => { g.done = false; }); });
+    state.villagers.forEach(v => { v.gifted = false; v.giftedBtn = false; v.giftNote = ''; v.collected = false; v.bff = false; v.gold = 0; v.gifts.forEach(g => { g.done = false; }); });
     state.horses.forEach(h => { HORSE_TASKS.forEach(([k]) => { h[k] = false; }); h.giftNote = ''; });
     state.activities.forEach(a => { a.done = false; if (a.goal) a.count = 0; (a.items || []).forEach(i => { i.done = false; }); });
     state.lastReset = Date.now();
@@ -313,8 +311,9 @@ const villagerDone = v => canGift(v) && v.gifted && (v.collected || !canCollect(
 let ITEMS = [];
 const itemIndex = new Map();
 const findItemInfo = name => itemIndex.get(String(name || '').trim().toLowerCase());
-const whereText = info => !info ? '' :
-  '📍 ' + [info.where.length ? info.where.join(', ') : info.from.join(', '), info.realm].filter(Boolean).join(' · ');
+// "Main-Plaza, Forgotten Lands · Eternity-Glittering Dunes"
+const areasText = info => (info.areas || []).map(([realm, places]) => (realm ? realm + '-' : '') + places.join(', ')).join(' · ');
+const whereText = info => info && info.areas && info.areas.length ? '📍 ' + areasText(info) : '';
 fetch('items.json', { cache: 'no-cache' }).then(r => r.json()).then(d => {
   ITEMS = d.items || [];
   ITEMS.forEach(i => itemIndex.set(i.name.toLowerCase(), i));
@@ -458,8 +457,13 @@ function render() {
       </div>${v.level === 10 ? bffHtml(v) : ''}
       <div class="fieldLabel">Notes</div>
       <textarea data-f="notes" placeholder="Notes, quests, reminders…">${esc(v.notes)}</textarea>
-${giftSlotsHtml(v)}
+
+      <div class="fieldLabel">Today's gift (clears daily)</div>
+      <textarea class="giftNote" data-f="giftNote" rows="2" placeholder="What to give today…">${esc(v.giftNote)}</textarea>${giftSlotsHtml(v)}
       <div class="btnRow">
+        ${canGift(v)
+          ? `<button class="toggle ${v.giftedBtn ? 'on' : ''}" data-act="gift">${v.giftedBtn ? '🎁 Gifted' : 'Gifted'}</button>`
+          : `<button class="toggle" disabled title="Not available at level 0">Gifted</button>`}
         ${canCollect(v)
           ? `<button class="toggle ${v.collected ? 'on' : ''}" data-act="collect">${v.collected ? '✅ Collected' : 'Collected'}</button>`
           : `<button class="toggle" disabled title="Unlocks at level 7">Collected</button>`}
@@ -526,11 +530,13 @@ const find = el => {
     const act = btn.dataset.act;
     const item = find(btn);
     const kind = btn.closest('.card').dataset.kind;
-    if (act === 'gift') item.gifted = !item.gifted;
-    if (act === 'giftSlot') {
-      const g = item.gifts[btn.closest('.slot').dataset.slot]; g.done = !g.done;
-      item.gifted = item.gifts.every(x => x.done);   // Gifted = all three gifts given
+    if (act === 'gift') {
+      if (kind === 'villagers') item.giftedBtn = !item.giftedBtn; else item.gifted = !item.gifted;
     }
+    if (act === 'giftSlot') { const g = item.gifts[btn.closest('.slot').dataset.slot]; g.done = !g.done; }
+    // Villager counts as gifted when all three gift slots are checked (or the Gifted button is on)
+    if (kind === 'villagers' && (act === 'gift' || act === 'giftSlot'))
+      item.gifted = item.giftedBtn || item.gifts.every(x => x.done);
     if (act === 'collect') item.collected = !item.collected;
     if (act === 'care') item[btn.dataset.task] = !item[btn.dataset.task];
     if (act === 'spec') {
@@ -594,7 +600,7 @@ document.getElementById('addForm').addEventListener('submit', e => {
   const input = document.getElementById('newName');
   const name = input.value.trim(); if (!name) return;
   state.villagers.push({
-    id: newId(), name, level: 1, specialty: 'None', notes: '', gifts: [0, 1, 2].map(() => ({ item: '', done: false })), gifted: false, collected: false, fav: false, snap: false, bff: false, gold: 0
+    id: newId(), name, level: 1, specialty: 'None', notes: '', giftNote: '', gifts: [0, 1, 2].map(() => ({ item: '', done: false })), gifted: false, giftedBtn: false, collected: false, fav: false, snap: false, bff: false, gold: 0
   });
   input.value = ''; save(); render();
 });
@@ -612,7 +618,7 @@ rt.addEventListener('change', () => {
   save(); render();
 });
 document.getElementById('resetNow').onclick = () => {
-  if (confirm("Clear all villager and horse checkmarks (incl. gift checks), BFF and gold levels, horse gift boxes, activity checkmarks, checklists and counters?")) checkReset(true);
+  if (confirm("Clear all villager and horse checkmarks (incl. gift checks), BFF and gold levels, today's gift boxes, activity checkmarks, checklists and counters?")) checkReset(true);
 };
 document.getElementById('sort').onchange = render;
 // DLC (label only for now), top notes, collapsible sections and the villager specialty filter
@@ -626,8 +632,8 @@ function showLookup() {
   const exact = findItemInfo(q);
   const hits = exact ? [exact] : ITEMS.filter(i => i.name.toLowerCase().includes(q)).slice(0, 8);
   out.innerHTML = hits.length ? hits.map(i => `
-    <div class="lookupItem"><b>${esc(i.name)}</b> <span class="meta">${esc([i.kind || i.type, i.realm].filter(Boolean).join(' · '))}</span>
-      <div>${i.where.length ? '📍 ' + esc(i.where.join(', ')) : ''}</div>
+    <div class="lookupItem"><b>${esc(i.name)}</b> <span class="meta">${esc(i.kind || i.type)}</span>
+      <div>${esc(whereText(i))}</div>
       ${i.from.length ? `<div class="meta">How: ${esc(i.from.join(', '))}</div>` : ''}</div>`).join('')
     : `<div class="meta">${ITEMS.length ? 'No matching items.' : 'Item list is loading…'}</div>`;
 }
