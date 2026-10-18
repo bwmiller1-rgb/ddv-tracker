@@ -95,14 +95,45 @@ details .row{flex-wrap:wrap;margin-top:10px}
 .mini{background:transparent;border:none;color:var(--cardMuted);padding:4px 8px;font-size:1.1rem;flex:none}
 .addRow{display:flex;gap:8px;flex-wrap:wrap}
 .small{padding:6px 12px;font-size:.9rem;background:transparent;border:1px dashed var(--cardMuted);color:var(--cardMuted)}
+/* DLC picker, top notes, collapsible sections, villager filter */
+.dlcRow{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.95rem}
+.dlcRow select{padding:6px 10px}
+.topNotes{margin:4px 0 6px;color:var(--muted)}
+.topNotes summary{cursor:pointer;font-weight:600}
+.topNotes textarea{margin-top:8px;min-height:90px;font-weight:600}
+.secHead{display:flex;align-items:center;gap:8px;margin:22px 0 4px;padding:0;background:transparent;border:none;color:var(--accent);font-size:1.25rem;font-weight:700}
+.secHead .caret{display:inline-block;width:1em;transition:transform .15s}
+.secHead.closed .caret{transform:rotate(-90deg)}
+.section.closed{display:none}
+.filterRow{display:flex;align-items:center;gap:8px;color:var(--muted);margin:4px 0 8px}
+.filterRow select{padding:6px 10px}
+/* Dreamsnap heart + hover labels for the star and heart */
+.heart{background:transparent;border:none;padding:4px 6px;font-size:1.3rem;line-height:1;color:#9b94b5}
+.heart.on{color:#e0457b}
+[data-tip]{position:relative}
+[data-tip]:hover::after,[data-tip]:focus-visible::after{content:attr(data-tip);position:absolute;left:50%;bottom:100%;transform:translateX(-50%);margin-bottom:4px;padding:3px 8px;border-radius:6px;background:#141414;color:#fff;font-size:.75rem;font-weight:600;white-space:nowrap;pointer-events:none;z-index:5}
+/* BFF checkbox + gold level bar */
+.bffRow{display:flex;align-items:center;gap:10px}
+.bff{display:flex;align-items:center;gap:6px;font-weight:700}
+.bff input{width:22px;height:22px;padding:0;accent-color:#d4a000}
+.goldBar{display:flex;gap:3px}
+.goldBar button{width:34px;height:22px;padding:0;border-radius:5px;background:#e8e3d3;border:1px solid #cfc6a8}
+.goldBar button.on{background:#d9c690;border-color:#c4b27a}
+.bffOn .goldBar button.on{background:#ffc20e;border-color:#e0a800;box-shadow:0 0 6px rgba(255,194,14,.7)}
+.goldPct{font-size:.9rem;font-weight:700;color:var(--cardMuted);min-width:38px}
 </style>
 </head>
 <body>
 <header>
   <div><div class="titleRow"><h1>Felina's Valley Tracker</h1><button id="refreshBtn" class="refresh" aria-label="Refresh">⟳ Refresh</button></div><div class="progress" id="progress"></div></div>
   <div class="sortBox">
+  <label class="dlcRow">DLC <select id="dlc">
+    <option>1-Main</option><option>2-Eternity</option><option>3-Storybook</option><option>4-Honeyglow</option>
+    <option>5-Wishblossom</option><option>6-Devildump</option><option>7-Sea</option>
+  </select></label>
   <select id="sort" aria-label="Sort villagers">
-    <option value="name" selected>A–Z</option>
+    <option value="default" selected>Default (♥ ★ level BFF gold)</option>
+    <option value="name">A–Z</option>
     <option value="todo">Not gifted first</option>
     <option value="uncollected">Not collected first</option>
     <option value="specialty">Specialty</option>
@@ -118,26 +149,38 @@ details .row{flex-wrap:wrap;margin-top:10px}
   </div>
 </header>
 
-<h2>Daily activities</h2>
+<details class="topNotes" id="topNotes">
+  <summary>📝 Notes</summary>
+  <textarea id="generalNotes" placeholder="Anything you want to remember — these notes don't reset."></textarea>
+</details>
+
+<button class="secHead" data-sec="activities"><span class="caret">▾</span>Daily activities</button>
+<div class="section" data-sec="activities">
 <form class="add" id="addActivity">
   <input id="newActivity" placeholder="Add an activity (e.g. Star Path duty)" autocomplete="off">
   <button class="primary">Add</button>
 </form>
 <div class="grid" id="activities"></div>
+</div>
 
-<h2>Horses</h2>
+<button class="secHead" data-sec="horses"><span class="caret">▾</span>Horses</button>
+<div class="section" data-sec="horses">
 <form class="add" id="addHorse">
   <input id="newHorse" placeholder="Add a horse" autocomplete="off">
   <button class="primary">Add</button>
 </form>
 <div class="grid" id="horses"></div>
+</div>
 
-<h2>Villagers</h2>
+<button class="secHead" data-sec="villagers"><span class="caret">▾</span>Villagers</button>
+<div class="section" data-sec="villagers">
 <form class="add" id="addForm">
   <input id="newName" placeholder="Add a villager (e.g. Goofy)" autocomplete="off">
   <button class="primary">Add</button>
 </form>
+<label class="filterRow">Show <select id="specFilter"></select></label>
 <div class="grid" id="list"></div>
+</div>
 
 <details>
   <summary>Settings &amp; backup</summary>
@@ -173,6 +216,10 @@ function upgrade() {
   state.horses.forEach(h => { h.specialties = (h.specialties || []).filter(s => HORSE_SPECIALTIES.includes(s)); });
   state.theme = state.theme || 'purple';
   state.completedLast = !!state.completedLast;
+  state.dlc = state.dlc || '1-Main';
+  state.generalNotes = state.generalNotes || '';
+  state.collapsed = state.collapsed || {};
+  state.specFilter = state.specFilter || 'all';
 }
 upgrade();
 
@@ -189,10 +236,10 @@ function lastBoundary() {
   return b.getTime();
 }
 
-// Clears villager and horse daily toggles, "Today's gift" boxes, activity checkmarks, checklists and counters
+// Clears villager and horse daily toggles (incl. BFF and gold level), "Today's gift" boxes, activity checkmarks, checklists and counters
 function checkReset(force) {
   if (force || state.lastReset < lastBoundary()) {
-    state.villagers.forEach(v => { v.gifted = false; v.collected = false; v.giftNote = ''; });
+    state.villagers.forEach(v => { v.gifted = false; v.collected = false; v.giftNote = ''; v.bff = false; v.gold = 0; });
     state.horses.forEach(h => { HORSE_TASKS.forEach(([k]) => { h[k] = false; }); h.giftNote = ''; });
     state.activities.forEach(a => { a.done = false; if (a.goal) a.count = 0; (a.items || []).forEach(i => { i.done = false; }); });
     state.lastReset = Date.now();
@@ -200,8 +247,16 @@ function checkReset(force) {
   }
 }
 
-// Favorites always sort to the top, then the chosen order
-const byFav = (a, b) => (!!b.fav - !!a.fav);
+// Dreamsnap (heart) cards sort first, then favorites (star), then the chosen order
+const byFav = (a, b) => (!!b.snap - !!a.snap) || (!!b.fav - !!a.fav);
+// Default villager order: level 9 down to 0, then 10 · BFFs first · gold level low to high · specialty · A–Z
+const levelRank = v => v.level === 10 ? -1 : v.level;
+const bySpecialty = (a, b) => ((a.specialty || 'None') === 'None') - ((b.specialty || 'None') === 'None') ||
+  (a.specialty || '').localeCompare(b.specialty || '');
+const defaultVillagerSort = (a, b) =>
+  (levelRank(b) - levelRank(a)) || (!!b.bff - !!a.bff) || ((a.gold || 0) - (b.gold || 0)) ||
+  bySpecialty(a, b) || (b.level - a.level) || a.name.localeCompare(b.name);
+const GOLD_STEPS = 4; // 25%, 50%, 75%, 100%
 // Horses: five daily care tasks (stored as fields on each horse) and their own specialty list
 const HORSE_TASKS = [['pet', 'Pet', '🤚'], ['brush', 'Brush', '🪮'], ['feed', 'Feed', '🥕'], ['ride', 'Ride', '🏇'], ['gifted', 'Gift', '🎁']];
 const horseDone = h => h.level > 0 && HORSE_TASKS.every(([k]) => h[k]);
@@ -244,7 +299,18 @@ const checklistHtml = a => {
       </div>`;
 };
 const favButton = item =>
-  `<button class="fav" data-act="fav" aria-label="${item.fav ? 'Unfavorite' : 'Favorite'}">${item.fav ? '★' : '☆'}</button>`;
+  `<button class="fav" data-act="fav" data-tip="Favorite" aria-label="Favorite" aria-pressed="${!!item.fav}">${item.fav ? '★' : '☆'}</button>` +
+  `<button class="heart ${item.snap ? 'on' : ''}" data-act="snap" data-tip="Dreamsnap" aria-label="Dreamsnap" aria-pressed="${!!item.snap}">${item.snap ? '♥' : '♡'}</button>`;
+const bffHtml = v => {
+  const gold = v.gold || 0;
+  return `
+      <div class="bffRow ${v.bff ? 'bffOn' : ''}">
+        <label class="bff"><input type="checkbox" data-f="bff" ${v.bff ? 'checked' : ''}> BFF</label>
+        <div class="goldBar" aria-label="Gold level">${Array.from({length: GOLD_STEPS}, (_, i) =>
+          `<button class="${i < gold ? 'on' : ''}" data-act="gold" data-n="${i + 1}" aria-label="${(i + 1) * 25}%"></button>`).join('')}</div>
+        <span class="goldPct">${gold * 25}%</span>
+      </div>`;
+};
 
 // Checklist item boxes grow to fit their text
 function autoGrow(el) {
@@ -301,10 +367,12 @@ function render() {
   }).join('') : '<p class="empty">No horses yet.</p>';
 
   const sort = document.getElementById('sort').value;
-  const vs = [...state.villagers].sort((a, b) => lastIfDone(villagerDone(a), villagerDone(b)) || byFav(a, b) || (
+  const shown = state.specFilter === 'all' ? state.villagers
+    : state.villagers.filter(v => (v.specialty || 'None') === state.specFilter);
+  const vs = [...shown].sort((a, b) => lastIfDone(villagerDone(a), villagerDone(b)) || byFav(a, b) || (
+    sort === 'default' ? defaultVillagerSort(a, b) :
     sort === 'name'  ? a.name.localeCompare(b.name) :
-    sort === 'specialty' ? ((a.specialty || 'None') === 'None') - ((b.specialty || 'None') === 'None') ||
-      (a.specialty || '').localeCompare(b.specialty || '') || a.name.localeCompare(b.name) :
+    sort === 'specialty' ? bySpecialty(a, b) || a.name.localeCompare(b.name) :
     sort === 'level' ? (b.level - a.level) || a.name.localeCompare(b.name) :
     sort === 'levelUp' ? (a.level - b.level) || a.name.localeCompare(b.name) :
     sort === 'uncollected' ? (needsCollect(b) - needsCollect(a)) || a.name.localeCompare(b.name) :
@@ -322,7 +390,7 @@ function render() {
         <select data-f="specialty">${
           SPECIALTIES.map(s => `<option ${v.specialty === s ? 'selected' : ''}>${s}</option>`).join('')
         }</select>
-      </div>
+      </div>${bffHtml(v)}
       <div class="fieldLabel">Notes</div>
       <textarea data-f="notes" placeholder="Notes, quests, reminders…">${esc(v.notes)}</textarea>
       <div class="fieldLabel">Today's gift (clears daily)</div>
@@ -335,7 +403,7 @@ function render() {
           ? `<button class="toggle ${v.collected ? 'on' : ''}" data-act="collect">${v.collected ? '✅ Collected' : 'Collected'}</button>`
           : `<button class="toggle" disabled title="Unlocks at level 7">Collected</button>`}
       </div>
-    </div>`).join('') : '<p class="empty">No villagers yet.</p>';
+    </div>`).join('') : `<p class="empty">${state.villagers.length ? 'No villagers with that specialty.' : 'No villagers yet.'}</p>`;
 
   // Level 0 villagers aren't counted toward daily completion
   const counted = state.villagers.filter(canGift);
@@ -354,6 +422,7 @@ function render() {
     part(gifted, counted.length, 'gifted'),
     part(collected, collectable.length, 'collected'),
   ].join(' · ');
+  document.querySelectorAll('[data-sec]').forEach(el => el.classList.toggle('closed', !!state.collapsed[el.dataset.sec]));
   document.querySelectorAll('.item textarea').forEach(autoGrow);
   document.getElementById('lastReset').textContent =
     state.lastReset ? `Last reset: ${new Date(state.lastReset).toLocaleString()}` : '';
@@ -376,6 +445,7 @@ const find = el => {
   grid.addEventListener('change', e => {
     const f = e.target.dataset.f;
     if (f === 'sparkles') { find(e.target).sparkles = e.target.checked; save(); return; }
+    if (f === 'bff') { find(e.target).bff = e.target.checked; save(); render(); return; }
     if (f === 'level' || f === 'specialty') {
       find(e.target)[f] = f === 'level' ? Number(e.target.value) : e.target.value;
       save(); render();
@@ -413,6 +483,8 @@ const find = el => {
     if (['addItem', 'toggleItem', 'delItem', 'addCounter', 'inc', 'dec', 'delCounter'].includes(act) && hasTracking(item))
       item.done = trackingDone(item);
     if (act === 'fav') item.fav = !item.fav;
+    if (act === 'snap') item.snap = !item.snap;
+    if (act === 'gold') { const n = Number(btn.dataset.n); item.gold = (item.gold || 0) === n ? n - 1 : n; }
     if (act === 'del') {
       if (!confirm(`Remove ${item.name}?`)) return;
       state[kind] = state[kind].filter(x => x !== item);
@@ -448,7 +520,7 @@ document.getElementById('addForm').addEventListener('submit', e => {
   const input = document.getElementById('newName');
   const name = input.value.trim(); if (!name) return;
   state.villagers.push({
-    id: newId(), name, level: 1, specialty: 'None', notes: '', giftNote: '', gifted: false, collected: false, fav: false
+    id: newId(), name, level: 1, specialty: 'None', notes: '', giftNote: '', gifted: false, collected: false, fav: false, snap: false, bff: false, gold: 0
   });
   input.value = ''; save(); render();
 });
@@ -466,9 +538,25 @@ rt.addEventListener('change', () => {
   save(); render();
 });
 document.getElementById('resetNow').onclick = () => {
-  if (confirm("Clear all villager and horse checkmarks, today's gift boxes, activity checkmarks, checklists and counters?")) checkReset(true);
+  if (confirm("Clear all villager and horse checkmarks, BFF and gold levels, today's gift boxes, activity checkmarks, checklists and counters?")) checkReset(true);
 };
 document.getElementById('sort').onchange = render;
+// DLC (label only for now), top notes, collapsible sections and the villager specialty filter
+const dlcSel = document.getElementById('dlc');
+const notesBox = document.getElementById('generalNotes');
+const specFilter = document.getElementById('specFilter');
+specFilter.innerHTML = '<option value="all">All specialties</option>' +
+  SPECIALTIES.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join('');
+function syncTopControls() {
+  dlcSel.value = state.dlc; notesBox.value = state.generalNotes; specFilter.value = state.specFilter;
+}
+syncTopControls();
+dlcSel.onchange = () => { state.dlc = dlcSel.value; save(); };
+notesBox.oninput = () => { state.generalNotes = notesBox.value; save(); };
+specFilter.onchange = () => { state.specFilter = specFilter.value; save(); render(); };
+document.querySelectorAll('.secHead').forEach(h => h.onclick = () => {
+  state.collapsed[h.dataset.sec] = !state.collapsed[h.dataset.sec]; save(); render();
+});
 // Home-screen apps have no browser reload button; this reloads and skips the cached copy so updates show up
 document.getElementById('refreshBtn').onclick = () => { save(); location.replace(location.pathname + '?r=' + Date.now()); };
 const completedLast = document.getElementById('completedLast');
@@ -489,7 +577,7 @@ function restoreBackup(text) {
     if (!confirm(`Replace everything on this device with the backup${when}?`)) return;
     delete data.savedAt;
     state = data; upgrade(); save();
-    rt.value = state.resetTime; themeSel.value = state.theme; completedLast.checked = state.completedLast; applyTheme();
+    rt.value = state.resetTime; themeSel.value = state.theme; completedLast.checked = state.completedLast; applyTheme(); syncTopControls();
     checkReset(); render();
     alert('Restored!');
   } catch { alert("That doesn't look like a valid backup."); }
