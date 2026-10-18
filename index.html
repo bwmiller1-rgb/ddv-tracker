@@ -256,7 +256,7 @@ const bySpecialty = (a, b) => ((a.specialty || 'None') === 'None') - ((b.special
 const defaultVillagerSort = (a, b) =>
   (levelRank(b) - levelRank(a)) || (!!b.bff - !!a.bff) || ((a.gold || 0) - (b.gold || 0)) ||
   bySpecialty(a, b) || (b.level - a.level) || a.name.localeCompare(b.name);
-const GOLD_STEPS = 4; // 25%, 50%, 75%, 100%
+const GOLD_STEPS = 4; // 25%, 50%, 75%, 100% — shown on level 10 villagers only
 // Horses: five daily care tasks (stored as fields on each horse) and their own specialty list
 const HORSE_TASKS = [['pet', 'Pet', '🤚'], ['brush', 'Brush', '🪮'], ['feed', 'Feed', '🥕'], ['ride', 'Ride', '🏇'], ['gifted', 'Gift', '🎁']];
 const horseDone = h => h.level > 0 && HORSE_TASKS.every(([k]) => h[k]);
@@ -390,7 +390,7 @@ function render() {
         <select data-f="specialty">${
           SPECIALTIES.map(s => `<option ${v.specialty === s ? 'selected' : ''}>${s}</option>`).join('')
         }</select>
-      </div>${bffHtml(v)}
+      </div>${v.level === 10 ? bffHtml(v) : ''}
       <div class="fieldLabel">Notes</div>
       <textarea data-f="notes" placeholder="Notes, quests, reminders…">${esc(v.notes)}</textarea>
       <div class="fieldLabel">Today's gift (clears daily)</div>
@@ -447,7 +447,10 @@ const find = el => {
     if (f === 'sparkles') { find(e.target).sparkles = e.target.checked; save(); return; }
     if (f === 'bff') { find(e.target).bff = e.target.checked; save(); render(); return; }
     if (f === 'level' || f === 'specialty') {
-      find(e.target)[f] = f === 'level' ? Number(e.target.value) : e.target.value;
+      const it = find(e.target);
+      it[f] = f === 'level' ? Number(e.target.value) : e.target.value;
+      // BFF and gold level only apply to level 10 villagers
+      if (f === 'level' && it.level !== 10 && 'bff' in it) { it.bff = false; it.gold = 0; }
       save(); render();
     }
   });
