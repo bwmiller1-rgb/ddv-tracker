@@ -279,7 +279,7 @@ function lastBoundary() {
 // Clears villager and horse daily toggles (incl. BFF and gold level), "Today's gift" boxes, activity checkmarks, checklists and counters
 function checkReset(force) {
   if (force || state.lastReset < lastBoundary()) {
-    state.villagers.forEach(v => { v.gifted = false; v.collected = false; v.bff = false; v.gold = 0; v.gifts.forEach(g => { g.done = false; }); });
+    state.villagers.forEach(v => { v.gifted = false; v.collected = false; v.bff = false; v.gold = 0; v.gifts.forEach(g => { g.done = false; g.item = ''; }); });
     state.horses.forEach(h => { HORSE_TASKS.forEach(([k]) => { h[k] = false; }); h.giftNote = ''; });
     state.activities.forEach(a => { a.done = false; if (a.goal) a.count = 0; (a.items || []).forEach(i => { i.done = false; }); });
     state.lastReset = Date.now();
@@ -330,7 +330,7 @@ fetch('items.json', { cache: 'no-cache' }).then(r => r.json()).then(d => {
   render(); showLookup();
 }).catch(() => {});
 const giftSlotsHtml = v => `
-      <div class="fieldLabel">Gifts (checks clear daily) — ${v.gifts.filter(g => g.done).length}/3</div>
+      <div class="fieldLabel">Gifts (clear daily) — ${v.gifts.filter(g => g.done).length}/3</div>
       <div class="giftSlots">${v.gifts.map((g, i) => `
         <div class="slot" data-slot="${i}">
           <div class="row">
@@ -617,7 +617,7 @@ rt.addEventListener('change', () => {
   save(); render();
 });
 document.getElementById('resetNow').onclick = () => {
-  if (confirm("Clear all villager and horse checkmarks (incl. gift checks), BFF and gold levels, horse gift boxes, activity checkmarks, checklists and counters?")) checkReset(true);
+  if (confirm("Clear all villager and horse checkmarks, villager gift slots, BFF and gold levels, horse gift boxes, activity checkmarks, checklists and counters?")) checkReset(true);
 };
 document.getElementById('sort').onchange = render;
 // DLC (label only for now), top notes, collapsible sections and the villager specialty filter
