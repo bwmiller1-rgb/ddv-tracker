@@ -146,6 +146,29 @@ details .row{flex-wrap:wrap;margin-top:10px}
 .lv10Gift svg{width:26px;height:26px;fill:#9b94b5}
 .lv10Gift.on{color:#c62828}
 .lv10Gift.on svg{fill:#d32f2f}
+/* Tabs + item collection tracker */
+.tabs{display:flex;gap:6px;margin:2px 0 10px}
+.tab{padding:8px 18px;font-weight:700;border-radius:999px;background:transparent;color:var(--muted);border:1px solid var(--muted)}
+.tab.on{background:var(--accent);color:#1d1838;border-color:var(--accent)}
+.view.hidden{display:none}
+.colTotal{font-size:1.1rem;font-weight:700;margin:4px 0 6px}
+.colTotal.allDone{color:#5dd39e}
+.bar{height:12px;border-radius:999px;background:rgba(255,255,255,.18);overflow:hidden;margin-bottom:10px}
+.bar span{display:block;height:100%;background:var(--done)}
+.regionChips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.regionChips .chip{background:var(--card);color:var(--cardText);border-color:transparent;font-weight:600}
+.regionChips .chip.on{background:var(--accent);color:#1d1838}
+.regionChips .chip.full{box-shadow:inset 0 0 0 2px var(--done)}
+.colFilters{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 10px;color:var(--muted)}
+.colFilters label{display:flex;align-items:center;gap:6px}
+.colFilters select,.colFilters input:not([type=checkbox]){padding:6px 10px}
+.colFilters input[type=checkbox]{width:20px;height:20px;padding:0;accent-color:var(--done)}
+.colCount{color:var(--muted);font-size:.9rem;margin-bottom:6px}
+.colList{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:8px}
+.colItem{display:flex;gap:10px;align-items:flex-start;background:var(--card);color:var(--cardText);border-radius:12px;padding:8px 10px;border:2px solid transparent}
+.colItem.on{background:var(--doneBg);border-color:var(--done)}
+.colItem .check{width:38px;height:38px}
+.colItem b{font-size:1.02rem}
 </style>
 </head>
 <body>
@@ -174,6 +197,12 @@ details .row{flex-wrap:wrap;margin-top:10px}
   </div>
 </header>
 
+<nav class="tabs">
+  <button class="tab" data-tab="daily">📅 Daily</button>
+  <button class="tab" data-tab="collection">📦 Collection</button>
+</nav>
+
+<div class="view" id="dailyView">
 <details class="topNotes" id="topNotes">
   <summary>📝 Notes</summary>
   <textarea id="generalNotes" placeholder="Anything you want to remember — these notes don't reset."></textarea>
@@ -217,6 +246,23 @@ details .row{flex-wrap:wrap;margin-top:10px}
 </div>
 <div class="grid" id="list"></div>
 </div>
+</div>
+
+<div class="view" id="collectionView">
+<h2>Item collection</h2>
+<div class="colTotal" id="colTotal"></div>
+<div class="bar"><span id="colBar"></span></div>
+<div class="regionChips" id="regionChips"></div>
+<div class="colFilters">
+  <label>Region <select id="colRegion"></select></label>
+  <label>Type <select id="colType"></select></label>
+  <label>Find <input id="colFind" placeholder="Item name" autocomplete="off"></label>
+  <label><input type="checkbox" id="colHide"> Hide collected</label>
+  <button id="colClear" class="clearBtn">✕ Clear</button>
+</div>
+<div class="colCount" id="colCount"></div>
+<div class="colList" id="colList"></div>
+</div>
 
 <details>
   <summary>Settings &amp; backup</summary>
@@ -257,6 +303,9 @@ function upgrade() {
   state.generalNotes = state.generalNotes || '';
   state.collapsed = state.collapsed || {};
   state.specFilter = state.specFilter || 'all';
+  state.tab = state.tab || 'daily';
+  state.collection = state.collection || {};   // item name (lower case) → true once collected; never reset
+  state.colFilter = { region: 'all', type: 'all', hide: false, ...state.colFilter };
   state.villagers.forEach(v => {
     if (!Array.isArray(v.gifts)) {
       v.gifts = [0, 1, 2].map(() => ({ item: '', done: false }));
@@ -332,8 +381,67 @@ fetch('items.json', { cache: 'no-cache' }).then(r => r.json()).then(d => {
   ITEMS = d.items || [];
   ITEMS.forEach(i => itemIndex.set(i.name.toLowerCase(), i));
   document.getElementById('itemNames').innerHTML = ITEMS.map(i => `<option value="${esc(i.name)}">`).join('');
-  render(); showLookup();
+  fillColFilters(); render(); showLookup();
 }).catch(() => {});
+// Item collection: regions an item is found in, and its type/kind for the filter
+const REGIONS = ['Main', 'Eternity', 'Storybook', 'Honeyglow', 'Wishblossom', 'Anywhere/Events'];
+const kindOf = i => i.kind === 'Crafting Material' ? 'Crafting Materials' : i.kind;
+const itemRegions = i => {
+  const rs = (i.areas || []).map(([r]) => r || 'Anywhere/Events');
+  return [...new Set(rs.length ? rs : [i.realm || 'Anywhere/Events'])];
+};
+const isCollected = i => !!state.collection[i.name.toLowerCase()];
+const colMatches = (i, f, q) =>
+  (f.region === 'all' || itemRegions(i).includes(f.region)) &&
+  (f.type === 'all' || f.type === 't:' + i.type || f.type === 'k:' + kindOf(i)) &&
+  (!q || i.name.toLowerCase().includes(q));
+function renderCollection() {
+  const f = state.colFilter;
+  const done = ITEMS.filter(isCollected).length;
+  const pct = ITEMS.length ? Math.round(done / ITEMS.length * 100) : 0;
+  const total = document.getElementById('colTotal');
+  total.textContent = ITEMS.length ? `${done} / ${ITEMS.length} items collected (${pct}%)${done === ITEMS.length ? ' 🎉' : ''}` : 'Item list is loading…';
+  total.classList.toggle('allDone', ITEMS.length > 0 && done === ITEMS.length);
+  document.getElementById('colBar').style.width = pct + '%';
+  // Per-region progress (an item found in two regions counts in both); tap a region to filter by it
+  document.getElementById('regionChips').innerHTML = REGIONS.map(r => {
+    const inR = ITEMS.filter(i => itemRegions(i).includes(r));
+    if (!inR.length) return '';
+    const got = inR.filter(isCollected).length;
+    return `<button class="chip ${f.region === r ? 'on' : ''} ${got === inR.length ? 'full' : ''}" data-region="${r}">${r} ${got}/${inR.length}</button>`;
+  }).join('');
+  const q = document.getElementById('colFind').value.trim().toLowerCase();
+  const shown = ITEMS.filter(i => colMatches(i, f, q) && !(f.hide && isCollected(i)))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  document.getElementById('colCount').textContent = ITEMS.length ? `Showing ${shown.length} item${shown.length === 1 ? '' : 's'}` : '';
+  document.getElementById('colList').innerHTML = shown.map(i => {
+    const on = isCollected(i);
+    return `
+    <div class="colItem ${on ? 'on' : ''}">
+      <button class="check ${on ? 'on' : ''}" data-item-name="${esc(i.name)}" aria-label="${on ? 'Uncheck' : 'Mark collected'}: ${esc(i.name)}">${on ? '✓' : ''}</button>
+      <div><b>${esc(i.name)}</b> <span class="meta">${esc(kindOf(i) || i.type)}</span>
+        <div class="meta">${esc(whereText(i))}</div>
+        ${i.from.length ? `<div class="meta">How: ${esc(i.from.join(', '))}</div>` : ''}</div>
+    </div>`;
+  }).join('') || `<p class="empty">${ITEMS.length ? 'No items match the filter.' : ''}</p>`;
+}
+function fillColFilters() {
+  const types = [...new Set(ITEMS.map(i => i.type))].sort();
+  const kinds = [...new Set(ITEMS.map(kindOf).filter(Boolean))].sort();
+  document.getElementById('colRegion').innerHTML = '<option value="all">All regions</option>' +
+    REGIONS.map(r => `<option>${r}</option>`).join('');
+  document.getElementById('colType').innerHTML = '<option value="all">All types</option>' +
+    `<optgroup label="Type">${types.map(t => `<option value="t:${esc(t)}">${esc(t)}</option>`).join('')}</optgroup>` +
+    `<optgroup label="Kind">${kinds.map(k => `<option value="k:${esc(k)}">${esc(k)}</option>`).join('')}</optgroup>`;
+  syncColFilters();
+}
+function syncColFilters() {
+  const f = state.colFilter;
+  document.getElementById('colRegion').value = f.region;
+  document.getElementById('colType').value = f.type;
+  if (ITEMS.length && document.getElementById('colType').value !== f.type) { f.type = 'all'; document.getElementById('colType').value = 'all'; }
+  document.getElementById('colHide').checked = f.hide;
+}
 const giftSlotsHtml = v => `
       <div class="fieldLabel">Gifts (clear daily) — ${v.gifts.filter(g => g.done).length}/3</div>
       <div class="giftSlots">${v.gifts.map((g, i) => `
@@ -500,6 +608,10 @@ ${giftSlotsHtml(v)}
     part(collected, collectable.length, 'collected'),
   ].join(' · ');
   document.querySelectorAll('[data-sec]').forEach(el => el.classList.toggle('closed', !!state.collapsed[el.dataset.sec]));
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('on', t.dataset.tab === state.tab));
+  document.getElementById('dailyView').classList.toggle('hidden', state.tab !== 'daily');
+  document.getElementById('collectionView').classList.toggle('hidden', state.tab !== 'collection');
+  renderCollection();
   document.querySelectorAll('.item textarea').forEach(autoGrow);
   document.getElementById('lastReset').textContent =
     state.lastReset ? `Last reset: ${new Date(state.lastReset).toLocaleString()}` : '';
@@ -664,6 +776,32 @@ specFilter.onchange = () => { state.specFilter = specFilter.value; save(); rende
 document.querySelectorAll('.secHead').forEach(h => h.onclick = () => {
   state.collapsed[h.dataset.sec] = !state.collapsed[h.dataset.sec]; save(); render();
 });
+// Tabs and the item collection tracker
+document.querySelectorAll('.tab').forEach(t => t.onclick = () => { state.tab = t.dataset.tab; save(); render(); window.scrollTo(0, 0); });
+const colFilterChanged = () => {
+  const f = state.colFilter;
+  f.region = document.getElementById('colRegion').value;
+  f.type = document.getElementById('colType').value;
+  f.hide = document.getElementById('colHide').checked;
+  save(); renderCollection();
+};
+['colRegion', 'colType', 'colHide'].forEach(id => document.getElementById(id).onchange = colFilterChanged);
+document.getElementById('colFind').oninput = renderCollection;
+document.getElementById('colClear').onclick = () => {
+  document.getElementById('colFind').value = '';
+  state.colFilter = { region: 'all', type: 'all', hide: false }; syncColFilters(); save(); renderCollection();
+};
+document.getElementById('regionChips').onclick = e => {
+  const chip = e.target.closest('[data-region]'); if (!chip) return;
+  state.colFilter.region = state.colFilter.region === chip.dataset.region ? 'all' : chip.dataset.region;
+  syncColFilters(); save(); renderCollection();
+};
+document.getElementById('colList').onclick = e => {
+  const btn = e.target.closest('[data-item-name]'); if (!btn) return;
+  const k = btn.dataset.itemName.toLowerCase();
+  if (state.collection[k]) delete state.collection[k]; else state.collection[k] = true;
+  save(); renderCollection();
+};
 // Home-screen apps have no browser reload button; this reloads and skips the cached copy so updates show up
 document.getElementById('refreshBtn').onclick = () => { save(); location.replace(location.pathname + '?r=' + Date.now()); };
 const completedLast = document.getElementById('completedLast');
@@ -684,7 +822,7 @@ function restoreBackup(text) {
     if (!confirm(`Replace everything on this device with the backup${when}?`)) return;
     delete data.savedAt;
     state = data; upgrade(); save();
-    rt.value = state.resetTime; themeSel.value = state.theme; completedLast.checked = state.completedLast; applyTheme(); syncTopControls();
+    rt.value = state.resetTime; themeSel.value = state.theme; completedLast.checked = state.completedLast; applyTheme(); syncTopControls(); syncColFilters();
     checkReset(); render();
     alert('Restored!');
   } catch { alert("That doesn't look like a valid backup."); }
