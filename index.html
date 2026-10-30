@@ -146,6 +146,9 @@ details .row{flex-wrap:wrap;margin-top:10px}
 .lv10Gift svg{width:26px;height:26px;fill:#9b94b5}
 .lv10Gift.on{color:#c62828}
 .lv10Gift.on svg{fill:#d32f2f}
+/* Checklist item "Daily" box: unchecked items keep their checkmark through the daily reset */
+.daily{display:flex;flex-direction:column;align-items:center;gap:1px;font-size:.7rem;font-weight:600;color:var(--cardMuted);flex:none}
+.daily input{width:20px;height:20px;padding:0;accent-color:var(--done)}
 /* Tabs + item collection tracker */
 .tabs{display:flex;gap:6px;margin:2px 0 10px}
 .tab{padding:8px 18px;font-weight:700;border-radius:999px;background:transparent;color:var(--muted);border:1px solid var(--muted)}
@@ -330,12 +333,12 @@ function lastBoundary() {
   return b.getTime();
 }
 
-// Clears villager and horse daily toggles (incl. BFF and gold level), "Today's gift" boxes, activity checkmarks, checklists and counters
+// Clears villager and horse daily toggles (incl. BFF and gold level), "Today's gift" boxes, activity checkmarks, checklists (items with Daily unchecked keep their checkmark) and counters
 function checkReset(force) {
   if (force || state.lastReset < lastBoundary()) {
     state.villagers.forEach(v => { v.gifted = false; v.collected = false; v.bff = false; v.gold = 0; v.gifts.forEach(g => { g.done = false; g.item = ''; }); });
     state.horses.forEach(h => { HORSE_TASKS.forEach(([k]) => { h[k] = false; }); h.giftNote = ''; });
-    state.activities.forEach(a => { a.done = false; if (a.goal) a.count = 0; (a.items || []).forEach(i => { i.done = false; }); });
+    state.activities.forEach(a => { a.done = false; if (a.goal) a.count = 0; (a.items || []).forEach(i => { if (!i.keep) i.done = false; }); if (hasTracking(a)) a.done = trackingDone(a); });
     state.lastReset = Date.now();
     save(); render();
   }
@@ -462,6 +465,7 @@ const checklistHtml = a => {
         <div class="item ${i.done ? 'on' : ''}" data-item="${i.id}">
           <button class="check ${i.done ? 'on' : ''}" data-act="toggleItem" aria-label="${i.done ? 'Uncheck' : 'Check'}">${i.done ? '✓' : ''}</button>
           <textarea data-f="itemText" rows="1" placeholder="Item">${esc(i.text)}</textarea>
+          <label class="daily" title="Clear this item with the daily reset"><input type="checkbox" data-f="itemDaily" ${i.keep ? '' : 'checked'}>Daily</label>
           <button class="mini" data-act="delItem" aria-label="Remove item">✕</button>
         </div>`).join('');
   const count = a.count || 0;
@@ -640,6 +644,7 @@ const find = el => {
   grid.addEventListener('change', e => {
     const f = e.target.dataset.f;
     if (f === 'sparkles') { find(e.target).sparkles = e.target.checked; save(); return; }
+    if (f === 'itemDaily') { findItem(e.target).keep = !e.target.checked; save(); return; }
     if (f === 'bff') { find(e.target).bff = e.target.checked; save(); render(); return; }
     if (f === 'level' || f === 'specialty') {
       const it = find(e.target);
