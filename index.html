@@ -58,7 +58,7 @@ button{cursor:pointer;background:var(--btn)}
 .toggle.on{background:var(--done);color:#fff;border:none}
 .btnRow{display:flex;gap:8px}
 .btnRow .toggle{flex:1;min-width:0}
-.careGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.careGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
 .careGrid .toggle{padding:12px 6px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{padding:6px 10px;font-size:.9rem;border-radius:999px}
@@ -67,7 +67,6 @@ button{cursor:pointer;background:var(--btn)}
 .sparkle{display:flex;align-items:center;gap:8px;font-weight:600}
 .sparkle input{width:22px;height:22px;padding:0;accent-color:var(--fav)}
 .toggle:disabled{opacity:.4;cursor:not-allowed}
-.giftNote{width:100%;min-height:0;line-height:1.35}
 .card select,.card input:not(.name),.card textarea{font-size:1.08rem;font-weight:700}
 .card ::placeholder{font-weight:400}
 .fieldLabel{font-size:.85rem;font-weight:600;color:var(--cardMuted);margin-bottom:-4px}
@@ -317,6 +316,12 @@ function upgrade() {
     delete v.giftNote; delete v.giftedBtn;
     v.gifted = v.gifts.every(g => g.done);
   });
+  // Horses use the same three daily gift slots as villagers (the old gift box and Gift button are gone)
+  state.horses.forEach(h => {
+    if (!Array.isArray(h.gifts)) h.gifts = [0, 1, 2].map(() => ({ item: '', done: false }));
+    delete h.giftNote;
+    h.gifted = h.gifts.every(g => g.done);
+  });
 }
 upgrade();
 
@@ -333,11 +338,11 @@ function lastBoundary() {
   return b.getTime();
 }
 
-// Clears villager and horse daily toggles (incl. BFF and gold level), "Today's gift" boxes, activity checkmarks, checklists (unless the card's Reset box is unchecked) and counters
+// Clears villager and horse daily toggles (incl. BFF and gold level), villager and horse gift slots, activity checkmarks, checklists (unless the card's Reset box is unchecked) and counters
 function checkReset(force) {
   if (force || state.lastReset < lastBoundary()) {
     state.villagers.forEach(v => { v.gifted = false; v.collected = false; v.bff = false; v.gold = 0; v.gifts.forEach(g => { g.done = false; g.item = ''; }); });
-    state.horses.forEach(h => { HORSE_TASKS.forEach(([k]) => { h[k] = false; }); h.giftNote = ''; });
+    state.horses.forEach(h => { HORSE_TASKS.forEach(([k]) => { h[k] = false; }); h.gifted = false; h.gifts.forEach(g => { g.done = false; g.item = ''; }); });
     state.activities.forEach(a => { a.done = false; if (a.goal) a.count = 0; if (!a.keepItems) (a.items || []).forEach(i => { i.done = false; }); if (hasTracking(a)) a.done = trackingDone(a); });
     state.lastReset = Date.now();
     save(); render();
@@ -355,8 +360,9 @@ const defaultVillagerSort = (a, b) =>
   bySpecialty(a, b) || a.name.localeCompare(b.name);
 const GOLD_STEPS = 4; // 25%, 50%, 75%, 100% — shown on level 10 villagers only
 // Horses: five daily care tasks (stored as fields on each horse) and their own specialty list
-const HORSE_TASKS = [['pet', 'Pet', '🤚'], ['brush', 'Brush', '🪮'], ['feed', 'Feed', '🥕'], ['ride', 'Ride', '🏇'], ['gifted', 'Gift', '🎁']];
-const horseDone = h => h.level > 0 && HORSE_TASKS.every(([k]) => h[k]);
+const HORSE_TASKS = [['pet', 'Pet', '🤚'], ['brush', 'Brush', '🪮'], ['feed', 'Feed', '🥕'], ['ride', 'Ride', '🏇']];
+// Done = all four care tasks plus all three gift slots
+const horseDone = h => h.level > 0 && HORSE_TASKS.every(([k]) => h[k]) && h.gifted;
 const levelSelect = x => `<label>Level <select data-f="level">${
   Array.from({length:11}, (_, i) => `<option ${x.level == i ? 'selected' : ''}>${i}</option>`).join('')
 }</select></label>`;
@@ -546,8 +552,7 @@ function render() {
       }).join('')}</div>
       <div class="fieldLabel">Notes</div>
       <textarea data-f="notes" placeholder="Notes, reminders…">${esc(h.notes)}</textarea>
-      <div class="fieldLabel">Today's gift (clears daily)</div>
-      <textarea class="giftNote" data-f="giftNote" rows="2" placeholder="What to give today…">${esc(h.giftNote)}</textarea>
+${giftSlotsHtml(h)}
       <div class="careGrid">${HORSE_TASKS.map(([k, label, icon]) => h.level > 0
         ? `<button class="toggle ${h[k] ? 'on' : ''}" data-act="care" data-task="${k}">${h[k] ? icon + ' ' : ''}${label}</button>`
         : `<button class="toggle" disabled title="Not available at level 0">${label}</button>`).join('')}</div>
@@ -632,7 +637,7 @@ const find = el => {
   const grid = document.getElementById(gridId);
   grid.addEventListener('input', e => {
     const f = e.target.dataset.f;
-    if (f === 'notes' || f === 'name' || f === 'giftNote') { find(e.target)[f] = e.target.value; save(); }
+    if (f === 'notes' || f === 'name') { find(e.target)[f] = e.target.value; save(); }
     if (f === 'giftItem') {
       const slot = e.target.closest('.slot');
       find(e.target).gifts[slot.dataset.slot].item = e.target.value;
@@ -713,7 +718,7 @@ document.getElementById('addHorse').addEventListener('submit', e => {
   const input = document.getElementById('newHorse');
   const name = input.value.trim(); if (!name) return;
   state.horses.push({
-    id: newId(), name, level: 1, specialties: [], notes: '', giftNote: '', sparkles: false, fav: false,
+    id: newId(), name, level: 1, specialties: [], notes: '', gifts: [0, 1, 2].map(() => ({ item: '', done: false })), sparkles: false, fav: false,
     pet: false, brush: false, feed: false, ride: false, gifted: false
   });
   input.value = ''; save(); render();
@@ -743,7 +748,7 @@ rt.addEventListener('change', () => {
   save(); render();
 });
 document.getElementById('resetNow').onclick = () => {
-  if (confirm("Clear all villager and horse checkmarks, villager gift slots, BFF and gold levels, horse gift boxes, activity checkmarks, checklists and counters?")) checkReset(true);
+  if (confirm("Clear all villager and horse checkmarks, villager and horse gift slots, BFF and gold levels, activity checkmarks, checklists and counters?")) checkReset(true);
 };
 document.getElementById('sort').onchange = render;
 // DLC (label only for now), top notes, collapsible sections and the villager specialty filter
