@@ -7486,7 +7486,14 @@
    "type": "Foraging",
    "kind": "Crafting Materials",
    "realm": "Main",
-   "areas": [],
+   "areas": [
+    [
+     "Main",
+     [
+      "Location not on the wiki yet"
+     ]
+    ]
+   ],
    "from": []
   },
   {
