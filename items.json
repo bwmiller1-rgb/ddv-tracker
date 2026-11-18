@@ -1,6 +1,6 @@
 {
  "source": "Dreamlight Valley Wiki (dreamlightvalleywiki.com), CC BY-NC-SA",
- "count": 417,
+ "count": 445,
  "items": [
   {
    "name": "Acorn Snail",
@@ -126,6 +126,23 @@
    "from": [
     "Aladdin's Gem Stall",
     "Mining"
+   ]
+  },
+  {
+   "name": "Anchovy",
+   "type": "Ingredient",
+   "kind": "Fish",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Shipwreck Shores"
+     ]
+    ]
+   ],
+   "from": [
+    "Fishing"
    ]
   },
   {
@@ -501,6 +518,23 @@
    ]
   },
   {
+   "name": "Blue Bubble Blooms",
+   "type": "Foraging",
+   "kind": "Flowers",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Foraging"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging"
+   ]
+  },
+  {
    "name": "Blue Button",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -660,7 +694,7 @@
    ]
   },
   {
-   "name": "Blue Snapdragon",
+   "name": "Blue Skull Snapdragon",
    "type": "Foraging",
    "kind": "Flowers",
    "realm": "Sea",
@@ -668,7 +702,7 @@
     [
      "Sea",
      [
-      "Shipwreck Shores"
+      "Foraging"
      ]
     ]
    ],
@@ -872,6 +906,23 @@
    ]
   },
   {
+   "name": "Bucket of Sweets",
+   "type": "Foraging",
+   "kind": "Fish",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Candy Cove"
+     ]
+    ]
+   ],
+   "from": [
+    "Fishing"
+   ]
+  },
+  {
    "name": "Bumblestone",
    "type": "Gem",
    "kind": "",
@@ -962,7 +1013,7 @@
   },
   {
    "name": "Candy Pebbles",
-   "type": "Ingredient",
+   "type": "Foraging",
    "kind": "",
    "realm": "Sea",
    "areas": [
@@ -1182,6 +1233,23 @@
    "from": [
     "Goofy's Stall",
     "Gardening"
+   ]
+  },
+  {
+   "name": "Chocolate Neapolitan Oxalis",
+   "type": "Foraging",
+   "kind": "Flowers",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Foraging"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging"
    ]
   },
   {
@@ -1635,6 +1703,21 @@
    ]
   },
   {
+   "name": "Dark Pearl",
+   "type": "Foraging",
+   "kind": "",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Location not on the wiki yet"
+     ]
+    ]
+   ],
+   "from": []
+  },
+  {
    "name": "Dark Wood",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -1919,6 +2002,21 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Electric Eel Kelp",
+   "type": "Foraging",
+   "kind": "",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Location not on the wiki yet"
+     ]
+    ]
+   ],
+   "from": []
   },
   {
    "name": "Elysian Grain",
@@ -2387,6 +2485,21 @@
    ]
   },
   {
+   "name": "Gold Sand",
+   "type": "Foraging",
+   "kind": "",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Location not on the wiki yet"
+     ]
+    ]
+   ],
+   "from": []
+  },
+  {
    "name": "Golden Apple",
    "type": "Ingredient",
    "kind": "Fruit",
@@ -2546,6 +2659,23 @@
    ]
   },
   {
+   "name": "Green Bubble Blooms",
+   "type": "Foraging",
+   "kind": "Flowers",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Foraging"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging"
+   ]
+  },
+  {
    "name": "Green Button",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -2668,7 +2798,7 @@
    ]
   },
   {
-   "name": "Green Snapdragon",
+   "name": "Green Skull Snapdragon",
    "type": "Foraging",
    "kind": "Flowers",
    "realm": "Sea",
@@ -2676,12 +2806,29 @@
     [
      "Sea",
      [
-      "Shipwreck Shores"
+      "Foraging"
      ]
     ]
    ],
    "from": [
     "Foraging"
+   ]
+  },
+  {
+   "name": "Gummiberry Juice",
+   "type": "Foraging",
+   "kind": "Fish",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Candy Cove"
+     ]
+    ]
+   ],
+   "from": [
+    "Fishing"
    ]
   },
   {
@@ -2846,6 +2993,38 @@
    ]
   },
   {
+   "name": "Igloo Crab",
+   "type": "Ingredient",
+   "kind": "Fish",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Candy Cove"
+     ]
+    ]
+   ],
+   "from": [
+    "Fishing"
+   ]
+  },
+  {
+   "name": "Iridescent Seashells",
+   "type": "Foraging",
+   "kind": "",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Location not on the wiki yet"
+     ]
+    ]
+   ],
+   "from": []
+  },
+  {
    "name": "Iron Ore",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -2937,6 +3116,23 @@
      "Wishblossom",
      [
       "Glamour Gulch"
+     ]
+    ]
+   ],
+   "from": [
+    "Fishing"
+   ]
+  },
+  {
+   "name": "Jellyfish",
+   "type": "Ingredient",
+   "kind": "Fish",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Candy Cove"
      ]
     ]
    ],
@@ -3190,6 +3386,23 @@
    ]
   },
   {
+   "name": "Mango Wrasse",
+   "type": "Ingredient",
+   "kind": "Fish",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Kingdom of Oublié"
+     ]
+    ]
+   ],
+   "from": [
+    "Fishing"
+   ]
+  },
+  {
    "name": "Marble",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -3243,6 +3456,21 @@
    ]
   },
   {
+   "name": "Mermaid's Purse",
+   "type": "Foraging",
+   "kind": "",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Location not on the wiki yet"
+     ]
+    ]
+   ],
+   "from": []
+  },
+  {
    "name": "Milk",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
@@ -3262,6 +3490,23 @@
    ]
   },
   {
+   "name": "Mini-Kraken",
+   "type": "Ingredient",
+   "kind": "Fish",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Shipwreck Shores"
+     ]
+    ]
+   ],
+   "from": [
+    "Fishing"
+   ]
+  },
+  {
    "name": "Mint",
    "type": "Ingredient",
    "kind": "Spices",
@@ -3271,6 +3516,23 @@
      "Main",
      [
       "Frosted Heights"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging"
+   ]
+  },
+  {
+   "name": "Mint Neapolitan Oxalis",
+   "type": "Foraging",
+   "kind": "Flowers",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Candy Cove"
      ]
     ]
    ],
@@ -3296,6 +3558,23 @@
     "Goofy's Stall",
     "Foraging",
     "Removing Mossy Logs"
+   ]
+  },
+  {
+   "name": "Mother of Pearl",
+   "type": "Foraging",
+   "kind": "Fish",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Kingdom of Oublié"
+     ]
+    ]
+   ],
+   "from": [
+    "Fishing"
    ]
   },
   {
@@ -3409,6 +3688,21 @@
    "from": [
     "Digging Sparkling Holes"
    ]
+  },
+  {
+   "name": "Nougat Nugget",
+   "type": "Foraging",
+   "kind": "",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Location not on the wiki yet"
+     ]
+    ]
+   ],
+   "from": []
   },
   {
    "name": "Nutmeg",
@@ -4127,18 +4421,20 @@
   },
   {
    "name": "Pink Coral",
-   "type": "Ingredient",
-   "kind": "",
+   "type": "Foraging",
+   "kind": "Fish",
    "realm": "Sea",
    "areas": [
     [
      "Sea",
      [
-      "Location not on the wiki yet"
+      "Kingdom of Oublié"
      ]
     ]
    ],
-   "from": []
+   "from": [
+    "Fishing"
+   ]
   },
   {
    "name": "Pink Crocus",
@@ -4526,6 +4822,21 @@
    "from": [
     "Gardening"
    ]
+  },
+  {
+   "name": "Pumice Stone",
+   "type": "Foraging",
+   "kind": "",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Location not on the wiki yet"
+     ]
+    ]
+   ],
+   "from": []
   },
   {
    "name": "Pumpkin",
@@ -5035,6 +5346,23 @@
    ]
   },
   {
+   "name": "Red Bubble Blooms",
+   "type": "Foraging",
+   "kind": "Flowers",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Foraging"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging"
+   ]
+  },
+  {
    "name": "Red Button",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -5210,7 +5538,7 @@
    ]
   },
   {
-   "name": "Red Snapdragon",
+   "name": "Red Skull Snapdragon",
    "type": "Foraging",
    "kind": "Flowers",
    "realm": "Sea",
@@ -5218,7 +5546,7 @@
     [
      "Sea",
      [
-      "Shipwreck Shores"
+      "Foraging"
      ]
     ]
    ],
@@ -5484,6 +5812,23 @@
     "Kristoff's Stall",
     "Digging",
     "Removing Small and Large Sea Debris"
+   ]
+  },
+  {
+   "name": "Sand Dollars",
+   "type": "Foraging",
+   "kind": "",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Fishing"
+     ]
+    ]
+   ],
+   "from": [
+    "Fishing"
    ]
   },
   {
@@ -6242,6 +6587,21 @@
    ]
   },
   {
+   "name": "Shipwreck Parts",
+   "type": "Foraging",
+   "kind": "",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Location not on the wiki yet"
+     ]
+    ]
+   ],
+   "from": []
+  },
+  {
    "name": "Shovel Bird Eggs",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
@@ -6684,6 +7044,23 @@
    ]
   },
   {
+   "name": "Strawberry Neapolitan Oxalis",
+   "type": "Foraging",
+   "kind": "Flowers",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Foraging"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging"
+   ]
+  },
+  {
    "name": "Stygian Mudskipper",
    "type": "Ingredient",
    "kind": "Fish",
@@ -6942,6 +7319,23 @@
    ]
   },
   {
+   "name": "Torn Net",
+   "type": "Foraging",
+   "kind": "Fish",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Shipwreck Shores"
+     ]
+    ]
+   ],
+   "from": [
+    "Fishing"
+   ]
+  },
+  {
    "name": "Tourmaline",
    "type": "Gem",
    "kind": "",
@@ -7079,6 +7473,23 @@
    ]
   },
   {
+   "name": "Unicorn Fish",
+   "type": "Ingredient",
+   "kind": "Fish",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Kingdom of Oublié"
+     ]
+    ]
+   ],
+   "from": [
+    "Fishing"
+   ]
+  },
+  {
    "name": "Vanilla",
    "type": "Ingredient",
    "kind": "Sweets",
@@ -7095,6 +7506,23 @@
      "Storybook",
      [
       "Mythopia"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging"
+   ]
+  },
+  {
+   "name": "Vanilla Neapolitan Oxalis",
+   "type": "Foraging",
+   "kind": "Flowers",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Foraging"
      ]
     ]
    ],
@@ -7569,6 +7997,23 @@
    ]
   },
   {
+   "name": "Yellow Bubble Blooms",
+   "type": "Foraging",
+   "kind": "Flowers",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Foraging"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging"
+   ]
+  },
+  {
    "name": "Yellow Cactus Flower",
    "type": "Foraging",
    "kind": "Flowers",
@@ -7665,6 +8110,23 @@
      [
       "The Grove",
       "The Lagoon"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging"
+   ]
+  },
+  {
+   "name": "Yellow Skull Snapdragon",
+   "type": "Foraging",
+   "kind": "Flowers",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Foraging"
      ]
     ]
    ],
