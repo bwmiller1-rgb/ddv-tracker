@@ -1,6 +1,6 @@
 {
  "source": "Dreamlight Valley Wiki (dreamlightvalleywiki.com), CC BY-NC-SA",
- "count": 411,
+ "count": 417,
  "items": [
   {
    "name": "Acorn Snail",
@@ -660,6 +660,23 @@
    ]
   },
   {
+   "name": "Blue Snapdragon",
+   "type": "Foraging",
+   "kind": "Flowers",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Shipwreck Shores"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging"
+   ]
+  },
+  {
    "name": "Blue Star Lily",
    "type": "Foraging",
    "kind": "Flowers",
@@ -942,6 +959,21 @@
     "Foraging",
     "Cactoberry Bush"
    ]
+  },
+  {
+   "name": "Candy Pebbles",
+   "type": "Ingredient",
+   "kind": "",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Location not on the wiki yet"
+     ]
+    ]
+   ],
+   "from": []
   },
   {
    "name": "Canola",
@@ -2636,6 +2668,23 @@
    ]
   },
   {
+   "name": "Green Snapdragon",
+   "type": "Foraging",
+   "kind": "Flowers",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Shipwreck Shores"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging"
+   ]
+  },
+  {
    "name": "Hardwood",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -2648,6 +2697,12 @@
       "Glade of Trust",
       "Sunlit Plateau",
       "Frosted Heights"
+     ]
+    ],
+    [
+     "Honeyglow",
+     [
+      "Honeyglow Woods"
      ]
     ],
     [
@@ -2736,8 +2791,7 @@
     ]
    ],
    "from": [
-    "Aladdin's Gem Stall",
-    ">"
+    "Mining"
    ]
   },
   {
@@ -3084,6 +3138,21 @@
    "from": [
     "Gardening"
    ]
+  },
+  {
+   "name": "Lychee",
+   "type": "Ingredient",
+   "kind": "",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Location not on the wiki yet"
+     ]
+    ]
+   ],
+   "from": []
   },
   {
    "name": "Magma",
@@ -4055,6 +4124,21 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Pink Coral",
+   "type": "Ingredient",
+   "kind": "",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Location not on the wiki yet"
+     ]
+    ]
+   ],
+   "from": []
   },
   {
    "name": "Pink Crocus",
@@ -5126,6 +5210,23 @@
    ]
   },
   {
+   "name": "Red Snapdragon",
+   "type": "Foraging",
+   "kind": "Flowers",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Shipwreck Shores"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging"
+   ]
+  },
+  {
    "name": "Red Thistle",
    "type": "Foraging",
    "kind": "Flowers",
@@ -5486,7 +5587,8 @@
     ]
    ],
    "from": [
-    "Foraging"
+    "Foraging",
+    "Menu Icon Digging"
    ]
   },
   {
@@ -6613,6 +6715,7 @@
    ],
    "from": [
     "Goofy's Stall",
+    "Goofy's Caravan",
     "Gardening"
    ]
   },

@@ -393,7 +393,7 @@ fetch('items.json', { cache: 'no-cache' }).then(r => r.json()).then(d => {
   fillColFilters(); render(); showLookup();
 }).catch(() => {});
 // Item collection: regions an item is found in, and its type/kind for the filter
-const REGIONS = ['Main', 'Eternity', 'Storybook', 'Honeyglow', 'Wishblossom', 'Anywhere/Events'];
+const REGIONS = ['Main', 'Eternity', 'Storybook', 'Honeyglow', 'Wishblossom', 'Sea', 'Anywhere/Events'];
 const kindOf = i => i.kind === 'Crafting Material' ? 'Crafting Materials' : i.kind;
 const itemRegions = i => {
   const rs = (i.areas || []).map(([r]) => r || 'Anywhere/Events');
