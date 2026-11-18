@@ -1,5 +1,6 @@
 // Builds items.json (gatherable items + where they're found) from the Dreamlight Valley Wiki.
 // Run by hand when the game adds items: node scripts/update-items.mjs   (Node 18+, no packages needed)
+// Quick check first: node scripts/update-items.mjs --check   (page info only; exit code 10 = wiki pages changed)
 // Item data © Dreamlight Valley Wiki contributors, CC BY-NC-SA.
 import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 
@@ -7,6 +8,7 @@ const API = 'https://dreamlightvalleywiki.com/api.php';
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15';
 const HUBS = ['Ingredients', 'Gems', 'Foraging', 'Fishing', 'Gardening'];
 const KEEP_TYPES = ['Ingredient', 'Foraging', 'Gem'];
+const CHECK_ONLY = process.argv.includes('--check');   // only report which pages changed; download no page content
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // Which realm (DLC) each biome/region belongs to. Add new places here when an expansion comes out.
@@ -116,41 +118,73 @@ for (const hub of HUBS) {
 }
 console.log('Candidate pages:', titles.size);
 
-const items = [];
+// Revision cache: each page's last revision id and the item parsed from it, so later runs only download
+// pages that were edited. Bump PARSER_VERSION when the parsing below changes, to re-read every page once.
+const PARSER_VERSION = 1;
+const cacheFile = new URL('./wiki-cache.json', import.meta.url);
+let cache = existsSync(cacheFile) ? JSON.parse(readFileSync(cacheFile, 'utf8')) : {};
+if (cache.version !== PARSER_VERSION) cache = { version: PARSER_VERSION, pages: {} };
+
+// Cheap check: page info only (last revision id, no page content), 50 pages per request
+const revs = {};   // resolved page title -> last revision id
 const list = [...titles];
-for (let i = 0; i < list.length; i += 40) {
-  const d = await api({ action: 'query', titles: list.slice(i, i + 40).join('|'), prop: 'revisions',
-    rvprop: 'content', rvslots: 'main', redirects: '1' });
+for (let i = 0; i < list.length; i += 50) {
+  const d = await api({ action: 'query', titles: list.slice(i, i + 50).join('|'), prop: 'info', redirects: '1' });
+  for (const p of Object.values(d.query.pages || {})) if (p.lastrevid) revs[p.title] = p.lastrevid;
+  await sleep(1500);
+}
+const changed = Object.keys(revs).filter(t => cache.pages[t]?.rev !== revs[t]);
+const isNew = t => !cache.pages[t];
+// Edits to pages that aren't items (e.g. "Critters") don't need an update on their own
+const itemChanges = changed.filter(t => isNew(t) || cache.pages[t].item);
+console.log(`Item pages new or edited since last update: ${itemChanges.length}`);
+if (Object.keys(cache.pages).length) itemChanges.slice(0, 50).forEach(t => console.log(`  ${isNew(t) ? 'new' : 'edited'}: ${t}`));
+if (CHECK_ONLY) process.exit(itemChanges.length ? 10 : 0);
+
+// Download and parse only the pages that changed
+function parseItem(title, text) {
+  const f = infobox(text.replace(/<!--[\s\S]*?-->/g, ''));   // drop commented-out (not yet filled in) fields
+  if (!f || !f.type) return null;
+  const type = clean(f.type)[0] || '';
+  if (!KEEP_TYPES.includes(type)) return null;
+  const where = clean(f.found || f.biomes || f.biome || f.location || '');
+  const from = clean(f.from || '');
+  const realm = COLLECTION_REALM[clean(f.collection || '')[0]] || expansionRealm(text);
+  const how = from.filter(x => !where.includes(x));
+  return {
+    name: title,
+    type,
+    kind: clean(f.ingtype || f.category || f.collectioncategory || '')[0] || '',
+    realm,
+    // where it's found, grouped by realm; items with no location (shop-only) use their sources instead
+    areas: where.length ? groupByRealm(where) : how.length ? [[realm, how]]
+      : expansionRealm(text) ? [[realm, ['Location not on the wiki yet']]] : [],
+    from: how,
+  };
+}
+for (let i = 0; i < changed.length; i += 40) {
+  const d = await api({ action: 'query', titles: changed.slice(i, i + 40).join('|'), prop: 'revisions',
+    rvprop: 'content|ids', rvslots: 'main', redirects: '1' });
   for (const p of Object.values(d.query.pages || {})) {
-    const text = p.revisions?.[0]?.slots?.main?.['*'];
+    const rev = p.revisions?.[0];
+    const text = rev?.slots?.main?.['*'];
     if (!text) continue;
-    const f = infobox(text.replace(/<!--[\s\S]*?-->/g, ''));   // drop commented-out (not yet filled in) fields
-    if (!f || !f.type) continue;
-    const type = clean(f.type)[0] || '';
-    if (!KEEP_TYPES.includes(type)) continue;
-    const where = clean(f.found || f.biomes || f.biome || f.location || '');
-    const from = clean(f.from || '');
-    const realm = COLLECTION_REALM[clean(f.collection || '')[0]] || expansionRealm(text);
-    const how = from.filter(x => !where.includes(x));
-    items.push({
-      name: p.title,
-      type,
-      kind: clean(f.ingtype || f.category || f.collectioncategory || '')[0] || '',
-      realm,
-      // where it's found, grouped by realm; items with no location (shop-only) use their sources instead
-      areas: where.length ? groupByRealm(where) : how.length ? [[realm, how]]
-        : expansionRealm(text) ? [[realm, ['Location not on the wiki yet']]] : [],
-      from: how,
-    });
+    cache.pages[p.title] = { rev: rev.revid, item: parseItem(p.title, text) };
   }
   process.stdout.write('.');
   await sleep(1500);
 }
+// Items from every page still linked from the hub pages
+const items = Object.keys(revs).map(t => cache.pages[t]?.item).filter(Boolean)
+  // known realm but no location yet (common for brand-new expansion items)
+  .map(it => it.areas.length || !it.realm ? it : { ...it, areas: [[it.realm, ['Location not on the wiki yet']]] });
 items.sort((a, b) => a.name.localeCompare(b.name));
 if (items.length < 100) throw new Error(`Only ${items.length} items found — wiki layout may have changed; not overwriting items.json`);
 
 const out = { source: 'Dreamlight Valley Wiki (dreamlightvalleywiki.com), CC BY-NC-SA', count: items.length, items };
 const file = new URL('../items.json', import.meta.url);
 const before = existsSync(file) ? JSON.stringify(JSON.parse(readFileSync(file, 'utf8')).items) : '';
+for (const t of Object.keys(cache.pages)) if (!(t in revs)) delete cache.pages[t];
+writeFileSync(cacheFile, JSON.stringify(cache) + '\n');
 if (before === JSON.stringify(items)) console.log('\nNo changes.');
 else { writeFileSync(file, JSON.stringify(out, null, 1) + '\n'); console.log(`\nWrote ${items.length} items.`); }
