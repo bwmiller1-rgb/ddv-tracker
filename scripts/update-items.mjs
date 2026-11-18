@@ -22,9 +22,14 @@ const REALMS = {
     'Everafter', 'The Wild Woods', 'Teapot Falls', 'The Fallen Fortress', 'The Beanstalk Marshes', 'The Bind', 'The Library of Lore'],
   Honeyglow: ['Honeyglow Woods', 'Braveheart Grove', 'Drowsybloom Acre', 'Gloommeadow', 'Nectar Apiary'],
   Wishblossom: ['Wishblossom Mountains', 'Pixie Acres', 'Glamour Gulch', 'Wishing Alps'],
+  Sea: ['Keepsake Sea', 'The Keepsake Sea', 'Shipwreck Shores', 'Candy Cove', 'Kingdom of Oublié'],
 };
 const COLLECTION_REALM = { 'Dreamlight Valley': 'Main', 'Eternity Isle': 'Eternity', 'Storybook Vale': 'Storybook',
-  'Honeyglow Woods': 'Honeyglow', 'Wishblossom Mountains': 'Wishblossom' };
+  'Honeyglow Woods': 'Honeyglow', 'Wishblossom Mountains': 'Wishblossom',
+  'Keepsake Sea': 'Sea', 'The Keepsake Sea': 'Sea' };
+// Unfinished wiki pages for a new expansion are tagged {{placeholder|update=Version History/Expansion_N}}
+const EXPANSION_REALM = { 4: 'Sea' };
+const expansionRealm = text => EXPANSION_REALM[(text.match(/placeholder\|update=Version[ _]History\/Expansion[ _](\d+)/i) || [])[1]] || '';
 const realmOf = place => Object.keys(REALMS).find(r => REALMS[r].includes(place.replace(/\s*\(max \d+\)$/i, '')));
 // [["Main", ["Plaza", "Forgotten Lands"]], ["Eternity", [...]], ["", [notes that aren't places]]]
 function groupByRealm(places) {
@@ -119,13 +124,13 @@ for (let i = 0; i < list.length; i += 40) {
   for (const p of Object.values(d.query.pages || {})) {
     const text = p.revisions?.[0]?.slots?.main?.['*'];
     if (!text) continue;
-    const f = infobox(text);
+    const f = infobox(text.replace(/<!--[\s\S]*?-->/g, ''));   // drop commented-out (not yet filled in) fields
     if (!f || !f.type) continue;
     const type = clean(f.type)[0] || '';
     if (!KEEP_TYPES.includes(type)) continue;
     const where = clean(f.found || f.biomes || f.biome || f.location || '');
     const from = clean(f.from || '');
-    const realm = COLLECTION_REALM[clean(f.collection || '')[0]] || '';
+    const realm = COLLECTION_REALM[clean(f.collection || '')[0]] || expansionRealm(text);
     const how = from.filter(x => !where.includes(x));
     items.push({
       name: p.title,
@@ -133,7 +138,8 @@ for (let i = 0; i < list.length; i += 40) {
       kind: clean(f.ingtype || f.category || f.collectioncategory || '')[0] || '',
       realm,
       // where it's found, grouped by realm; items with no location (shop-only) use their sources instead
-      areas: where.length ? groupByRealm(where) : how.length ? [[realm, how]] : [],
+      areas: where.length ? groupByRealm(where) : how.length ? [[realm, how]]
+        : expansionRealm(text) ? [[realm, ['Location not on the wiki yet']]] : [],
       from: how,
     });
   }
