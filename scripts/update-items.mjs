@@ -135,8 +135,9 @@ for (let i = 0; i < list.length; i += 50) {
 }
 const changed = Object.keys(revs).filter(t => cache.pages[t]?.rev !== revs[t]);
 const isNew = t => !cache.pages[t];
-// Edits to pages that aren't items (e.g. "Critters") don't need an update on their own
-const itemChanges = changed.filter(t => isNew(t) || cache.pages[t].item);
+// Edits to pages that aren't items (e.g. "Critters") don't need an update on their own, but unfinished
+// draft pages (no type yet, or tagged as a placeholder) can turn into items, so those still count
+const itemChanges = changed.filter(t => isNew(t) || cache.pages[t].item || cache.pages[t].draft !== false);
 console.log(`Item pages new or edited since last update: ${itemChanges.length}`);
 if (Object.keys(cache.pages).length) itemChanges.slice(0, 50).forEach(t => console.log(`  ${isNew(t) ? 'new' : 'edited'}: ${t}`));
 if (CHECK_ONLY) process.exit(itemChanges.length ? 10 : 0);
@@ -169,7 +170,10 @@ for (let i = 0; i < changed.length; i += 40) {
     const rev = p.revisions?.[0];
     const text = rev?.slots?.main?.['*'];
     if (!text) continue;
-    cache.pages[p.title] = { rev: rev.revid, item: parseItem(p.title, text) };
+    const item = parseItem(p.title, text);
+    const f = infobox(text.replace(/<!--[\s\S]*?-->/g, ''));
+    const draft = !item && (/\{\{\s*placeholder/i.test(text) || (!!f && !clean(f.type || '')[0]));
+    cache.pages[p.title] = item ? { rev: rev.revid, item } : { rev: rev.revid, item: null, draft };
   }
   process.stdout.write('.');
   await sleep(1500);
