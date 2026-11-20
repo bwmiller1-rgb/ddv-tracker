@@ -140,6 +140,11 @@ details .row{flex-wrap:wrap;margin-top:10px}
 .goldBar button.on{background:#d9c690;border-color:#c4b27a}
 .bffOn .goldBar button.on{background:#ffc20e;border-color:#e0a800;box-shadow:0 0 6px rgba(255,194,14,.7)}
 .goldPct{font-size:.9rem;font-weight:700;color:var(--cardMuted);min-width:38px}
+/* Advanced companions (Keepsake Sea): max level 5 */
+.advRow{display:flex;align-items:center;gap:10px;font-size:.9rem;font-weight:600;color:var(--cardMuted)}
+.advRow label{display:flex;align-items:center;gap:6px}
+.card .advRow input{width:20px;height:20px;padding:0;accent-color:var(--done)}
+.maxBadge{flex:none;white-space:nowrap;padding:2px 10px;border-radius:999px;background:#ffc20e;color:#141414;font-weight:800;font-size:.85rem}
 /* Received level 10 gift (one-time, not cleared daily) */
 .lv10Gift{display:flex;align-items:center;gap:8px;background:transparent;border:none;padding:2px 0;font-weight:700;color:var(--cardMuted)}
 .lv10Gift svg{width:26px;height:26px;fill:#9b94b5}
@@ -293,6 +298,12 @@ const SPECIALTIES = ['None','Digging','Fishing','Foraging','Gardening','Mining',
 const HORSE_SPECIALTIES = ['Water Crops','Digging','Remove Night Thorns','Harvesting','Mining'];
 let state = JSON.parse(localStorage.getItem(KEY) || 'null') ||
             { villagers: [], resetTime: '05:00', lastReset: 0 };
+// Advanced companions (Keepsake Sea) live in the villager list but max out at level 5. Recognized by name,
+// or marked with the card's "Advanced" checkbox (v.advanced overrides the name check either way)
+const ADVANCED_NAMES = ['dory', 'dori', 'sebastian', 'flounder'];
+const isAdvanced = v => v.advanced ?? ADVANCED_NAMES.includes(v.name.trim().toLowerCase());
+const maxLevel = v => isAdvanced(v) ? 5 : 10;
+const atMax = v => v.level === maxLevel(v);
 // Fill in fields added after the first version so older saves keep working
 function upgrade() {
   state.activities = state.activities || [];
@@ -315,6 +326,7 @@ function upgrade() {
     // The old "Today's gift" box and Gifted button are gone: gifted now means all three gift slots checked
     delete v.giftNote; delete v.giftedBtn;
     v.gifted = v.gifts.every(g => g.done);
+    if (v.level > maxLevel(v)) v.level = maxLevel(v);
   });
   // Horses use the same three daily gift slots as villagers (the old gift box and Gift button are gone)
   state.horses.forEach(h => {
@@ -352,7 +364,7 @@ function checkReset(force) {
 // Dreamsnap (heart) cards sort first, then favorites (star), then the chosen order
 const byFav = (a, b) => (!!b.snap - !!a.snap) || (!!b.fav - !!a.fav);
 // Default villager order: level 9 down to 0, then 10 · BFFs first · gold level low to high · specialty · A–Z
-const levelRank = v => v.level === 10 ? -1 : v.level;
+const levelRank = v => atMax(v) ? -1 : v.level;
 const bySpecialty = (a, b) => ((a.specialty || 'None') === 'None') - ((b.specialty || 'None') === 'None') ||
   (a.specialty || '').localeCompare(b.specialty || '');
 const defaultVillagerSort = (a, b) =>
@@ -363,19 +375,19 @@ const GOLD_STEPS = 4; // 25%, 50%, 75%, 100% — shown on level 10 villagers onl
 const HORSE_TASKS = [['pet', 'Pet', '🤚'], ['brush', 'Brush', '🪮'], ['feed', 'Feed', '🥕'], ['ride', 'Ride', '🏇']];
 // Done = all four care tasks plus all three gift slots
 const horseDone = h => h.level > 0 && HORSE_TASKS.every(([k]) => h[k]) && h.gifted;
-const levelSelect = x => `<label>Level <select data-f="level">${
-  Array.from({length:11}, (_, i) => `<option ${x.level == i ? 'selected' : ''}>${i}</option>`).join('')
+const levelSelect = (x, max = 10) => `<label>Level <select data-f="level">${
+  Array.from({length: max + 1}, (_, i) => `<option ${x.level == i ? 'selected' : ''}>${i}</option>`).join('')
 }</select></label>`;
 // When "Move completed to bottom" is checked, finished cards go below unfinished ones
 const lastIfDone = (aDone, bDone) => state.completedLast ? (!!aDone - !!bDone) : 0;
-// "Collected" only applies to villagers at level 7 or higher
-const canCollect = v => v.level >= 7;
+// "Collected" only applies to villagers at level 7 or higher (never to advanced companions)
+const canCollect = v => !isAdvanced(v) && v.level >= 7;
 const needsCollect = v => canCollect(v) && !v.collected;
 // Level 0 villagers can't be gifted yet
 const canGift = v => v.level > 0;
 const needsGift = v => canGift(v) && !v.gifted;
 // Level 10: done once collected (gifting doesn't change the color). Below 10: gifted (+ collected from level 7).
-const villagerDone = v => v.level === 10 ? !!v.collected : canGift(v) && v.gifted && (v.collected || !canCollect(v));
+const villagerDone = v => isAdvanced(v) ? canGift(v) && v.gifted : v.level === 10 ? !!v.collected : canGift(v) && v.gifted && (v.collected || !canCollect(v));
 const villagerColor = v => villagerDone(v) ? 'complete'
   : v.level === 10 || !canCollect(v) ? ''
   : v.gifted ? 'giftOnly' : v.collected ? 'collectOnly' : '';
@@ -584,10 +596,14 @@ ${giftSlotsHtml(h)}
         <button class="del" data-act="del" aria-label="Delete" title="Delete">${TRASH}</button>
       </div>
       <div class="row">
-        ${levelSelect(v)}
+        ${levelSelect(v, maxLevel(v))}
         <select data-f="specialty">${
           SPECIALTIES.map(s => `<option ${v.specialty === s ? 'selected' : ''}>${s}</option>`).join('')
         }</select>
+      </div>
+      <div class="advRow">
+        <label title="Advanced companions max out at level 5"><input type="checkbox" data-f="advanced" ${isAdvanced(v) ? 'checked' : ''}> Advanced (max level 5)</label>
+        ${isAdvanced(v) && atMax(v) ? '<span class="maxBadge">⭐ MAX</span>' : ''}
       </div>${v.level === 10 ? bffHtml(v) : ''}
       <div class="fieldLabel">Notes</div>
       <textarea data-f="notes" placeholder="Notes, quests, reminders…">${esc(v.notes)}</textarea>
@@ -651,6 +667,12 @@ const find = el => {
     if (f === 'sparkles') { find(e.target).sparkles = e.target.checked; save(); return; }
     if (f === 'itemsReset') { find(e.target).keepItems = !e.target.checked; save(); return; }
     if (f === 'bff') { find(e.target).bff = e.target.checked; save(); render(); return; }
+    if (f === 'advanced') {
+      const v = find(e.target);
+      v.advanced = e.target.checked;
+      if (v.advanced) { v.level = Math.min(v.level, 5); v.bff = false; v.gold = 0; v.collected = false; }
+      save(); render(); return;
+    }
     if (f === 'level' || f === 'specialty') {
       const it = find(e.target);
       it[f] = f === 'level' ? Number(e.target.value) : e.target.value;
