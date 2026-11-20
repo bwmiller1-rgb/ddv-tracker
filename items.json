@@ -1,6 +1,6 @@
 {
  "source": "Dreamlight Valley Wiki (dreamlightvalleywiki.com), CC BY-NC-SA",
- "count": 454,
+ "count": 465,
  "items": [
   {
    "name": "Acorn Snail",
@@ -154,11 +154,15 @@
     [
      "Sea",
      [
-      "Location not on the wiki yet"
+      "Shipwreck Shores",
+      "Candy Cove",
+      "Kingdom of Oublié"
      ]
     ]
    ],
-   "from": []
+   "from": [
+    "Enchanted Pirate Ship"
+   ]
   },
   {
    "name": "Anglerfish",
@@ -1027,19 +1031,38 @@
    ]
   },
   {
-   "name": "Candy Pebbles",
-   "type": "Foraging",
-   "kind": "",
+   "name": "Candy Corn",
+   "type": "Ingredient",
+   "kind": "Vegetables",
    "realm": "Sea",
    "areas": [
     [
      "Sea",
      [
-      "Location not on the wiki yet"
+      "Candy Cove"
      ]
     ]
    ],
-   "from": []
+   "from": [
+    "Gardening"
+   ]
+  },
+  {
+   "name": "Candy Pebbles",
+   "type": "Foraging",
+   "kind": "Refined Materials",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Candy Cove"
+     ]
+    ]
+   ],
+   "from": [
+    "Digging"
+   ]
   },
   {
    "name": "Canola",
@@ -1737,17 +1760,21 @@
   {
    "name": "Dark Pearl",
    "type": "Foraging",
-   "kind": "",
+   "kind": "Underwater",
    "realm": "Sea",
    "areas": [
     [
      "Sea",
      [
-      "Location not on the wiki yet"
+      "Shipwreck Shores",
+      "Candy Cove",
+      "Kingdom of Oublié"
      ]
     ]
    ],
-   "from": []
+   "from": [
+    "Foraging"
+   ]
   },
   {
    "name": "Dark Wood",
@@ -1860,6 +1887,23 @@
    "from": [
     "Foraging",
     "Dreamango Tree"
+   ]
+  },
+  {
+   "name": "Dreamlight Avocado",
+   "type": "Ingredient",
+   "kind": "Vegetables",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Shipwreck Shores"
+     ]
+    ]
+   ],
+   "from": [
+    "Gardening"
    ]
   },
   {
@@ -2038,17 +2082,21 @@
   {
    "name": "Electric Eel Kelp",
    "type": "Foraging",
-   "kind": "",
+   "kind": "Vegetables",
    "realm": "Sea",
    "areas": [
     [
      "Sea",
      [
-      "Location not on the wiki yet"
+      "Shipwreck Shores",
+      "Candy Cove",
+      "Kingdom of Oublié"
      ]
     ]
    ],
-   "from": []
+   "from": [
+    "Foraging"
+   ]
   },
   {
    "name": "Elysian Grain",
@@ -2536,17 +2584,19 @@
   {
    "name": "Gold Sand",
    "type": "Foraging",
-   "kind": "",
+   "kind": "Crafting Materials",
    "realm": "Sea",
    "areas": [
     [
      "Sea",
      [
-      "Location not on the wiki yet"
+      "Kingdom of Oublié"
      ]
     ]
    ],
-   "from": []
+   "from": [
+    "Mining"
+   ]
   },
   {
    "name": "Golden Apple",
@@ -2881,6 +2931,23 @@
    ]
   },
   {
+   "name": "Gummy Bean",
+   "type": "Ingredient",
+   "kind": "Vegetables",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Shipwreck Shores"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging"
+   ]
+  },
+  {
    "name": "Hardwood",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -3061,17 +3128,19 @@
   {
    "name": "Iridescent Seashells",
    "type": "Foraging",
-   "kind": "",
+   "kind": "Crafting Materials",
    "realm": "Sea",
    "areas": [
     [
      "Sea",
      [
-      "Location not on the wiki yet"
+      "Kingdom of Oublié"
      ]
     ]
    ],
-   "from": []
+   "from": [
+    "Digging"
+   ]
   },
   {
    "name": "Iron Ore",
@@ -3385,19 +3454,56 @@
    ]
   },
   {
-   "name": "Lychee",
+   "name": "Luminous Hibiscus",
    "type": "Ingredient",
-   "kind": "",
+   "kind": "Spices",
    "realm": "Sea",
    "areas": [
     [
      "Sea",
      [
-      "Location not on the wiki yet"
+      "Shipwreck Shores"
      ]
     ]
    ],
-   "from": []
+   "from": [
+    "Foraging"
+   ]
+  },
+  {
+   "name": "Lychee",
+   "type": "Ingredient",
+   "kind": "Fruit",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Shipwreck Shores"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging",
+    "Lychee Tree"
+   ]
+  },
+  {
+   "name": "Magical Ivy",
+   "type": "Ingredient",
+   "kind": "Vegetables",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Kingdom of Oublié"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging"
+   ]
   },
   {
    "name": "Magma",
@@ -3449,6 +3555,24 @@
    ],
    "from": [
     "Fishing"
+   ]
+  },
+  {
+   "name": "Mapleberry",
+   "type": "Ingredient",
+   "kind": "Fruit",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Candy Cove"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging",
+    "Mapleberry Bush"
    ]
   },
   {
@@ -3505,19 +3629,40 @@
    ]
   },
   {
-   "name": "Mermaid's Purse",
-   "type": "Foraging",
-   "kind": "",
+   "name": "Mermaid Gourd",
+   "type": "Ingredient",
+   "kind": "Vegetables",
    "realm": "Sea",
    "areas": [
     [
      "Sea",
      [
-      "Location not on the wiki yet"
+      "Kingdom of Oublié"
      ]
     ]
    ],
-   "from": []
+   "from": [
+    "Gardening"
+   ]
+  },
+  {
+   "name": "Mermaid's Purse",
+   "type": "Foraging",
+   "kind": "Underwater",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Shipwreck Shores",
+      "Candy Cove",
+      "Kingdom of Oublié"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging (Bubbles)"
+   ]
   },
   {
    "name": "Milk",
@@ -3741,17 +3886,19 @@
   {
    "name": "Nougat Nugget",
    "type": "Foraging",
-   "kind": "",
+   "kind": "Crafting Materials",
    "realm": "Sea",
    "areas": [
     [
      "Sea",
      [
-      "Location not on the wiki yet"
+      "Candy Cove"
      ]
     ]
    ],
-   "from": []
+   "from": [
+    "Mining"
+   ]
   },
   {
    "name": "Nutmeg",
@@ -4730,6 +4877,24 @@
    ]
   },
   {
+   "name": "Pomegranate",
+   "type": "Ingredient",
+   "kind": "Fruit",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Kingdom of Oublié"
+     ]
+    ]
+   ],
+   "from": [
+    "Foraging",
+    "Pomegranate Tree"
+   ]
+  },
+  {
    "name": "Porcini Mushrooms",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -4875,17 +5040,19 @@
   {
    "name": "Pumice Stone",
    "type": "Foraging",
-   "kind": "",
+   "kind": "Crafting Materials",
    "realm": "Sea",
    "areas": [
     [
      "Sea",
      [
-      "Location not on the wiki yet"
+      "Shipwreck Shores"
      ]
     ]
    ],
-   "from": []
+   "from": [
+    "Mining"
+   ]
   },
   {
    "name": "Pumpkin",
@@ -6164,6 +6331,23 @@
    ]
   },
   {
+   "name": "Sherbet Cane Straw",
+   "type": "Ingredient",
+   "kind": "Grains",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Candy Cove"
+     ]
+    ]
+   ],
+   "from": [
+    "Gardening"
+   ]
+  },
+  {
    "name": "Shiny Alexandrite",
    "type": "Gem",
    "kind": "",
@@ -6706,17 +6890,19 @@
   {
    "name": "Shipwreck Parts",
    "type": "Foraging",
-   "kind": "",
+   "kind": "Crafting Materials",
    "realm": "Sea",
    "areas": [
     [
      "Sea",
      [
-      "Location not on the wiki yet"
+      "Shipwreck Shores"
      ]
     ]
    ],
-   "from": []
+   "from": [
+    "Digging"
+   ]
   },
   {
    "name": "Shovel Bird Eggs",
@@ -7252,6 +7438,23 @@
    ]
   },
   {
+   "name": "Sweet Heart of Palm",
+   "type": "Ingredient",
+   "kind": "Vegetables",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Shipwreck Shores"
+     ]
+    ]
+   ],
+   "from": [
+    "Gardening"
+   ]
+  },
+  {
    "name": "Sweet Jelly",
    "type": "Ingredient",
    "kind": "Sweets",
@@ -7294,11 +7497,15 @@
     [
      "Sea",
      [
-      "Location not on the wiki yet"
+      "Shipwreck Shores",
+      "Candy Cove",
+      "Kingdom of Oublié"
      ]
     ]
    ],
-   "from": []
+   "from": [
+    "Enchanted Pirate Ship"
+   ]
   },
   {
    "name": "Teal Eternal Poppies",
@@ -7495,11 +7702,15 @@
     [
      "Sea",
      [
-      "Location not on the wiki yet"
+      "Shipwreck Shores",
+      "Candy Cove",
+      "Kingdom of Oublié"
      ]
     ]
    ],
-   "from": []
+   "from": [
+    "Enchanted Pirate Ship"
+   ]
   },
   {
    "name": "Tree Resin",
@@ -7612,6 +7823,23 @@
      "Eternity",
      [
       "Wild Tangle"
+     ]
+    ]
+   ],
+   "from": [
+    "Gardening"
+   ]
+  },
+  {
+   "name": "Twilight Taro",
+   "type": "Ingredient",
+   "kind": "Vegetables",
+   "realm": "Sea",
+   "areas": [
+    [
+     "Sea",
+     [
+      "Kingdom of Oublié"
      ]
     ]
    ],
