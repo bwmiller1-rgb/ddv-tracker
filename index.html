@@ -380,16 +380,17 @@ const levelSelect = (x, max = 10) => `<label>Level <select data-f="level">${
 }</select></label>`;
 // When "Move completed to bottom" is checked, finished cards go below unfinished ones
 const lastIfDone = (aDone, bDone) => state.completedLast ? (!!aDone - !!bDone) : 0;
-// "Collected" only applies to villagers at level 7 or higher (never to advanced companions)
-const canCollect = v => !isAdvanced(v) && v.level >= 7;
+// "Collected" only applies to villagers at level 7 or higher (level 5 for advanced companions)
+const collectLevel = v => isAdvanced(v) ? 5 : 7;   // advanced companions can collect at their max, level 5
+const canCollect = v => v.level >= collectLevel(v);
 const needsCollect = v => canCollect(v) && !v.collected;
 // Level 0 villagers can't be gifted yet
 const canGift = v => v.level > 0;
 const needsGift = v => canGift(v) && !v.gifted;
-// Level 10: done once collected (gifting doesn't change the color). Below 10: gifted (+ collected from level 7).
-const villagerDone = v => isAdvanced(v) ? canGift(v) && v.gifted : v.level === 10 ? !!v.collected : canGift(v) && v.gifted && (v.collected || !canCollect(v));
+// Max level (10, or 5 for advanced): done once collected (gifting doesn't change the color). Below max: gifted (+ collected once unlocked).
+const villagerDone = v => atMax(v) ? !!v.collected : canGift(v) && v.gifted && (v.collected || !canCollect(v));
 const villagerColor = v => villagerDone(v) ? 'complete'
-  : v.level === 10 || !canCollect(v) ? ''
+  : atMax(v) || !canCollect(v) ? ''
   : v.gifted ? 'giftOnly' : v.collected ? 'collectOnly' : '';
 // Item list (items.json, built weekly from the wiki) for the lookup box and gift slots
 let ITEMS = [];
@@ -611,7 +612,7 @@ ${giftSlotsHtml(v)}
       <div class="btnRow">
         ${canCollect(v)
           ? `<button class="toggle ${v.collected ? 'on' : ''}" data-act="collect">${v.collected ? '✅ Collected' : 'Collected'}</button>`
-          : `<button class="toggle" disabled title="Unlocks at level 7">Collected</button>`}
+          : `<button class="toggle" disabled title="Unlocks at level ${collectLevel(v)}">Collected</button>`}
       </div>
     </div>`).join('') : `<p class="empty">${state.villagers.length ? 'No villagers match the filter.' : 'No villagers yet.'}</p>`;
 
@@ -670,7 +671,7 @@ const find = el => {
     if (f === 'advanced') {
       const v = find(e.target);
       v.advanced = e.target.checked;
-      if (v.advanced) { v.level = Math.min(v.level, 5); v.bff = false; v.gold = 0; v.collected = false; }
+      if (v.advanced) { v.level = Math.min(v.level, 5); v.bff = false; v.gold = 0; }
       save(); render(); return;
     }
     if (f === 'level' || f === 'specialty') {
