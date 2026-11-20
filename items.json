@@ -927,7 +927,7 @@
   {
    "name": "Bucket of Sweets",
    "type": "Foraging",
-   "kind": "Fish",
+   "kind": "Crafting Materials",
    "realm": "Sea",
    "areas": [
     [
@@ -1679,7 +1679,7 @@
     [
      "Sea",
      [
-      "Mining"
+      "Shipwreck Shores"
      ]
     ]
    ],
@@ -2538,7 +2538,7 @@
     [
      "Sea",
      [
-      "Mining"
+      "Kingdom of Oublié"
      ]
     ]
    ],
@@ -2916,7 +2916,7 @@
   {
    "name": "Gummiberry Juice",
    "type": "Foraging",
-   "kind": "Fish",
+   "kind": "Crafting Materials",
    "realm": "Sea",
    "areas": [
     [
@@ -3757,7 +3757,7 @@
   {
    "name": "Mother of Pearl",
    "type": "Foraging",
-   "kind": "Fish",
+   "kind": "Crafting Materials",
    "realm": "Sea",
    "areas": [
     [
@@ -4618,7 +4618,7 @@
   {
    "name": "Pink Coral",
    "type": "Foraging",
-   "kind": "Fish",
+   "kind": "Crafting Materials",
    "realm": "Sea",
    "areas": [
     [
@@ -5886,7 +5886,7 @@
     [
      "Sea",
      [
-      "Mining"
+      "Candy Cove"
      ]
     ]
    ],
@@ -6050,7 +6050,7 @@
   {
    "name": "Sand Dollars",
    "type": "Foraging",
-   "kind": "Fish",
+   "kind": "Crafting Materials",
    "realm": "Sea",
    "areas": [
     [
@@ -6468,7 +6468,7 @@
     [
      "Sea",
      [
-      "Mining"
+      "Shipwreck Shores"
      ]
     ]
    ],
@@ -6566,7 +6566,7 @@
     [
      "Sea",
      [
-      "Mining"
+      "Kingdom of Oublié"
      ]
     ]
    ],
@@ -6750,7 +6750,7 @@
     [
      "Sea",
      [
-      "Mining"
+      "Candy Cove"
      ]
     ]
    ],
@@ -7660,7 +7660,7 @@
   {
    "name": "Torn Net",
    "type": "Foraging",
-   "kind": "Fish",
+   "kind": "Crafting Materials",
    "realm": "Sea",
    "areas": [
     [
