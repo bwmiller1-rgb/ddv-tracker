@@ -216,7 +216,7 @@ details .row{flex-wrap:wrap;margin-top:10px}
 </details>
 
 <div class="lookup">
-  <label>🔍 Where to find <input id="itemLookup" list="itemNames" placeholder="Type an item (e.g. Apple)" autocomplete="off"></label>
+  <label>🔍 Find item or recipe <input id="itemLookup" list="itemNames" placeholder="Item or recipe (e.g. Apple Pie)" autocomplete="off"></label>
   <div class="lookupResults" id="lookupResults"></div>
 </div>
 <datalist id="itemNames"></datalist>
@@ -394,13 +394,18 @@ const villagerColor = v => villagerDone(v) ? 'complete'
   : v.gifted ? 'giftOnly' : v.collected ? 'collectOnly' : '';
 // Item list (items.json, built weekly from the wiki) for the lookup box and gift slots
 let ITEMS = [];
+let COL_ITEMS = [];   // the Collection tab tracks gatherables only, not meals
 const itemIndex = new Map();
 const findItemInfo = name => itemIndex.get(String(name || '').trim().toLowerCase());
 // "Main-Plaza, Forgotten Lands · Eternity-Glittering Dunes"
 const areasText = info => (info.areas || []).map(([realm, places]) => (realm ? realm + '-' : '') + places.join(', ')).join(' · ');
-const whereText = info => info && info.areas && info.areas.length ? '📍 ' + areasText(info) : '';
+// Meals show their recipe instead of a location: "🍳 Apple + Wheat + Butter · ★★★"
+const recipeText = info => '🍳 ' + info.recipe.join(' + ') + (info.stars ? ' · ' + '★'.repeat(info.stars) : '');
+const whereText = info => !info ? '' : info.recipe ? recipeText(info)
+  : info.areas && info.areas.length ? '📍 ' + areasText(info) : '';
 fetch('items.json', { cache: 'no-cache' }).then(r => r.json()).then(d => {
   ITEMS = d.items || [];
+  COL_ITEMS = ITEMS.filter(i => i.type !== 'Meal');
   ITEMS.forEach(i => itemIndex.set(i.name.toLowerCase(), i));
   document.getElementById('itemNames').innerHTML = ITEMS.map(i => `<option value="${esc(i.name)}">`).join('');
   fillColFilters(); render(); showLookup();
@@ -419,23 +424,23 @@ const colMatches = (i, f, q) =>
   (!q || i.name.toLowerCase().includes(q));
 function renderCollection() {
   const f = state.colFilter;
-  const done = ITEMS.filter(isCollected).length;
-  const pct = ITEMS.length ? Math.round(done / ITEMS.length * 100) : 0;
+  const done = COL_ITEMS.filter(isCollected).length;
+  const pct = COL_ITEMS.length ? Math.round(done / COL_ITEMS.length * 100) : 0;
   const total = document.getElementById('colTotal');
-  total.textContent = ITEMS.length ? `${done} / ${ITEMS.length} items collected (${pct}%)${done === ITEMS.length ? ' 🎉' : ''}` : 'Item list is loading…';
-  total.classList.toggle('allDone', ITEMS.length > 0 && done === ITEMS.length);
+  total.textContent = COL_ITEMS.length ? `${done} / ${COL_ITEMS.length} items collected (${pct}%)${done === COL_ITEMS.length ? ' 🎉' : ''}` : 'Item list is loading…';
+  total.classList.toggle('allDone', COL_ITEMS.length > 0 && done === COL_ITEMS.length);
   document.getElementById('colBar').style.width = pct + '%';
   // Per-region progress (an item found in two regions counts in both); tap a region to filter by it
   document.getElementById('regionChips').innerHTML = REGIONS.map(r => {
-    const inR = ITEMS.filter(i => itemRegions(i).includes(r));
+    const inR = COL_ITEMS.filter(i => itemRegions(i).includes(r));
     if (!inR.length) return '';
     const got = inR.filter(isCollected).length;
     return `<button class="chip ${f.region === r ? 'on' : ''} ${got === inR.length ? 'full' : ''}" data-region="${r}">${r} ${got}/${inR.length}</button>`;
   }).join('');
   const q = document.getElementById('colFind').value.trim().toLowerCase();
-  const shown = ITEMS.filter(i => colMatches(i, f, q) && !(f.hide && isCollected(i)))
+  const shown = COL_ITEMS.filter(i => colMatches(i, f, q) && !(f.hide && isCollected(i)))
     .sort((a, b) => a.name.localeCompare(b.name));
-  document.getElementById('colCount').textContent = ITEMS.length ? `Showing ${shown.length} item${shown.length === 1 ? '' : 's'}` : '';
+  document.getElementById('colCount').textContent = COL_ITEMS.length ? `Showing ${shown.length} item${shown.length === 1 ? '' : 's'}` : '';
   document.getElementById('colList').innerHTML = shown.map(i => {
     const on = isCollected(i);
     return `
@@ -445,11 +450,11 @@ function renderCollection() {
         <div class="meta">${esc(whereText(i))}</div>
         ${i.from.length ? `<div class="meta">How: ${esc(i.from.join(', '))}</div>` : ''}</div>
     </div>`;
-  }).join('') || `<p class="empty">${ITEMS.length ? 'No items match the filter.' : ''}</p>`;
+  }).join('') || `<p class="empty">${COL_ITEMS.length ? 'No items match the filter.' : ''}</p>`;
 }
 function fillColFilters() {
-  const types = [...new Set(ITEMS.map(i => i.type))].sort();
-  const kinds = [...new Set(ITEMS.map(kindOf).filter(Boolean))].sort();
+  const types = [...new Set(COL_ITEMS.map(i => i.type))].sort();
+  const kinds = [...new Set(COL_ITEMS.map(kindOf).filter(Boolean))].sort();
   document.getElementById('colRegion').innerHTML = '<option value="all">All regions</option>' +
     REGIONS.map(r => `<option>${r}</option>`).join('');
   document.getElementById('colType').innerHTML = '<option value="all">All types</option>' +
@@ -461,7 +466,7 @@ function syncColFilters() {
   const f = state.colFilter;
   document.getElementById('colRegion').value = f.region;
   document.getElementById('colType').value = f.type;
-  if (ITEMS.length && document.getElementById('colType').value !== f.type) { f.type = 'all'; document.getElementById('colType').value = 'all'; }
+  if (COL_ITEMS.length && document.getElementById('colType').value !== f.type) { f.type = 'all'; document.getElementById('colType').value = 'all'; }
   document.getElementById('colHide').checked = f.hide;
 }
 const giftSlotsHtml = v => `

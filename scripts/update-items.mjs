@@ -6,8 +6,8 @@ import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 
 const API = 'https://dreamlightvalleywiki.com/api.php';
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15';
-const HUBS = ['Ingredients', 'Gems', 'Foraging', 'Fishing', 'Gardening'];
-const KEEP_TYPES = ['Ingredient', 'Foraging', 'Gem'];
+const HUBS = ['Ingredients', 'Gems', 'Foraging', 'Fishing', 'Gardening', 'Cooking'];
+const KEEP_TYPES = ['Ingredient', 'Foraging', 'Gem', 'Meal'];   // meals carry their recipe instead of a location
 const CHECK_ONLY = process.argv.includes('--check');   // only report which pages changed; download no page content
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -120,7 +120,7 @@ console.log('Candidate pages:', titles.size);
 
 // Revision cache: each page's last revision id and the item parsed from it, so later runs only download
 // pages that were edited. Bump PARSER_VERSION when the parsing below changes, to re-read every page once.
-const PARSER_VERSION = 1;
+const PARSER_VERSION = 2;
 const cacheFile = new URL('./wiki-cache.json', import.meta.url);
 let cache = existsSync(cacheFile) ? JSON.parse(readFileSync(cacheFile, 'utf8')) : {};
 if (cache.version !== PARSER_VERSION) cache = { version: PARSER_VERSION, pages: {} };
@@ -151,6 +151,13 @@ function parseItem(title, text) {
   const where = clean(f.found || f.biomes || f.biome || f.location || '');
   const from = clean(f.from || '');
   const realm = COLLECTION_REALM[clean(f.collection || '')[0]] || expansionRealm(text);
+  if (type === 'Meal') {
+    // {{IngredientList | Apple, Wheat, Butter | addCategories }} -> ["Apple", "Wheat", "Butter"]
+    // "*" lines list which items count for a category ingredient like Fruit; keep just the category
+    const ingredients = (f.ingredients || '').split('\n').filter(l => !l.trim().startsWith('*')).join('\n');
+    return { name: title, type, kind: clean(f.category || '')[0] || '', realm, areas: [], from: [],
+      recipe: clean(ingredients), stars: parseInt(f.stars, 10) || 0 };
+  }
   const how = from.filter(x => !where.includes(x));
   return {
     name: title,
@@ -181,7 +188,7 @@ for (let i = 0; i < changed.length; i += 40) {
 // Items from every page still linked from the hub pages
 const items = Object.keys(revs).map(t => cache.pages[t]?.item).filter(Boolean)
   // known realm but no location yet (common for brand-new expansion items)
-  .map(it => it.areas.length || !it.realm ? it : { ...it, areas: [[it.realm, ['Location not on the wiki yet']]] });
+  .map(it => it.areas.length || !it.realm || it.type === 'Meal' ? it : { ...it, areas: [[it.realm, ['Location not on the wiki yet']]] });
 items.sort((a, b) => a.name.localeCompare(b.name));
 if (items.length < 100) throw new Error(`Only ${items.length} items found — wiki layout may have changed; not overwriting items.json`);
 

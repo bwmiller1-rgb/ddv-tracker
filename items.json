@@ -1,7 +1,51 @@
 {
  "source": "Dreamlight Valley Wiki (dreamlightvalleywiki.com), CC BY-NC-SA",
- "count": 465,
+ "count": 974,
  "items": [
+  {
+   "name": "\"My Hero\" Cookie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Butter",
+    "Sweets"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "101 Teeny Tiny Dalmatian Cupcakes",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Dark Chocolate Coffee Beans",
+    "Egg",
+    "Wheat",
+    "Sugarcane"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "A Very Unusual Tea Time",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Plain Yogurt",
+    "Spiral Strawberries",
+    "Salt Crystal",
+    "Sour Berries"
+   ],
+   "stars": 4
+  },
   {
    "name": "Acorn Snail",
    "type": "Ingredient",
@@ -20,6 +64,21 @@
    ]
   },
   {
+   "name": "Afternoon Tea Set",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Dark Chocolate Coffee Beans",
+    "Pearly Barley",
+    "Vegetables",
+    "Pincushion Peach"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Agave",
    "type": "Ingredient",
    "kind": "Sweets",
@@ -36,6 +95,20 @@
     "Foraging",
     "Feeding Cobras liked foods"
    ]
+  },
+  {
+   "name": "Ajiaco",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Corn",
+    "Potato",
+    "Poultry"
+   ],
+   "stars": 3
   },
   {
    "name": "Alexandrite",
@@ -75,6 +148,19 @@
    ]
   },
   {
+   "name": "Alpine Fishcakes",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Red Alpine Bass",
+    "Dill"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Amber",
    "type": "Foraging",
    "kind": "Crafting Material",
@@ -108,6 +194,19 @@
    "from": [
     "Goofy's Stall (Upgrade 2)"
    ]
+  },
+  {
+   "name": "Ambrosia Smoothie",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Plain Yogurt",
+    "Ambrosia"
+   ],
+   "stars": 2
   },
   {
    "name": "Amethyst",
@@ -200,6 +299,19 @@
    ]
   },
   {
+   "name": "Aphrodite's Delight",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Golden Apple",
+    "Ambrosia"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Apple",
    "type": "Ingredient",
    "kind": "Fruit",
@@ -218,6 +330,61 @@
     "Apple Tree",
     "Goofy's Caravan"
    ]
+  },
+  {
+   "name": "Apple Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Apple",
+    "Wheat",
+    "Butter"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Apple Sauce",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Apple",
+    "Cinnamon"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Apple Sorbet",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Apple",
+    "Sugarcane"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Apple-Cider-Glazed Salmon",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Salmon",
+    "Sugarcane",
+    "Apple"
+   ],
+   "stars": 3
   },
   {
    "name": "Aquamarine",
@@ -239,6 +406,81 @@
    ]
   },
   {
+   "name": "Aquatic Escargot",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Trumpet Snail",
+    "Garlic",
+    "Salt Crystal"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Arcane Garlic Crab",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sorcerer Hat Hermit Crab",
+    "Garlic",
+    "Salt Crystal",
+    "Spices"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Arendellian Pickled Herring",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Herring",
+    "Lemon",
+    "Onion",
+    "Garlic",
+    "Spices"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Arepas Con Queso",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Corn",
+    "Cheese",
+    "Agave"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Argossian Pizza",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Elysian Grain",
+    "Onion",
+    "Vegetables",
+    "Flyleaf Feta",
+    "Olives"
+   ],
+   "stars": 5
+  },
+  {
    "name": "Asparagus",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -255,6 +497,88 @@
     "Goofy's Stall",
     "Gardening"
    ]
+  },
+  {
+   "name": "Aurora's Cake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Sugarcane",
+    "Egg",
+    "Fruit",
+    "Milk"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Bagna Càuda",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Anchovy",
+    "Butter",
+    "Spices"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Baked Beans",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Beans",
+    "Pork"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Baked Carp",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Carp",
+    "Butter"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Baked Feta & Olives",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Flyleaf Feta",
+    "Olives"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Baked Whitefish and Roasted Beets",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mountain Whitefish",
+    "Beetroot"
+   ],
+   "stars": 2
   },
   {
    "name": "Balloon Fish",
@@ -314,6 +638,92 @@
    ]
   },
   {
+   "name": "Banana Ice Cream",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Banana",
+    "Milk",
+    "Sugarcane"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Banana Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Banana",
+    "Wheat",
+    "Butter"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Banana Split",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Banana",
+    "Milk",
+    "Sugarcane",
+    "Sweets"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Baozi",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pork",
+    "Wheat",
+    "Soya",
+    "Spices"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Barbecued Brilliant Blue Starfish",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Brilliant Blue Starfish",
+    "Mint"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Barbecued Pretty Pink Starfish",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pretty Pink Starfish",
+    "Paprika"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Barley",
    "type": "Ingredient",
    "kind": "Grains",
@@ -331,6 +741,21 @@
    ]
   },
   {
+   "name": "Barley Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Barley",
+    "Cauliflower",
+    "Radish",
+    "Spices"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Basil",
    "type": "Ingredient",
    "kind": "Spices",
@@ -346,6 +771,35 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Basil Berry Salad",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Blueberry",
+    "Basil",
+    "Strawberry"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Basil Omelet",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Basil",
+    "Egg",
+    "Cheese",
+    "Milk"
+   ],
+   "stars": 4
   },
   {
    "name": "Bass",
@@ -416,6 +870,47 @@
    ]
   },
   {
+   "name": "Beet Brownie Stack",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Beetroot",
+    "Egg",
+    "Sweets"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Beet Sugar Sculpture",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Beetroot",
+    "Sugarcane"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Beet-iful Spaetzle",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Beetroot",
+    "Egg"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Beetroot",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -450,6 +945,21 @@
    ]
   },
   {
+   "name": "Beignets",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Canola",
+    "Wheat",
+    "Egg",
+    "Sugarcane"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Bell Pepper",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -466,6 +976,95 @@
     "Goofy's Stall",
     "Gardening"
    ]
+  },
+  {
+   "name": "Bell Pepper Puffs",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Bell Pepper",
+    "Egg",
+    "Cheese"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Berry Salad",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Raspberry",
+    "Blueberry",
+    "Gooseberry"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Best Fish Forever",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sea Snail",
+    "Robot Fish",
+    "Celery",
+    "Cumin"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Birthday Cake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cocoa Bean",
+    "Wheat",
+    "Sugarcane",
+    "Egg",
+    "Butter"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Biryani",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Poultry",
+    "Rice",
+    "Cinnamon",
+    "Cumin",
+    "Mint"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Biscuits",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Sugarcane",
+    "Butter"
+   ],
+   "stars": 3
   },
   {
    "name": "Black Glass-Like Flowers",
@@ -535,6 +1134,22 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Blend of the Bayou",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Prisma Shrimp",
+    "Rice",
+    "Celery",
+    "Butter",
+    "Spices"
+   ],
+   "stars": 5
   },
   {
    "name": "Blue Bubble Blooms",
@@ -802,6 +1417,48 @@
    ]
   },
   {
+   "name": "Blueberry Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Blueberry",
+    "Wheat",
+    "Butter"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Blustery Day Soup",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Honeyglow",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Dairy and Oil",
+    "Mushroom",
+    "Truffle",
+    "Golden Honey"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Boba Tea",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sugarcane",
+    "Milk"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Bones",
    "type": "Foraging",
    "kind": "Crafting Material",
@@ -836,6 +1493,97 @@
     "Foraging",
     "Bonsai Star Fruit Tree"
    ]
+  },
+  {
+   "name": "Bony Osso Buco",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Skeleton Fish",
+    "Celery",
+    "Vegetables",
+    "Grapes"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Bouillabaisse",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Seafood",
+    "Shrimp",
+    "Tomato",
+    "Vegetables"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Braised Abalone",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Oyster",
+    "Sea Snail",
+    "Mushroom",
+    "Garlic"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Braised Bamboo Shoots",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Bamboo",
+    "Canola",
+    "Soya",
+    "Ginger"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Brandade de Morue",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cod",
+    "Potato",
+    "Milk",
+    "Lemon",
+    "Garlic"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Bread Bowl Pumpkin Soup",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Tigger Fish",
+    "Fairy Kamut",
+    "Pumpkin",
+    "Milk"
+   ],
+   "stars": 4
   },
   {
    "name": "Bream",
@@ -907,6 +1655,21 @@
    ]
   },
   {
+   "name": "Brunchfast",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Honeyglow",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sweet Jelly",
+    "Butter",
+    "Egg",
+    "Fruit"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Brussels Sprout",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -942,6 +1705,22 @@
    ]
   },
   {
+   "name": "Bulgur Salad",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Cucumber",
+    "Tomato",
+    "Mint",
+    "Spices"
+   ],
+   "stars": 5
+  },
+  {
    "name": "Bumblestone",
    "type": "Gem",
    "kind": "",
@@ -958,6 +1737,36 @@
     "Aladdin's Gem Stall",
     "Mining"
    ]
+  },
+  {
+   "name": "Buñuelos",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Cheese",
+    "Milk",
+    "Egg"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Burrito",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Meat",
+    "Wheat",
+    "Beans",
+    "Cumin"
+   ],
+   "stars": 4
   },
   {
    "name": "Butter",
@@ -979,6 +1788,21 @@
    ]
   },
   {
+   "name": "Buttermilk Borscht",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Beetroot",
+    "Egg",
+    "Milk",
+    "Dill"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Button Mushroom",
    "type": "Ingredient",
    "kind": "Spices",
@@ -996,6 +1820,19 @@
    ]
   },
   {
+   "name": "Button Stew",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Button Mushroom",
+    "Carrot"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Cabbage",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -1011,6 +1848,20 @@
    "from": [
     "Gardening"
    ]
+  },
+  {
+   "name": "Cacio e Pepe",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Elysian Grain",
+    "Flyleaf Feta",
+    "Black Pepper"
+   ],
+   "stars": 3
   },
   {
    "name": "Cactoberries",
@@ -1031,6 +1882,31 @@
    ]
   },
   {
+   "name": "Candied Oyster",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Oyster",
+    "Gummy Bean"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Candy",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sweets"
+   ],
+   "stars": 1
+  },
+  {
    "name": "Candy Corn",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -1048,6 +1924,18 @@
    ]
   },
   {
+   "name": "Candy Corn Tart",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Candy Corn"
+   ],
+   "stars": 1
+  },
+  {
    "name": "Candy Pebbles",
    "type": "Foraging",
    "kind": "Refined Materials",
@@ -1063,6 +1951,21 @@
    "from": [
     "Digging"
    ]
+  },
+  {
+   "name": "Cannoli",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Cheese",
+    "Egg",
+    "Vanilla"
+   ],
+   "stars": 4
   },
   {
    "name": "Canola",
@@ -1106,6 +2009,90 @@
    ]
   },
   {
+   "name": "Cape Gooseberry Chia Pancakes",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Chia Seeds",
+    "Shovel Bird Eggs",
+    "Cape Gooseberry"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Cape Gooseberry Smoothie",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Plain Yogurt",
+    "Cape Gooseberry"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Cape Gooseberry Sour Fondue",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cape Gooseberry",
+    "Sour Berries"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Caprese Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Vegetables",
+    "Flyleaf Feta",
+    "Olives",
+    "Salt Crystal",
+    "Spices"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Caramel Apples",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sugarcane",
+    "Apple"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Caramel Macarons",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Almonds",
+    "Egg",
+    "Agave"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Carp",
    "type": "Ingredient",
    "kind": "Fish",
@@ -1124,6 +2111,20 @@
    ]
   },
   {
+   "name": "Carp Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Carp",
+    "Lemon",
+    "Lettuce"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Carrot",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -1140,6 +2141,21 @@
     "Goofy's Stall",
     "Gardening"
    ]
+  },
+  {
+   "name": "Carrot Cake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Carrot",
+    "Wheat",
+    "Egg",
+    "Sugarcane"
+   ],
+   "stars": 4
   },
   {
    "name": "Catfish",
@@ -1176,6 +2192,18 @@
    ]
   },
   {
+   "name": "Cauliflower Steak",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cauliflower"
+   ],
+   "stars": 1
+  },
+  {
    "name": "Celery",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -1191,6 +2219,20 @@
    "from": [
     "Gardening"
    ]
+  },
+  {
+   "name": "Charlotte Cake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Strawberry",
+    "Agave"
+   ],
+   "stars": 3
   },
   {
    "name": "Cheese",
@@ -1210,6 +2252,62 @@
     "Chez Remy",
     "Tiana's Palace"
    ]
+  },
+  {
+   "name": "Cheese Platter",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cheese"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Cheeseburger",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Venison",
+    "Wheat",
+    "Vegetables",
+    "Cheese"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Cheesecake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cheese",
+    "Wheat",
+    "Sugarcane",
+    "Fruit"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Cheesy Crispy Baked Cod",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cod",
+    "Wheat",
+    "Cheese"
+   ],
+   "stars": 3
   },
   {
    "name": "Cherry",
@@ -1233,6 +2331,64 @@
    ]
   },
   {
+   "name": "Cherry Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cherry",
+    "Wheat",
+    "Butter"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Cheshire Cat Tail (2)",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cocoa Bean",
+    "Egg",
+    "Wheat",
+    "Sugarcane"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Chia Pudding",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Chia Seeds",
+    "Rhubarb",
+    "Cinnamon",
+    "Sweets"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Chia Seed Bread",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Chia Seeds",
+    "Shovel Bird Eggs"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Chia Seeds",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
@@ -1248,6 +2404,21 @@
    "from": [
     "Gardening"
    ]
+  },
+  {
+   "name": "Chicken Souvlaki",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Poultry",
+    "Lemon",
+    "Mint",
+    "Paprika"
+   ],
+   "stars": 4
   },
   {
    "name": "Chili Pepper",
@@ -1274,6 +2445,80 @@
    ]
   },
   {
+   "name": "Chili Pepper Puffs",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Chili Pepper",
+    "Egg",
+    "Cheese"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Chimera Skewer",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Hippocampus",
+    "Trumpet Snail",
+    "Flying Fish",
+    "Fish",
+    "Brussels Sprout"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Chocolate Chip Cookies",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cocoa Bean",
+    "Wheat",
+    "Sugarcane",
+    "Butter"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Chocolate Ice Cream",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cocoa Bean",
+    "Sugarcane",
+    "Milk",
+    "Slush Ice"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Chocolate Macarons",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Almonds",
+    "Egg",
+    "Cocoa Bean"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Chocolate Neapolitan Oxalis",
    "type": "Foraging",
    "kind": "Flowers",
@@ -1291,6 +2536,62 @@
    ]
   },
   {
+   "name": "Chocolate Waffles",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cocoa Bean",
+    "Wheat",
+    "Egg",
+    "Milk"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Chocolate-Covered Mapleberries",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mapleberry",
+    "Cocoa Bean"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Chowder",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Seafood",
+    "Milk",
+    "Potato",
+    "Vegetables"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Chrysanthemum Tea",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Chrysanthemum Tea Leaves",
+    "Blueberry"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Chrysanthemum Tea Leaves",
    "type": "Ingredient",
    "kind": "Spices",
@@ -1306,6 +2607,20 @@
    "from": [
     "Mulan's Tea Stall"
    ]
+  },
+  {
+   "name": "Churros with Sweet Syrup",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Butter",
+    "Gummy Bean"
+   ],
+   "stars": 3
   },
   {
    "name": "Cinnamon",
@@ -1329,6 +2644,51 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Cinnamon Cake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Shovel Bird Eggs",
+    "Plain Yogurt",
+    "Cinnamon"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Cinnamon Cookies",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Plain Yogurt",
+    "Cinnamon",
+    "Sweets"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Cinnamon Donut",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Egg",
+    "Cinnamon",
+    "Sweets"
+   ],
+   "stars": 4
   },
   {
    "name": "Citrine",
@@ -1367,6 +2727,47 @@
    ]
   },
   {
+   "name": "Clam Juice",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Clam",
+    "Tomato"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Classic Frankfurter",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pork",
+    "Poultry",
+    "Venison",
+    "Wheat"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Classic Mac & Cheese",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Cheese"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Clay",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -1392,6 +2793,21 @@
     "Digging",
     "Removing Small and Big Wildebeest Bones"
    ]
+  },
+  {
+   "name": "Club Sandwich",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pork",
+    "Poultry",
+    "Wheat",
+    "Tomato"
+   ],
+   "stars": 4
   },
   {
    "name": "Cocoa Bean",
@@ -1441,6 +2857,50 @@
    ]
   },
   {
+   "name": "Coconut Boba Tea",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sugarcane",
+    "Milk",
+    "Coconut"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Coconut Cake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Coconut",
+    "Wheat",
+    "Egg",
+    "Sugarcane"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Coconut Ice Cream",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Milk",
+    "Sugarcane",
+    "Coconut"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Cod",
    "type": "Ingredient",
    "kind": "Fish",
@@ -1479,6 +2939,18 @@
    ]
   },
   {
+   "name": "Coffee",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Coffee Bean"
+   ],
+   "stars": 1
+  },
+  {
    "name": "Coffee Bean",
    "type": "Ingredient",
    "kind": "Fruit",
@@ -1497,6 +2969,19 @@
    ]
   },
   {
+   "name": "Coleslaw",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cabbage",
+    "Carrot"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Common Club Rush",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -1513,6 +2998,21 @@
     "Goofy's Stall",
     "Foraging"
    ]
+  },
+  {
+   "name": "Conch Ceviche",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sea Snail",
+    "Onion",
+    "Tomato",
+    "Lemon"
+   ],
+   "stars": 4
   },
   {
    "name": "Copper",
@@ -1552,6 +3052,21 @@
     "Goofy's Stall",
     "Foraging"
    ]
+  },
+  {
+   "name": "Coq en Barbouille",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Poultry",
+    "Onion",
+    "Vegetables",
+    "Grapes"
+   ],
+   "stars": 4
   },
   {
    "name": "Corn",
@@ -1612,6 +3127,19 @@
    ]
   },
   {
+   "name": "Cotton Candy",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Agave",
+    "Sugarcane"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Crab",
    "type": "Ingredient",
    "kind": "Seafood",
@@ -1635,6 +3163,120 @@
    ]
   },
   {
+   "name": "Crab Melts",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Crab",
+    "Cheese"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Crackers",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Grains"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Cream Cheese Bagel",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Cheese",
+    "Sweets"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Creamy Garlic Scallops",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Scallop",
+    "Lemon",
+    "Butter",
+    "Garlic"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Creamy Soup",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Spices",
+    "Milk",
+    "Potato",
+    "Vegetables"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Crepe",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Egg",
+    "Milk",
+    "Vanilla"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Crepe Cone",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sherbet Cane Straw",
+    "Grains",
+    "Egg",
+    "Mapleberry",
+    "Fruit"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Crimson Burger",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Vegetables",
+    "Ruby Lentils"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Crimson Eternal Poppies",
    "type": "Foraging",
    "kind": "Flowers",
@@ -1651,6 +3293,44 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Crispy Baked Cod",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cod",
+    "Wheat"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Croissant",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Butter"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Crudités",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Vegetables"
+   ],
+   "stars": 1
   },
   {
    "name": "Crystal",
@@ -1724,6 +3404,49 @@
    ]
   },
   {
+   "name": "Cupcakes",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Egg",
+    "Cherry",
+    "Agave"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Cute Cake Pops",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sherbet Cane Straw",
+    "Grains",
+    "Butter",
+    "Milk"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Cute Sugar Cookies",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sherbet Cane Straw",
+    "Butter"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Dandelion",
    "type": "Foraging",
    "kind": "Flowers",
@@ -1739,6 +3462,20 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Danish",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Butter",
+    "Fruit"
+   ],
+   "stars": 4
   },
   {
    "name": "Dark Chocolate Coffee Beans",
@@ -1847,6 +3584,50 @@
    ]
   },
   {
+   "name": "Dragon Roll Maki",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Electric Eel",
+    "Rice",
+    "Seaweed",
+    "Vegetables"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Dream Fizz",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Dreamlight Fruit",
+    "Sugarcane",
+    "Wheat",
+    "Slush Ice"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Dream Ice Cream",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Dreamlight Fruit",
+    "Milk",
+    "Slush Ice"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Dream Shard",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -1888,6 +3669,20 @@
     "Foraging",
     "Dreamango Tree"
    ]
+  },
+  {
+   "name": "Dreamango Boba Tea",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Milk",
+    "Dreamango",
+    "Sugarcane"
+   ],
+   "stars": 3
   },
   {
    "name": "Dreamlight Avocado",
@@ -1969,6 +3764,21 @@
     "Kristoff's Stall",
     "Foraging"
    ]
+  },
+  {
+   "name": "Dumplings",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Meat",
+    "Wheat",
+    "Vegetables",
+    "Soya"
+   ],
+   "stars": 4
   },
   {
    "name": "Dunebopper",
@@ -2062,6 +3872,20 @@
    ]
   },
   {
+   "name": "Eggplant Puffs",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Eggplant",
+    "Egg",
+    "Cheese"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Electric Eel",
    "type": "Ingredient",
    "kind": "Fish",
@@ -2097,6 +3921,20 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Electric Radicchio & Persimmon Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Radicchio",
+    "Persimmon",
+    "Lightning Spice"
+   ],
+   "stars": 3
   },
   {
    "name": "Elysian Grain",
@@ -2135,6 +3973,20 @@
    ]
   },
   {
+   "name": "Eton Mess",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Red Currants",
+    "Pincushion Peach",
+    "Egg"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Evergem",
    "type": "Gem",
    "kind": "",
@@ -2153,6 +4005,21 @@
    ]
   },
   {
+   "name": "Fabulous Fajitas",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Poultry",
+    "Wheat",
+    "Vegetables",
+    "Cumin"
+   ],
+   "stars": 5
+  },
+  {
    "name": "Faerie Rye",
    "type": "Ingredient",
    "kind": "Grains",
@@ -2168,6 +4035,31 @@
    "from": [
     "Gardening"
    ]
+  },
+  {
+   "name": "Faerie Rye Crackers",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Faerie Rye"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Fairy Bread",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fairy Kamut",
+    "Fairy Sprinkles"
+   ],
+   "stars": 2
   },
   {
    "name": "Fairy Bubbles",
@@ -2223,6 +4115,48 @@
    ]
   },
   {
+   "name": "Fairy Wands",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Bonsai Star Fruit",
+    "Lollipop Fruit",
+    "Fruit"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Falafel",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Beans",
+    "Cumin",
+    "Garlic"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Felted Breakfast Spread",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Button Mushroom",
+    "Egg",
+    "Satin-Finned Betta"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Festive Anglerfish",
    "type": "Ingredient",
    "kind": "Fish",
@@ -2257,6 +4191,36 @@
    ]
   },
   {
+   "name": "Festive Blueberry Hot Cocoa",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sugarcane",
+    "Milk",
+    "Festive Cocoa Bean",
+    "Blueberry"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Festive Cherry Hot Cocoa",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sugarcane",
+    "Milk",
+    "Festive Cocoa Bean",
+    "Cherry"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Festive Cocoa Bean",
    "type": "Ingredient",
    "kind": "Sweets",
@@ -2289,6 +4253,21 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Festive Mint Hot Cocoa",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sugarcane",
+    "Milk",
+    "Festive Cocoa Bean",
+    "Mint"
+   ],
+   "stars": 4
   },
   {
    "name": "Festive Salmon",
@@ -2342,6 +4321,150 @@
    ]
   },
   {
+   "name": "Fish 'n' Chips",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Wheat",
+    "Canola",
+    "Potato"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Fish Creole",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Vegetables",
+    "Garlic",
+    "Rice",
+    "Tomato"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Fish Pasta",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Garlic",
+    "Wheat",
+    "Milk"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Fish Pie",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Wheat",
+    "Butter"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Fish Risotto",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Rice",
+    "Butter"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Fish Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Lemon",
+    "Lettuce"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Fish Sandwich",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Wheat"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Fish Soup",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Vegetables",
+    "Milk"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Fish Steak",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Tomato",
+    "Basil"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Fish Tacos",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Corn",
+    "Chili Pepper",
+    "Cheese"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Fishy Green Egg",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
@@ -2359,6 +4482,35 @@
     "Eggstravaganza",
     "Menu_Icon_Fishing on Dazzle Beach"
    ]
+  },
+  {
+   "name": "Fishy Pineapple Jelly",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Measuring-Tape Snail",
+    "Jellied Fish",
+    "Crab",
+    "Scarlet Kale",
+    "Fish"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Fizzy Nectar Soda",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Bonsai Star Fruit",
+    "Slush Ice"
+   ],
+   "stars": 2
   },
   {
    "name": "Flower Button",
@@ -2413,6 +4565,22 @@
    ]
   },
   {
+   "name": "Flying Fish Quenelles",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Flying Fish",
+    "Porcini Mushrooms",
+    "Vegetables",
+    "Flyleaf Feta",
+    "Dairy and Oil"
+   ],
+   "stars": 5
+  },
+  {
    "name": "Flyleaf Feta",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
@@ -2428,6 +4596,155 @@
    "from": [
     "Goofy's Stall (Upgrade 2)"
    ]
+  },
+  {
+   "name": "Foresty Quiche",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Honeyglow",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Dairy and Oil",
+    "Juniper Berry",
+    "Truffle",
+    "Golden Pattypan"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "French Fries",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Canola",
+    "Potato"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "French Macarons",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Almonds",
+    "Egg"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Friendly Bento",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Tigger Fish",
+    "Scarlet Kale",
+    "Honey Coral",
+    "Vegetables"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Friendly Fish Crackers",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mango Wrasse",
+    "Wheat",
+    "Vegetables"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Frosting Pudding",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Gummy Bean"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Fruit Milkshake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Milk",
+    "Fruit"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Fruit Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fruit",
+    "Wheat",
+    "Butter"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Fruit Salad",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fruit"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Fruit Sorbet",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Fruit"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Fruitcake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Fruit"
+   ],
+   "stars": 4
   },
   {
    "name": "Fuchsia Eternal Poppies",
@@ -2463,6 +4780,20 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Fugu Sushi",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fugu",
+    "Rice",
+    "Seaweed"
+   ],
+   "stars": 3
   },
   {
    "name": "Garlic",
@@ -2504,6 +4835,20 @@
    ]
   },
   {
+   "name": "Garlic Steam Mussels",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mussel",
+    "Onion",
+    "Garlic"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Garnet",
    "type": "Gem",
    "kind": "",
@@ -2530,6 +4875,21 @@
    ]
   },
   {
+   "name": "Gazpacho",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cucumber",
+    "Tomato",
+    "Onion",
+    "Spices"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Geode",
    "type": "Gem",
    "kind": "",
@@ -2545,6 +4905,22 @@
    "from": [
     "Mining"
    ]
+  },
+  {
+   "name": "Ghostly Fish Steak",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Here and There Fish",
+    "Lemon",
+    "Asparagus",
+    "Bell Pepper",
+    "Oregano"
+   ],
+   "stars": 5
   },
   {
    "name": "Giant Acorns",
@@ -2582,6 +4958,36 @@
    ]
   },
   {
+   "name": "Gingerbread House",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Ginger",
+    "Sugarcane",
+    "Vanilla",
+    "Egg"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Glazed Donut",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Egg",
+    "Sweets"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Gold Sand",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -2614,6 +5020,33 @@
    "from": [
     "Goofy's Stall (Upgrade 2)"
    ]
+  },
+  {
+   "name": "Golden Apple Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Shovel Bird Eggs",
+    "Golden Apple"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Golden Apple Smoothie",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Plain Yogurt",
+    "Golden Apple"
+   ],
+   "stars": 2
   },
   {
    "name": "Golden Pattypan",
@@ -2651,6 +5084,20 @@
    ]
   },
   {
+   "name": "Good Ol' Fashioned Burger",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Venison",
+    "Wheat",
+    "Lettuce"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Goose Feathers",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -2686,6 +5133,79 @@
     "Foraging",
     "Gooseberry Bush"
    ]
+  },
+  {
+   "name": "Gooseberry Boba Tea",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sugarcane",
+    "Milk",
+    "Gooseberry"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Gourd Luck Oysters",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Oyster",
+    "Mermaid Gourd",
+    "Magical Ivy"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Gourd Time Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mermaid Gourd",
+    "Tomato",
+    "Vegetables",
+    "Magical Ivy"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Gourd-geous Casserole",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Unicorn Fish",
+    "Mermaid Gourd",
+    "Vegetables",
+    "Cheese",
+    "Spices"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Gourmet Grubs",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sea Snail",
+    "Sand Worm",
+    "Scorpion"
+   ],
+   "stars": 3
   },
   {
    "name": "Grapes",
@@ -2739,6 +5259,82 @@
     "Goofy's Stall",
     "Digging"
    ]
+  },
+  {
+   "name": "Gray Stuff",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Dairy and Oil",
+    "Sugarcane",
+    "Cocoa Bean"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Greek Pizza",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Spices",
+    "Tomato",
+    "Onion",
+    "Cheese",
+    "Wheat"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Greek Potatoes",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Potato",
+    "Fruit",
+    "Garlic",
+    "Salt Crystal",
+    "Spices"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Greek Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cucumber",
+    "Radish",
+    "Vegetables",
+    "Flyleaf Feta",
+    "Olives"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Green Bean Casserole",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Green Beans",
+    "Onion",
+    "Porcini Mushrooms"
+   ],
+   "stars": 3
   },
   {
    "name": "Green Beans",
@@ -2880,6 +5476,19 @@
    ]
   },
   {
+   "name": "Green Salad",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Vegetables",
+    "Lettuce"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Green Silk Flower",
    "type": "Foraging",
    "kind": "Flowers",
@@ -2912,6 +5521,87 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Grilled Fish",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Grilled Fish Entree",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Vegetables"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Grilled Koi Gyro",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Koi",
+    "Wheat",
+    "Cucumber",
+    "Olives",
+    "Spices"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Grilled Vegetables",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Vegetables"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Grilled Veggie Platter",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Vegetables"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Gumbo",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Okra",
+    "Shrimp",
+    "Chili Pepper",
+    "Tomato",
+    "Onion"
+   ],
+   "stars": 5
   },
   {
    "name": "Gummiberry Juice",
@@ -2948,6 +5638,47 @@
    ]
   },
   {
+   "name": "Halloween Gingerbread Cookies",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Pumpkin",
+    "Ginger"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Hamburger Steak",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Venison",
+    "Potato",
+    "Vegetables",
+    "Beans"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Hard-Boiled Eggs",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Egg"
+   ],
+   "stars": 1
+  },
+  {
    "name": "Hardwood",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -2982,6 +5713,35 @@
    ]
   },
   {
+   "name": "Hawaiian Pizza",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pork",
+    "Wheat",
+    "Tomato",
+    "Cheese",
+    "Pineapple"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Hearty Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Vegetables",
+    "Lettuce"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Here and There Fish",
    "type": "Ingredient",
    "kind": "Fish",
@@ -3004,6 +5764,20 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Hermit Crab Pasta",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sorcerer Hat Hermit Crab",
+    "Wheat",
+    "Spices"
+   ],
+   "stars": 3
   },
   {
    "name": "Herring",
@@ -3041,6 +5815,22 @@
    ]
   },
   {
+   "name": "Hippocampus Cepelinai Dumplings",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Hippocampus",
+    "Onion",
+    "Potato",
+    "Spiral Strawberries",
+    "Black Pepper"
+   ],
+   "stars": 5
+  },
+  {
    "name": "Honey Agate",
    "type": "Gem",
    "kind": "",
@@ -3075,6 +5865,78 @@
    ]
   },
   {
+   "name": "Honey Macarons",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Honeyglow",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Golden Honey",
+    "Sweet Jelly",
+    "Grains",
+    "Sweet Chestnut"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Honey Pancakes",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Honey Coral",
+    "Wheat",
+    "Egg"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Honey Triffle",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Honeyglow",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pufflebud Pods",
+    "Golden Honey",
+    "Tree Resin",
+    "Juniper Berry"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Honey-Glazed Carrots",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Honey Coral",
+    "Carrot",
+    "Dill"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Honey-Glazed Plush Fish",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Honeyglow",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Plush Fish",
+    "Vegetables",
+    "Golden Honey"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Honeycomb Stone",
    "type": "Gem",
    "kind": "",
@@ -3090,6 +5952,19 @@
    "from": [
     "Mining"
    ]
+  },
+  {
+   "name": "Honeycrunch Bar",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Honeyglow",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sweet Chestnut",
+    "Golden Honey"
+   ],
+   "stars": 2
   },
   {
    "name": "Honeydew Melon",
@@ -3109,6 +5984,100 @@
    ]
   },
   {
+   "name": "Honeydew Smoothie",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Plain Yogurt",
+    "Honeydew Melon"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Honeydew Sour Fondue",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Honeydew Melon",
+    "Sour Berries"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Horace's Ham Sandwich",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pearly Barley",
+    "Cheese",
+    "Vegetables"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Hors d'Oeuvres",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Spices"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Hot Cocoa",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sugarcane",
+    "Milk",
+    "Cocoa Bean"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Ice Cream",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Milk",
+    "Sugarcane"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Ice Cream Sandwich",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sherbet Cane Straw",
+    "Wheat",
+    "Cocoa Bean"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Igloo Crab",
    "type": "Ingredient",
    "kind": "Fish",
@@ -3124,6 +6093,19 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Inky Pasta",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mini-Kraken",
+    "Wheat"
+   ],
+   "stars": 2
   },
   {
    "name": "Iridescent Seashells",
@@ -3191,6 +6173,48 @@
    ]
   },
   {
+   "name": "Jam Macarons",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Almonds",
+    "Egg",
+    "Fruit"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Jam Waffles",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fruit",
+    "Wheat",
+    "Egg",
+    "Milk"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Jasmine Tea",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Jasmine Tea Leaves",
+    "Sugarcane"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Jasmine Tea Leaves",
    "type": "Ingredient",
    "kind": "Spices",
@@ -3242,6 +6266,31 @@
    ]
   },
   {
+   "name": "Jellied Fish Terrine",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Jellied Fish"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Jellied Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Jellied Fish",
+    "Scarlet Kale"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Jellyfish",
    "type": "Ingredient",
    "kind": "Fish",
@@ -3257,6 +6306,51 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Jellyfish Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Jellyfish",
+    "Tomato",
+    "Vegetables",
+    "Soya"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Jerk Chicken",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Poultry",
+    "Onion",
+    "Garlic",
+    "Spices"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Joyful Meal",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Blueberry",
+    "Raspberry",
+    "Banana"
+   ],
+   "stars": 4
   },
   {
    "name": "Juniper Berry",
@@ -3276,6 +6370,48 @@
     "Foraging",
     "Juniper Berry Bush"
    ]
+  },
+  {
+   "name": "Kanelbulle",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Butter",
+    "Egg",
+    "Cinnamon"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Kanine Krunchies Cereal",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pearly Barley",
+    "Pincushion Peach"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Kappa Maki",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Seaweed",
+    "Cucumber",
+    "Rice"
+   ],
+   "stars": 3
   },
   {
    "name": "Kingfish",
@@ -3312,6 +6448,75 @@
    ]
   },
   {
+   "name": "Koi Sashimi",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Koi"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Kouign-Amann",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Butter",
+    "Agave"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Kraken Tart",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mini-Kraken",
+    "Wheat",
+    "Lychee"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Kraken's Catch",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mini-Kraken",
+    "Dreamlight Avocado",
+    "Dairy and Oil",
+    "Fruit"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Kronk's Spinach Puffs",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Spinach",
+    "Cheese",
+    "Canola"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Lamprey",
    "type": "Ingredient",
    "kind": "Fish",
@@ -3327,6 +6532,18 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Lamprey Sashimi",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Lamprey"
+   ],
+   "stars": 1
   },
   {
    "name": "Lancetfish",
@@ -3346,6 +6563,63 @@
    ]
   },
   {
+   "name": "Lancetfish Paella",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Lancetfish",
+    "Shrimp",
+    "Seafood",
+    "Tomato",
+    "Rice"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Large Seafood Platter",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Seafood",
+    "Lemon"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Latkes",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Onion",
+    "Potato",
+    "Canola",
+    "Egg"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Latte",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Coffee Bean",
+    "Milk"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Leek",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -3362,6 +6636,18 @@
     "Goofy's Stall",
     "Gardening"
    ]
+  },
+  {
+   "name": "Leek Soup",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Leek"
+   ],
+   "stars": 1
   },
   {
    "name": "Lemon",
@@ -3384,6 +6670,33 @@
    ]
   },
   {
+   "name": "Lemon Garlic Swordfish",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Swordfish",
+    "Garlic",
+    "Lemon"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Lemon Sorbet",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Lemon"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Lettuce",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -3402,6 +6715,51 @@
    ]
   },
   {
+   "name": "Lightning Bolt",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Stygian Mudskipper",
+    "Lamprey",
+    "Lightning Spice",
+    "Sweets"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Lightning Cake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Shovel Bird Eggs",
+    "Plain Yogurt",
+    "Lightning Spice"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Lightning Cookies",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Plain Yogurt",
+    "Sweets",
+    "Lightning Spice"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Lightning Spice",
    "type": "Ingredient",
    "kind": "Spices",
@@ -3418,6 +6776,120 @@
     "Foraging",
     "Feeding Baby Pegasi liked foods"
    ]
+  },
+  {
+   "name": "Lioness Feast",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mushroom",
+    "Tomato",
+    "Oregano",
+    "Here and There Fish"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Lo-Fries",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Flute Root",
+    "Yam",
+    "Canola"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Loaded Breakfast Yogurt",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Oats",
+    "Plain Yogurt",
+    "Spiral Strawberries",
+    "Ambrosia"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Loaded Golden Apple Porridge",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Oats",
+    "Golden Apple",
+    "Ambrosia"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Loaded Honeydew Porridge",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Oats",
+    "Honeydew Melon",
+    "Ambrosia"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Loaded Persimmon Porridge",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Oats",
+    "Persimmon",
+    "Ambrosia"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Loaded Rhubarb Porridge",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Oats",
+    "Rhubarb",
+    "Ambrosia"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Loaded Sea Grape Porridge",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Oats",
+    "Sea Grapes",
+    "Ambrosia"
+   ],
+   "stars": 4
   },
   {
    "name": "Lobster",
@@ -3471,6 +6943,33 @@
    ]
   },
   {
+   "name": "Luminous Hibiscus Tea",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Luminous Hibiscus"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Lupine Cullen Skink",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sea Wolf",
+    "Onion",
+    "Potato",
+    "Plain Yogurt"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Lychee",
    "type": "Ingredient",
    "kind": "Fruit",
@@ -3487,6 +6986,20 @@
     "Foraging",
     "Lychee Tree"
    ]
+  },
+  {
+   "name": "Maamouls",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Almonds",
+    "Dates"
+   ],
+   "stars": 3
   },
   {
    "name": "Magical Ivy",
@@ -3524,6 +7037,21 @@
    ]
   },
   {
+   "name": "Maguro Sushi",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Tuna",
+    "Seaweed",
+    "Rice",
+    "Ginger"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Majestea",
    "type": "Ingredient",
    "kind": "Spices",
@@ -3539,6 +7067,35 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Maki",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Seaweed",
+    "Rice"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Makrout",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Canola",
+    "Dates",
+    "Cinnamon"
+   ],
+   "stars": 4
   },
   {
    "name": "Mango Wrasse",
@@ -3558,6 +7115,20 @@
    ]
   },
   {
+   "name": "Mango Wrasse Curry Rice",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mango Wrasse",
+    "Rice",
+    "Spices"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Mapleberry",
    "type": "Ingredient",
    "kind": "Fruit",
@@ -3574,6 +7145,20 @@
     "Foraging",
     "Mapleberry Bush"
    ]
+  },
+  {
+   "name": "Mapleberry Mochi",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Rice",
+    "Mapleberry",
+    "Gummy Bean"
+   ],
+   "stars": 3
   },
   {
    "name": "Marble",
@@ -3595,6 +7180,34 @@
    ]
   },
   {
+   "name": "Margherita Pizza",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Spices",
+    "Tomato",
+    "Cheese",
+    "Wheat"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Marvelous Jam",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Dreamlight Fruit",
+    "Wheat"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Measuring-Tape Snail",
    "type": "Ingredient",
    "kind": "Fish",
@@ -3610,6 +7223,52 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Meat Pie",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Meat",
+    "Wheat",
+    "Butter"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Meaty Taco",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Venison",
+    "Chili Pepper",
+    "Corn",
+    "Vegetables",
+    "Cumin"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Mediterranean Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cucumber",
+    "Tomato",
+    "Onion",
+    "Lettuce",
+    "Spices"
+   ],
+   "stars": 5
   },
   {
    "name": "Melon",
@@ -3629,6 +7288,51 @@
    ]
   },
   {
+   "name": "Melon Boba Tea",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Milk",
+    "Melon",
+    "Sugarcane"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Meringue Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Lemon",
+    "Wheat",
+    "Egg",
+    "Butter"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Mermaid Cupcake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Milk",
+    "Wheat",
+    "Butter",
+    "Sugarcane",
+    "Scallop"
+   ],
+   "stars": 5
+  },
+  {
    "name": "Mermaid Gourd",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -3644,6 +7348,21 @@
    "from": [
     "Gardening"
    ]
+  },
+  {
+   "name": "Mermaid Milkshake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Milk",
+    "Pomegranate",
+    "Fruit",
+    "Sweets"
+   ],
+   "stars": 4
   },
   {
    "name": "Mermaid's Purse",
@@ -3665,6 +7384,22 @@
    ]
   },
   {
+   "name": "Merryweather's Gingersnaps",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Faerie Rye",
+    "Shovel Bird Eggs",
+    "Ginger",
+    "Nutmeg",
+    "Sour Berries"
+   ],
+   "stars": 5
+  },
+  {
    "name": "Milk",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
@@ -3684,6 +7419,21 @@
    ]
   },
   {
+   "name": "Milky Way Stew",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Rainbow Trout",
+    "Milk",
+    "Turnip",
+    "Cosmic Figs"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Mini-Kraken",
    "type": "Ingredient",
    "kind": "Fish",
@@ -3699,6 +7449,35 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Minnie Cupcake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Milk",
+    "Wheat",
+    "Butter",
+    "Sugarcane",
+    "Apple"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Minnie's Gingerbread Cookies",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Ginger"
+   ],
+   "stars": 2
   },
   {
    "name": "Mint",
@@ -3718,6 +7497,48 @@
    ]
   },
   {
+   "name": "Mint Boba Tea",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sugarcane",
+    "Milk",
+    "Mint"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Mint Candy",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mint",
+    "Sugarcane"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Mint Chocolate",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mint",
+    "Sugarcane",
+    "Butter",
+    "Cocoa Bean"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Mint Neapolitan Oxalis",
    "type": "Foraging",
    "kind": "Flowers",
@@ -3733,6 +7554,62 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Mint Sorbet",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Mint"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Mocha",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Coffee Bean",
+    "Milk",
+    "Cocoa Bean"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Mooncake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Canola",
+    "Beans",
+    "Agave"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Moqueca de Pirarucu",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pirarucu",
+    "Vegetables",
+    "Coconut"
+   ],
+   "stars": 4
   },
   {
    "name": "Moss",
@@ -3832,6 +7709,37 @@
    ]
   },
   {
+   "name": "Mushroom Pizza",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mushroom",
+    "Wheat",
+    "Tomato",
+    "Cheese"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Mushu's Congee",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Rice",
+    "Egg",
+    "Mushroom",
+    "Garlic",
+    "Ginger"
+   ],
+   "stars": 5
+  },
+  {
    "name": "Mussel",
    "type": "Ingredient",
    "kind": "Seafood",
@@ -3847,6 +7755,51 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Mussel Risotto",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mussel",
+    "Rice",
+    "Olives",
+    "Garlic",
+    "Spices"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Nachos",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Chili Pepper",
+    "Corn",
+    "Cheese"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Nestling Crepe",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Egg",
+    "Milk",
+    "Nestling Pear"
+   ],
+   "stars": 4
   },
   {
    "name": "Nestling Pear",
@@ -3919,6 +7872,49 @@
    ]
   },
   {
+   "name": "Nutmeg Cake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Shovel Bird Eggs",
+    "Plain Yogurt",
+    "Nutmeg"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Nutmeg Cookies",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Plain Yogurt",
+    "Nutmeg",
+    "Sweets"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Nuts & Bolts",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Robot Fish",
+    "Almonds"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Oak Leaves",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -3953,6 +7949,18 @@
     "Digging",
     "Removing Small and Large Glass Stalagmites"
    ]
+  },
+  {
+   "name": "Oatmeal",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Oats"
+   ],
+   "stars": 1
   },
   {
    "name": "Oats",
@@ -4007,6 +8015,18 @@
    ]
   },
   {
+   "name": "Okra Soup",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Okra"
+   ],
+   "stars": 1
+  },
+  {
    "name": "Old Braided Rope",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -4042,6 +8062,18 @@
    ]
   },
   {
+   "name": "Olive Plate",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Olives"
+   ],
+   "stars": 1
+  },
+  {
    "name": "Olives",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
@@ -4058,6 +8090,35 @@
     "Foraging",
     "Olive Tree"
    ]
+  },
+  {
+   "name": "Olympian Tapenade",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Elysian Grain",
+    "Olives",
+    "Honeydew Melon",
+    "Spices"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Omelet",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Egg",
+    "Cheese",
+    "Milk"
+   ],
+   "stars": 3
   },
   {
    "name": "Onion",
@@ -4078,6 +8139,20 @@
    ]
   },
   {
+   "name": "Onion Puffs",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Onion",
+    "Egg",
+    "Cheese"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Onyx",
    "type": "Gem",
    "kind": "",
@@ -4094,6 +8169,19 @@
     "Aladdin's Gem Stall",
     "Mining"
    ]
+  },
+  {
+   "name": "Oolong Tea",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Oolong Tea Leaves",
+    "Raspberry"
+   ],
+   "stars": 2
   },
   {
    "name": "Oolong Tea Leaves",
@@ -4305,6 +8393,60 @@
    ]
   },
   {
+   "name": "Oyster Platter",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Oyster",
+    "Lemon"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Pan-Fried Angler Fish",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Anglerfish",
+    "Tomato",
+    "Zucchini",
+    "Potato"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Pan-Seared Bass & Vegetables",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Bass",
+    "Vegetables"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Pan-Seared Tilapia & Vegetables",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Tilapia",
+    "Vegetables"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Paprika",
    "type": "Ingredient",
    "kind": "Spices",
@@ -4339,6 +8481,76 @@
    ]
   },
   {
+   "name": "Pasta",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Tomato"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Pasta with Herbs",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Butter",
+    "Spices"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Pastéis de Nata",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Corn",
+    "Egg",
+    "Milk",
+    "Vanilla"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Pastry Cream and Fruits",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fruit",
+    "Milk",
+    "Sugarcane"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Pawpsicle",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Sugarcane",
+    "Fruit"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Peanut",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
@@ -4356,6 +8568,48 @@
     "Chez Remy",
     "Tiana's Palace"
    ]
+  },
+  {
+   "name": "Peanut Butter Sandwich",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Peanut",
+    "Wheat"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Peanut Butter Waffles",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Peanut",
+    "Wheat",
+    "Egg",
+    "Milk"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Pear Upside-Down Cake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Egg",
+    "Nestling Pear"
+   ],
+   "stars": 3
   },
   {
    "name": "Pearl",
@@ -4418,6 +8672,19 @@
     "Kristoff's Stall",
     "Digging"
    ]
+  },
+  {
+   "name": "Peppermint Tea",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Lemon",
+    "Mint"
+   ],
+   "stars": 2
   },
   {
    "name": "Perch",
@@ -4489,6 +8756,76 @@
    ]
   },
   {
+   "name": "Persimmon Chia Pancakes",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Chia Seeds",
+    "Shovel Bird Eggs",
+    "Persimmon"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Persimmon Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Shovel Bird Eggs",
+    "Persimmon"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Persimmon Smoothie",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Plain Yogurt",
+    "Persimmon"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Persimmon Sour Fondue",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Persimmon",
+    "Sour Berries"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Pesto with Linguine",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Butter",
+    "Garlic",
+    "Oregano"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Petrified Wood",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -4508,6 +8845,21 @@
     "Removing Petrified Wood Rocks",
     "Feeding Baby Dragons liked foods"
    ]
+  },
+  {
+   "name": "Pickled Herring",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Herring",
+    "Lemon",
+    "Onion",
+    "Spices"
+   ],
+   "stars": 4
   },
   {
    "name": "Pike",
@@ -4579,6 +8931,19 @@
    "from": [
     "Gardening"
    ]
+  },
+  {
+   "name": "Pineapple Soft Serve",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Pineapple"
+   ],
+   "stars": 2
   },
   {
    "name": "Pink Bromeliad",
@@ -4756,6 +9121,20 @@
    ]
   },
   {
+   "name": "Piquant Piranha Soup",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Chili Pepper",
+    "Bamboo",
+    "Piranha"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Piranha",
    "type": "Ingredient",
    "kind": "Fish",
@@ -4790,6 +9169,21 @@
    ]
   },
   {
+   "name": "Pirate Ship Hot Dog",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Dreamlight Avocado",
+    "Vegetables",
+    "Soya"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Pixel Shard",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -4822,6 +9216,47 @@
    "from": [
     "Mining"
    ]
+  },
+  {
+   "name": "Pixie Ice Cream Dome Cake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fairy Kamut",
+    "Fairy Sprinkles",
+    "Slush Ice",
+    "Red Currants"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Pizza",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Tomato",
+    "Cheese",
+    "Wheat"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Plain Snow Cones",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice"
+   ],
+   "stars": 1
   },
   {
    "name": "Plain Yogurt",
@@ -4877,6 +9312,21 @@
    ]
   },
   {
+   "name": "Poached Basil-Butter Sturgeon",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "White Sturgeon",
+    "Basil",
+    "Lemon",
+    "Butter"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Pomegranate",
    "type": "Ingredient",
    "kind": "Fruit",
@@ -4893,6 +9343,48 @@
     "Foraging",
     "Pomegranate Tree"
    ]
+  },
+  {
+   "name": "Pomegranate Dumplings",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Rice",
+    "Pomegranate"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Pooh's Birthday Cake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Honeyglow",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Golden Honey",
+    "Sweets",
+    "Dairy and Oil",
+    "Fruit",
+    "Grains"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Popcorn",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Corn",
+    "Canola"
+   ],
+   "stars": 2
   },
   {
    "name": "Porcini Mushrooms",
@@ -4970,6 +9462,50 @@
    ]
   },
   {
+   "name": "Potato Leek Soup",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Leek",
+    "Potato",
+    "Milk",
+    "Onion",
+    "Garlic"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Potato Puffs",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Potato",
+    "Egg",
+    "Cheese"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Pottage",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Potato",
+    "Spices",
+    "Vegetables"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Poultry",
    "type": "Ingredient",
    "kind": "Protein",
@@ -4987,6 +9523,20 @@
    ]
   },
   {
+   "name": "Poutine",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Potato",
+    "Canola",
+    "Cheese"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Pretty Pink Starfish",
    "type": "Ingredient",
    "kind": "Seafood",
@@ -5002,6 +9552,22 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Princess Aurora Raspberry Cupcake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Milk",
+    "Wheat",
+    "Butter",
+    "Sugarcane",
+    "Raspberry"
+   ],
+   "stars": 5
   },
   {
    "name": "Prisma Shrimp",
@@ -5036,6 +9602,21 @@
    "from": [
     "Gardening"
    ]
+  },
+  {
+   "name": "Pulled Pork",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pork",
+    "Onion",
+    "Tomato",
+    "Oregano"
+   ],
+   "stars": 4
   },
   {
    "name": "Pumice Stone",
@@ -5073,6 +9654,49 @@
    ]
   },
   {
+   "name": "Pumpkin Puffs",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pumpkin",
+    "Egg",
+    "Cheese"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Pumpkin Soup",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Vegetables",
+    "Milk",
+    "Ginger",
+    "Pumpkin"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Pupusas Revueltas",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Poultry",
+    "Corn",
+    "Beans"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Pure Ice",
    "type": "Gem",
    "kind": "",
@@ -5089,6 +9713,18 @@
     "Aladdin's Gem Stall",
     "Mining"
    ]
+  },
+  {
+   "name": "Purée",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Potato"
+   ],
+   "stars": 1
   },
   {
    "name": "Purple & White Foxglove",
@@ -5283,6 +9919,21 @@
    ]
   },
   {
+   "name": "Purple Pastry",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Grains",
+    "Twilight Taro",
+    "Pomegranate",
+    "Sweets"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Purple Rising Penstemon",
    "type": "Foraging",
    "kind": "Flowers",
@@ -5375,6 +10026,22 @@
    ]
   },
   {
+   "name": "Rabbit's Garden Pie",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Honeyglow",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Golden Pattypan",
+    "Parsnip",
+    "Pufflebud Pods",
+    "Carrot",
+    "Grains"
+   ],
+   "stars": 5
+  },
+  {
    "name": "Radicchio",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -5392,6 +10059,35 @@
    ]
   },
   {
+   "name": "Radicchio Slaw",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cauliflower",
+    "Green Beans",
+    "Radicchio",
+    "Radish"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Radicchio-Stuffed Porcini",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Porcini Mushrooms",
+    "Radicchio",
+    "Black Pepper"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Radish",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -5407,6 +10103,22 @@
    "from": [
     "Gardening"
    ]
+  },
+  {
+   "name": "Rainbouillabaisse",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Prisma Shrimp",
+    "Seafood",
+    "Rainbow Trout",
+    "Tomato",
+    "Vegetables"
+   ],
+   "stars": 5
   },
   {
    "name": "Rainbow Rose Bouquet",
@@ -5456,6 +10168,36 @@
    ]
   },
   {
+   "name": "Ramen",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pork",
+    "Wheat",
+    "Egg"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Ranch Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Lettuce",
+    "Bell Pepper",
+    "Corn",
+    "Tomato",
+    "Onion"
+   ],
+   "stars": 5
+  },
+  {
    "name": "Raspberry",
    "type": "Ingredient",
    "kind": "Fruit",
@@ -5474,6 +10216,49 @@
     "Foraging",
     "Raspberry Bush"
    ]
+  },
+  {
+   "name": "Raspberry Boba Tea",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sugarcane",
+    "Milk",
+    "Raspberry"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Raspberry Jam Sandwich",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Raspberry"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Ratatouille",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Tomato",
+    "Eggplant",
+    "Onion",
+    "Zucchini",
+    "Spices"
+   ],
+   "stars": 5
   },
   {
    "name": "Reclaimed Barn Wood",
@@ -5598,6 +10383,35 @@
    ]
   },
   {
+   "name": "Red Currant Linzer Cookies",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Butter",
+    "Red Currants",
+    "Sugarcane"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Red Currant Valley Cakes",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Egg",
+    "Milk",
+    "Red Currants"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Red Currants",
    "type": "Ingredient",
    "kind": "Fruit",
@@ -5648,6 +10462,21 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Red Fruit Sorbet",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Raspberry",
+    "Gooseberry",
+    "Sugarcane"
+   ],
+   "stars": 4
   },
   {
    "name": "Red Luminescent Flower",
@@ -5791,6 +10620,37 @@
    ]
   },
   {
+   "name": "Red Velvet",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Cheese",
+    "Egg",
+    "Cocoa Bean",
+    "Vanilla"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Rhapsody Roll",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Rice",
+    "Flute Root",
+    "Seaweed",
+    "Vegetables"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Rhubarb",
    "type": "Ingredient",
    "kind": "Fruit",
@@ -5826,6 +10686,20 @@
    ]
   },
   {
+   "name": "Rice Pudding",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Oats",
+    "Rice",
+    "Vanilla"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Rich Soil",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -5858,6 +10732,99 @@
    "from": [
     "Gardening"
    ]
+  },
+  {
+   "name": "Roast",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Meat"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Roasted Almonds",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Almonds",
+    "Agave"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Roasted Asparagus",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Asparagus",
+    "Canola"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Roasted Barley & Veggies",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Barley",
+    "Brussels Sprout",
+    "Onion",
+    "Vegetables",
+    "Flyleaf Feta"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Roasted Brussels Sprouts",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Brussels Sprout",
+    "Garlic"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Roasted Green Beans",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Green Beans",
+    "Garlic"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Roasted Marshmallows",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pink Marshmallow",
+    "Blue Marshmallow"
+   ],
+   "stars": 4
   },
   {
    "name": "Robot Fish",
@@ -5895,6 +10862,20 @@
    ]
   },
   {
+   "name": "Root Beer",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Ginger",
+    "Sugarcane",
+    "Vanilla"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Rose & Cream Foxglove",
    "type": "Foraging",
    "kind": "Flowers",
@@ -5913,6 +10894,72 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Rosehip Honey Tea",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Honey Coral"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Royal Burger",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pork",
+    "Venison",
+    "Wheat",
+    "Vegetables",
+    "Cheese"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Royal Ice Tea",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Majestea"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Royal Latte",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Milk",
+    "Majestea"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Royal Tea",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Majestea"
+   ],
+   "stars": 1
   },
   {
    "name": "Ruby",
@@ -5957,6 +11004,20 @@
    ]
   },
   {
+   "name": "Ruby Masoor Dal",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Chili Pepper",
+    "Tomato",
+    "Ruby Lentils"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Rusty Hinge",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -5973,6 +11034,59 @@
     "Goofy's Stall",
     "Digging"
    ]
+  },
+  {
+   "name": "S'mores",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pink Marshmallow",
+    "Blue Marshmallow",
+    "Wheat"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Sake Maki",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Rice",
+    "Seaweed",
+    "Salmon"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Sake Sushi",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Salmon",
+    "Rice"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Salad",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Lettuce"
+   ],
+   "stars": 1
   },
   {
    "name": "Salmon",
@@ -6015,6 +11129,103 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Salt-Baked Sea Wolf",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sea Wolf",
+    "Salt Crystal"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Salt-Pickled Cauliflower",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cauliflower",
+    "Salt Crystal",
+    "Spices"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Salt-Pickled Garlic",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Garlic",
+    "Salt Crystal",
+    "Spices"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Salt-Pickled Green Beans",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Green Beans",
+    "Salt Crystal",
+    "Spices"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Salt-Pickled Radicchio",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Radicchio",
+    "Salt Crystal",
+    "Spices"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Salt-Pickled Radish",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Radish",
+    "Salt Crystal",
+    "Spices"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Salt-Pickled Sea Grapes",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sea Grapes",
+    "Salt Crystal",
+    "Spices"
+   ],
+   "stars": 3
   },
   {
    "name": "Sand",
@@ -6082,6 +11293,22 @@
    ]
   },
   {
+   "name": "Sand Stew",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Dunebopper",
+    "Sand Fish",
+    "Vegetables",
+    "Sand Worm",
+    "Spices"
+   ],
+   "stars": 5
+  },
+  {
    "name": "Sand Worm",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
@@ -6097,6 +11324,19 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Sand Worm Carpaccio Plate",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sand Worm",
+    "Melon"
+   ],
+   "stars": 2
   },
   {
    "name": "Sapphire",
@@ -6135,6 +11375,59 @@
    ]
   },
   {
+   "name": "Sausage and Sauerkraut Platter",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pork",
+    "Cabbage",
+    "Potato"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Sautéed Mushrooms",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mushroom",
+    "Butter"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Sautéed Porcini",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Porcini Mushrooms",
+    "Garlic"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Savory Fish",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Lemon"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Scales",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -6170,6 +11463,18 @@
    ]
   },
   {
+   "name": "Scarlet Bouquet Salad",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Scarlet Kale"
+   ],
+   "stars": 1
+  },
+  {
    "name": "Scarlet Kale",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -6187,6 +11492,34 @@
    ]
   },
   {
+   "name": "Scarlet Kale and Cheese Pinwheels",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Scarlet Kale",
+    "Cheese"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Schnitzel",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Poultry",
+    "Wheat",
+    "Canola"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Scorpion",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
@@ -6202,6 +11535,61 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Scottish Porridge",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Oats",
+    "Fruit"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Scrambled Egg",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Egg",
+    "Cheese"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Sea Biscuit",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Anchovy",
+    "Rice",
+    "Sweet Heart of Palm"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Sea Grape Chia Pancakes",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Chia Seeds",
+    "Shovel Bird Eggs",
+    "Sea Grapes"
+   ],
+   "stars": 4
   },
   {
    "name": "Sea Grapes",
@@ -6272,6 +11660,127 @@
    ]
   },
   {
+   "name": "Seafood Appetizer",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Seafood"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Seafood Boil",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Seafood",
+    "Spices",
+    "Potato",
+    "Corn"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Seafood Pasta",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Seafood",
+    "Wheat",
+    "Milk"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Seafood Pie",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Seafood",
+    "Wheat",
+    "Butter"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Seafood Platter",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Seafood"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Seafood Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Seafood",
+    "Lettuce"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Seafood Soup",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Seafood",
+    "Vegetables"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Seared Rainbow Trout",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Rainbow Trout",
+    "Tomato",
+    "Onion"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Seashell Madeleines",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Pomegranate",
+    "Sweets"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Seaweed",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -6295,6 +11804,21 @@
    ]
   },
   {
+   "name": "Seaweed Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Radish",
+    "Vegetables",
+    "Sea Grapes",
+    "Black Pepper"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Sequin Strands",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -6313,6 +11837,35 @@
    ]
   },
   {
+   "name": "Sesame Balls",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Ginger",
+    "Rice",
+    "Soya",
+    "Seaweed"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Sesame Seed Bagel",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Sweets"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Shad",
    "type": "Ingredient",
    "kind": "Fish",
@@ -6329,6 +11882,49 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Shad Ceviche",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Shad",
+    "Onion",
+    "Tomato",
+    "Lemon"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Shake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Dairy and Oil"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Shawarma",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Venison",
+    "Rice",
+    "Lemon",
+    "Cinnamon",
+    "Garlic"
+   ],
+   "stars": 5
   },
   {
    "name": "Sherbet Cane Straw",
@@ -6905,6 +12501,22 @@
    ]
   },
   {
+   "name": "Shish Taouk",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Poultry",
+    "Rice",
+    "Lemon",
+    "Garlic",
+    "Oregano"
+   ],
+   "stars": 5
+  },
+  {
    "name": "Shovel Bird Eggs",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
@@ -6920,6 +12532,21 @@
    "from": [
     "Goofy's Stall (Upgrade 2)"
    ]
+  },
+  {
+   "name": "Shovel Bird Eggs Benedict",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Elysian Grain",
+    "Shovel Bird Eggs",
+    "Spiral Strawberries",
+    "Salt Crystal"
+   ],
+   "stars": 4
   },
   {
    "name": "Shrimp",
@@ -6972,6 +12599,32 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Simple Chia Pudding",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Chia Seeds"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Simple Fried Perch",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Perch",
+    "Wheat",
+    "Butter"
+   ],
+   "stars": 3
   },
   {
    "name": "Skeleton Fish",
@@ -7028,6 +12681,48 @@
    ]
   },
   {
+   "name": "Smoked Fish Charcuterie Spread",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mountain Whitefish",
+    "Tuna",
+    "Fish",
+    "Wheat"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Smoked Peanuts and Anglerfish",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Anglerfish",
+    "Peanut"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Snow White's Gooseberry Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Gooseberry",
+    "Wheat",
+    "Butter"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Snowball",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -7051,6 +12746,20 @@
     "Digging",
     "Removing Small and Big Ice Blocks"
    ]
+  },
+  {
+   "name": "Soda Bread & Feta",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Flyleaf Feta",
+    "Salt Crystal"
+   ],
+   "stars": 3
   },
   {
    "name": "Soft Limestone",
@@ -7140,6 +12849,21 @@
    ]
   },
   {
+   "name": "Sole Meunière",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sole",
+    "Wheat",
+    "Butter",
+    "Lemon"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Sorcerer Hat Hermit Crab",
    "type": "Ingredient",
    "kind": "Seafood",
@@ -7155,6 +12879,21 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Soufflé",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cheese",
+    "Egg",
+    "Milk",
+    "Butter"
+   ],
+   "stars": 4
   },
   {
    "name": "Sour Berries",
@@ -7175,6 +12914,47 @@
    ]
   },
   {
+   "name": "Sour Berry Dessert",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Ambrosia",
+    "Sour Berries"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Sour Berry Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Shovel Bird Eggs",
+    "Sour Berries"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Sour Snow Cones",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Lemon",
+    "Sugarcane"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Soya",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
@@ -7191,6 +12971,135 @@
     "Goofy's Stall",
     "Gardening"
    ]
+  },
+  {
+   "name": "Spaceship Earth Cupcake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Milk",
+    "Wheat",
+    "Butter",
+    "Sugarcane",
+    "Coconut"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Spaghetti Arrabbiata",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Tomato",
+    "Wheat",
+    "Chili Pepper"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Spanakopita",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Onion",
+    "Spinach",
+    "Flyleaf Feta",
+    "Garlic",
+    "Spices"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Sparkling Ambrosia",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Lightning Spice",
+    "Ambrosia"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Spicy Baked Bream",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Bream",
+    "Chili Pepper",
+    "Butter"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Spicy Macarons",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Chili Pepper",
+    "Almonds",
+    "Egg"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Spicy Scorpion Skewer",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Scorpion",
+    "Paprika"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Spicy Yogurt",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Plain Yogurt",
+    "Spices"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Spiky Berry Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Butter",
+    "Cactoberries",
+    "Strawberry",
+    "Spices"
+   ],
+   "stars": 5
   },
   {
    "name": "Spinach",
@@ -7248,6 +13157,106 @@
    ]
   },
   {
+   "name": "Spiral Strawberry Chia Pancakes",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Chia Seeds",
+    "Shovel Bird Eggs",
+    "Spiral Strawberries"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Spiral Strawberry Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Shovel Bird Eggs",
+    "Spiral Strawberries"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Spiral Strawberry Smoothie",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Plain Yogurt",
+    "Spiral Strawberries"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Spiral Strawberry Sour Fondue",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Spiral Strawberries",
+    "Sour Berries"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Spring Chocolate",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Spring V-EGG-etable",
+    "Sugarcane",
+    "Cocoa Bean"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Spring Egg Bowl",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Egg-cellent Fruit",
+    "Spring V-EGG-etable",
+    "Wild Spring Egg",
+    "Cocoa Bean",
+    "Sugarcane"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Spring Mimosa Eggs",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Spring V-EGG-etable",
+    "Wild Spring Egg",
+    "Egg-cellent Fruit",
+    "Basil"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Spring V-EGG-etable",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
@@ -7265,6 +13274,34 @@
     "Eggstravaganza",
     "Gardening"
    ]
+  },
+  {
+   "name": "Sprout-Stuffed Porcini",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Brussels Sprout",
+    "Porcini Mushrooms",
+    "Black Pepper"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Squash-Stuffed Porcini",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Porcini Mushrooms",
+    "Ring Squash",
+    "Black Pepper"
+   ],
+   "stars": 3
   },
   {
    "name": "Squid",
@@ -7291,6 +13328,18 @@
    ]
   },
   {
+   "name": "Squid Sashimi",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Squid"
+   ],
+   "stars": 1
+  },
+  {
    "name": "Star Sapphire",
    "type": "Gem",
    "kind": "",
@@ -7307,6 +13356,77 @@
     "Aladdin's Gem Stall",
     "Mining"
    ]
+  },
+  {
+   "name": "Stargazy Pie",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Measuring-Tape Snail",
+    "Satin-Finned Betta",
+    "Red Alpine Bass",
+    "Wheat"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Steamed Fugu",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fugu",
+    "Ginger",
+    "Garlic"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Steamed Mussels",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mussel"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Stellar Milkshake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Milk",
+    "Cosmic Figs"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Stitch Cupcake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Milk",
+    "Wheat",
+    "Butter",
+    "Sugarcane",
+    "Blueberry"
+   ],
+   "stars": 5
   },
   {
    "name": "Stone",
@@ -7364,6 +13484,89 @@
    ]
   },
   {
+   "name": "Strawberry Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Butter",
+    "Strawberry"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Strawberry Rhubarb Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Plain Yogurt",
+    "Rhubarb",
+    "Spiral Strawberries"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Strawberry Shortcake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Egg",
+    "Strawberry"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Stuffed Dates",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Almonds",
+    "Dates"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Stuffed Lychees",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Lychee",
+    "Luminous Hibiscus"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Stuffed Ring Squash",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Ring Squash",
+    "Garlic",
+    "Ambrosia"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Stygian Mudskipper",
    "type": "Ingredient",
    "kind": "Fish",
@@ -7379,6 +13582,59 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Sugar-Free Banana Muffin",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Banana"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Sugar-Free Blueberry Muffin",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Blueberry"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Sugar-Free Fruit Explosion Muffin",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Fruit",
+    "Agave"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Sugar-Free Fruit Muffin",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Fruit"
+   ],
+   "stars": 2
   },
   {
    "name": "Sugarcane",
@@ -7417,6 +13673,79 @@
    ]
   },
   {
+   "name": "Sushi",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Fish",
+    "Rice"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Sushi Ship Platter",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Anchovy",
+    "Fish",
+    "Rice",
+    "Electric Eel Kelp",
+    "Luminous Hibiscus"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Sweet & Sour Kingfish Steak",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Kingfish",
+    "Sugarcane",
+    "Lemon"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Sweet Acorn Porridge",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Honeyglow",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Acorn Snail",
+    "Fruit",
+    "Grains"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Sweet and Sour Stir-Fry",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Poultry",
+    "Broccoli",
+    "Canola",
+    "Dreamango",
+    "Pineapple"
+   ],
+   "stars": 5
+  },
+  {
    "name": "Sweet Chestnut",
    "type": "Ingredient",
    "kind": "Fruit",
@@ -7438,6 +13767,20 @@
    ]
   },
   {
+   "name": "Sweet Frozen Crab",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Igloo Crab",
+    "Jellyfish",
+    "Fruit"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Sweet Heart of Palm",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -7453,6 +13796,47 @@
    "from": [
     "Gardening"
    ]
+  },
+  {
+   "name": "Sweet Heart of Palm Ceviche",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sweet Heart of Palm",
+    "Tomato",
+    "Spices"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Sweet Hearty Soup",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Igloo Crab",
+    "Candy Corn",
+    "Tomato"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Sweet Herring",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Herring",
+    "Onion"
+   ],
+   "stars": 2
   },
   {
    "name": "Sweet Jelly",
@@ -7472,6 +13856,74 @@
    ]
   },
   {
+   "name": "Sweet Popcorn",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Corn",
+    "Canola",
+    "Agave"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Sweet Slush",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Sweets"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Sweet Tofu",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Soya",
+    "Fruit"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Sweet Udon",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Dreamlight Fruit",
+    "Rice",
+    "Seafood",
+    "Sweets"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Sweetheart Salad",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Dreamlight Avocado",
+    "Sweet Heart of Palm"
+   ],
+   "stars": 2
+  },
+  {
    "name": "Swordfish",
    "type": "Ingredient",
    "kind": "Fish",
@@ -7487,6 +13939,62 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Taiyaki",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Sand Fish",
+    "Beans"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Takoyaki Stick",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Octopus",
+    "Seaweed",
+    "Egg",
+    "Soya"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Tamagoyaki",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Egg",
+    "Sugarcane"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Tandoori Chicken",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Chili Pepper",
+    "Poultry",
+    "Cumin",
+    "Paprika"
+   ],
+   "stars": 4
   },
   {
    "name": "Tarnished Doubloons",
@@ -7508,6 +14016,75 @@
    ]
   },
   {
+   "name": "Taro Fritters",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Grains",
+    "Twilight Taro"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Taro Turtle Bread",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Twilight Taro"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Tasty Salad",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Lettuce",
+    "Cucumber",
+    "Vegetables",
+    "Spices"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Tasty Veggies",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Vegetables",
+    "Spices"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Tea Sandwiches",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Corn",
+    "Cherry",
+    "Fish"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Teal Eternal Poppies",
    "type": "Foraging",
    "kind": "Flowers",
@@ -7524,6 +14101,51 @@
    "from": [
     "Foraging"
    ]
+  },
+  {
+   "name": "Tekka Maki",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Tuna",
+    "Soya",
+    "Seaweed",
+    "Rice"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Teriyaki Salmon",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Soya",
+    "Salmon",
+    "Sugarcane",
+    "Rice",
+    "Ginger"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Thousand Needles",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Brilliant Blue Starfish",
+    "Pretty Pink Starfish",
+    "Cactoberries"
+   ],
+   "stars": 3
   },
   {
    "name": "Three-Leaf Clover",
@@ -7559,6 +14181,19 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Tigger Tails",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Lollipop Fruit",
+    "Fairy Sprinkles"
+   ],
+   "stars": 2
   },
   {
    "name": "Tilapia",
@@ -7603,6 +14238,34 @@
    ]
   },
   {
+   "name": "Toasted Picnic Sandwich",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Honeyglow",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Golden Honey",
+    "Parsnip",
+    "Dairy and Oil",
+    "Tree Resin",
+    "Spices"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Tofu",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Soya"
+   ],
+   "stars": 1
+  },
+  {
    "name": "Tomato",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -7625,6 +14288,31 @@
     "Goofy's Stall",
     "Gardening"
    ]
+  },
+  {
+   "name": "Tomato Basil Soup",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Tomato",
+    "Basil"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Tomato Soup",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Tomato"
+   ],
+   "stars": 1
   },
   {
    "name": "Topaz",
@@ -7694,6 +14382,21 @@
    ]
   },
   {
+   "name": "Tourtière",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Venison",
+    "Wheat",
+    "Potato",
+    "Vegetables"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Treasure Map",
    "type": "Foraging",
    "kind": "Salvaging",
@@ -7713,6 +14416,21 @@
    ]
   },
   {
+   "name": "Treasure Map Pizza",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Anchovy",
+    "Wheat",
+    "Dreamlight Avocado",
+    "Tomato"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Tree Resin",
    "type": "Ingredient",
    "kind": "Dairy and Oil",
@@ -7729,6 +14447,21 @@
     "Digging",
     "Removing Small and Large Amber Brushwoods"
    ]
+  },
+  {
+   "name": "Tropical Pop",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Fruit",
+    "Sugarcane",
+    "Coconut"
+   ],
+   "stars": 4
   },
   {
    "name": "Tropical Wood",
@@ -7814,6 +14547,49 @@
    ]
   },
   {
+   "name": "Tuna Burger",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Tuna",
+    "Onion",
+    "Lemon",
+    "Wheat",
+    "Vegetables"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Tuna Sashimi",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Tuna"
+   ],
+   "stars": 1
+  },
+  {
+   "name": "Turkey Leg",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Poultry",
+    "Cumin",
+    "Paprika",
+    "Agave"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Turnip",
    "type": "Ingredient",
    "kind": "Vegetables",
@@ -7829,6 +14605,20 @@
    "from": [
     "Gardening"
    ]
+  },
+  {
+   "name": "Turnip Tartiflette",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pork",
+    "Turnip",
+    "Cheese"
+   ],
+   "stars": 3
   },
   {
    "name": "Twilight Taro",
@@ -7848,6 +14638,20 @@
    ]
   },
   {
+   "name": "Tzatziki",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Cucumber",
+    "Plain Yogurt",
+    "Garlic"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Unicorn Fish",
    "type": "Ingredient",
    "kind": "Fish",
@@ -7863,6 +14667,18 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Unicorn Fish Tartare",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Sea",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Unicorn Fish"
+   ],
+   "stars": 1
   },
   {
    "name": "Vanilla",
@@ -7889,6 +14705,35 @@
    ]
   },
   {
+   "name": "Vanilla Ice Cream",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Slush Ice",
+    "Milk",
+    "Sugarcane",
+    "Vanilla"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Vanilla Macarons",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Almonds",
+    "Egg",
+    "Vanilla"
+   ],
+   "stars": 3
+  },
+  {
    "name": "Vanilla Neapolitan Oxalis",
    "type": "Foraging",
    "kind": "Flowers",
@@ -7906,6 +14751,160 @@
    ]
   },
   {
+   "name": "Vanilla Yogurt",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Storybook",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Plain Yogurt",
+    "Vanilla"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Vegetable Soup",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Vegetables"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Vegetarian Dumplings",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Vegetables",
+    "Soya"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Vegetarian Pizza",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Vegetables",
+    "Tomato",
+    "Cheese",
+    "Wheat"
+   ],
+   "stars": 5
+  },
+  {
+   "name": "Vegetarian Stew",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Potato",
+    "Carrot",
+    "Onion"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Vegetarian Taco",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Corn",
+    "Chili Pepper",
+    "Cheese",
+    "Vegetables"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Vegetarian Turnip Tartiflette",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mushroom",
+    "Turnip",
+    "Soya"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Veggie Casserole",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Vegetables",
+    "Cheese",
+    "Spices"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Veggie Pasta",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Tomato",
+    "Wheat",
+    "Vegetables"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Veggie Pie",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Vegetables",
+    "Butter",
+    "Wheat"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Veggie Skewers",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Mushroom",
+    "Zucchini",
+    "Onion",
+    "Bell Pepper"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Venison",
    "type": "Ingredient",
    "kind": "Protein",
@@ -7921,6 +14920,22 @@
    "from": [
     "Gaston's Stall"
    ]
+  },
+  {
+   "name": "Vintage Peach Trifle",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Wishblossom",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pincushion Peach",
+    "Milk",
+    "Pearly Barley",
+    "Sugarcane",
+    "Fruit"
+   ],
+   "stars": 5
   },
   {
    "name": "Vitalys Crystal",
@@ -7960,6 +14975,21 @@
    ]
   },
   {
+   "name": "Waffles",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Milk",
+    "Egg",
+    "Sweets (Only Sugarcane or Agave)"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Walleye",
    "type": "Ingredient",
    "kind": "Fish",
@@ -7975,6 +15005,50 @@
    "from": [
     "Fishing"
    ]
+  },
+  {
+   "name": "Walleye en Papillote",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Walleye",
+    "Basil",
+    "Oregano",
+    "Vegetables"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Warm Milk & Honey",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Honeyglow",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Milk",
+    "Golden Honey"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Wedding Cake",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Butter",
+    "Sugarcane",
+    "Vanilla",
+    "Egg",
+    "Wheat"
+   ],
+   "stars": 5
   },
   {
    "name": "Wheat",
@@ -7999,6 +15073,47 @@
     "Goofy's Stall",
     "Gardening"
    ]
+  },
+  {
+   "name": "Wheat Porridge",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Milk",
+    "Wheat"
+   ],
+   "stars": 2
+  },
+  {
+   "name": "Wheat Porridge with Fruit",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Milk",
+    "Wheat",
+    "Fruit"
+   ],
+   "stars": 3
+  },
+  {
+   "name": "Whimsical Pie",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Dreamlight Fruit",
+    "Wheat",
+    "Butter"
+   ],
+   "stars": 3
   },
   {
    "name": "White & Pink Falling Penstemon",
@@ -8285,6 +15400,36 @@
    ]
   },
   {
+   "name": "Wonderland Cookies",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Butter",
+    "Sugarcane",
+    "Vanilla",
+    "Wheat"
+   ],
+   "stars": 4
+  },
+  {
+   "name": "Wonton Soup",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Egg",
+    "Shrimp",
+    "Wheat",
+    "Onion"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Wrought Iron",
    "type": "Foraging",
    "kind": "Crafting Materials",
@@ -8298,6 +15443,20 @@
     ]
    ],
    "from": []
+  },
+  {
+   "name": "Yakisoba",
+   "type": "Meal",
+   "kind": "Entrées",
+   "realm": "Eternity",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Pork",
+    "Wheat",
+    "Cabbage"
+   ],
+   "stars": 3
   },
   {
    "name": "Yam",
@@ -8547,6 +15706,21 @@
    ]
   },
   {
+   "name": "Yule Log",
+   "type": "Meal",
+   "kind": "Desserts",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Wheat",
+    "Cocoa Bean",
+    "Vanilla",
+    "Cherry"
+   ],
+   "stars": 4
+  },
+  {
    "name": "Zinc",
    "type": "Foraging",
    "kind": "Crafting Material",
@@ -8581,6 +15755,20 @@
     "Goofy's Stall",
     "Gardening"
    ]
+  },
+  {
+   "name": "Zucchini Puffs",
+   "type": "Meal",
+   "kind": "Appetizers",
+   "realm": "Main",
+   "areas": [],
+   "from": [],
+   "recipe": [
+    "Zucchini",
+    "Egg",
+    "Cheese"
+   ],
+   "stars": 3
   }
  ]
 }
